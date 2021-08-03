@@ -9,7 +9,7 @@ module.exports = {
         md: "1.5rem",
       },
       screens: {
-        DEFAULT: "77rem",
+        DEFAULT: "75.5rem",
       },
     },
     fontFamily: {
@@ -29,10 +29,7 @@ module.exports = {
         "4xl": "1.875rem",
       },
       boxShadow: {
-        "2xl": "0px 4px 6px rgba(0, 0, 0, 0.1)",
-        "3xl": "0px 4px 45px rgba(0, 0, 0, 0.1)",
-        "4xl": "0px 4px 10px rgba(0, 0, 0, 0.15)",
-        "5xl": "0px 2px 30px rgba(0, 0, 0, 0.15)",
+        "2xl": "inset 0px 2px 8px rgba(51, 51, 51, 0.08)",
       },
       colors: {
         gray: {

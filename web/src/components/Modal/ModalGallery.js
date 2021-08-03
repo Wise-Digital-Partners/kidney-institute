@@ -7,9 +7,6 @@ import SliderGallery from "../Slider/SliderGallery";
 
 const StyledModal = styled.div`
   .modal {
-    &.is-open {
-      ${tw`block`}
-    }
     &[aria-hidden="false"] {
       .overlay {
         animation: mmfadeIn 0.5s cubic-bezier(0, 0, 0.2, 1);
@@ -29,50 +26,6 @@ const StyledModal = styled.div`
       .content-wrapper {
         animation: mmpopOut 0.5s cubic-bezier(0, 0, 0.2, 1);
       }
-    }
-    .content-wrapper,
-    .overlay {
-      will-change: transform;
-    }
-    .close {
-      ${tw`absolute top-0 right-0 left-auto transform translate-x-1/2	md:translate-x-0 mb-0 mr-8 md:mr-10 mt-4 md:mt-10 text-black hover:text-primary-400 text-2xl cursor-pointer transition-all duration-300 ease-linear z-10`}
-      &:hover,
-            &:focus,
-            &:active {
-        ${tw`text-primary-400`}
-      }
-    }
-  }
-  @keyframes mmfadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes mmfadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-  @keyframes mmpopUp {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
-  @keyframes mmpopOut {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0);
     }
   }
 `;
@@ -114,7 +67,10 @@ const Modal = ({ slideIndex, children }) => {
                 children={children}
                 ref={slider}
               />
-              <i className="close fal fa-times" data-modal-close></i>
+              <i
+                className="fal fa-times absolute top-0 right-0 left-auto transform translate-x-1/2md:translate-x-0 mb-0 mr-8 md:mr-10 mt-4 md:mt-10 text-secondary-900 hover:text-primary-900 text-2xl cursor-pointer transition-all duration-300 ease-linear z-10"
+                data-modal-close
+              ></i>
             </div>
           </div>
           {/* <i className="close fal fa-times" data-modal-close></i> */}

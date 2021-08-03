@@ -53,12 +53,14 @@ export default class Form extends Component {
     })
       .then(
         () =>
-          (document.getElementById("contact-form-ajax-response").innerHTML =
+          (document.getElementById(
+            "kidney-institute-desert-form-ajax-response"
+          ).innerHTML =
             "Thank you for contacting us! We will get in touch with you shortly."),
         form.remove(),
         (window.dataLayer = window.dataLayer || []),
         window.dataLayer.push({
-          event: "contactFormSubmission",
+          event: "kidneyInstituteDesertFormSubmission",
         })
       )
       .catch((error) => alert(error));
@@ -67,9 +69,9 @@ export default class Form extends Component {
   render() {
     return (
       <StyledForm>
-        <div id="contact-form-ajax-response"></div>
+        <div id="kidney-institute-desert-form-ajax-response"></div>
         <form
-          name="Contact"
+          name="Kidney Institute of the Desert - Indio"
           method="post"
           action=""
           data-netlify="true"
@@ -77,7 +79,11 @@ export default class Form extends Component {
           onSubmit={this.handleSubmit}
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="Contact" />
+          <input
+            type="hidden"
+            name="form-name"
+            value="Kidney Institute of the Desert - Indio"
+          />
           <div hidden>
             <label>
               Don’t fill this out:{" "}
@@ -132,38 +138,23 @@ export default class Form extends Component {
           </div>
 
           <div className="mb-5">
-            <fieldset>
-              <legend
-                className="font-body text-sm font-semibold text-secondary-900 block mb-1"
-                htmlFor="looking-for"
-              >
-                What are you looking for?
-              </legend>
-              <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 mt-1 mb-1.5">
-                <label className="relative cursor-pointer">
-                  <input
-                    type="radio"
-                    name="looking-for"
-                    value="Dialysis Clinic"
-                    onChange={this.handleChange}
-                    required={true}
-                  />
-                  <i className="far fa-check"></i>
-                  <span className="radio-custom">Dialysis Clinic</span>
-                </label>
-
-                <label className="relative cursor-pointer">
-                  <input
-                    type="radio"
-                    name="looking-for"
-                    value="Nephrology Office"
-                    onChange={this.handleChange}
-                  />
-                  <i className="far fa-check"></i>
-                  <span className="radio-custom">Nephrology Office</span>
-                </label>
-              </div>
-            </fieldset>
+            <label
+              className="font-body text-sm font-semibold text-secondary-900 block mb-1"
+              htmlFor="what-can-we-help-you-with"
+            >
+              What Can We Help You With?
+            </label>
+            <select
+              name="what-can-we-help-you-with"
+              onBlur={this.handleChange}
+              required={true}
+            >
+              <option value="">Select one...</option>
+              <option value="Option 1">Option 1</option>
+              <option value="Option 2">Option 2</option>
+              <option value="Option 3">Option 3</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
 
           <div className="mb-5">

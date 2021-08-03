@@ -8,8 +8,8 @@ const StyledScrollNavigation = styled.div`
     ul {
       li {
         &.is-current {
-          &:before {
-            ${tw`lg:w-10 lg:mr-4`}
+          a {
+            ${tw`text-secondary-900 lg:before:w-full`}
           }
         }
       }
@@ -41,7 +41,7 @@ const ScrollNavigation = ({ children, className }) => {
           offset={-100}
           currentClassName="is-current"
           ref={scrollNavigationList}
-          className="scrollspy flex flex-col space-y-2.5 !max-h-full overflow-auto transition-all duration-300 ease-linear"
+          className="scrollspy flex flex-col space-y-5 !max-h-full transition-all duration-300 ease-linear"
           style={{ maxHeight: `${setHeight}` }}
         >
           {children}

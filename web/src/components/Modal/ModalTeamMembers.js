@@ -1,15 +1,12 @@
 import React from "react";
 import MicroModal from "micromodal";
 import styled from "@emotion/styled";
-import tw from "twin.macro";
+// import tw from "twin.macro";
 
 import SliderTeamMembers from "../Slider/SliderTeamMembers";
 
 const StyledModal = styled.div`
   .modal {
-    &.is-open {
-      ${tw`block`}
-    }
     &[aria-hidden="false"] {
       .overlay {
         animation: mmfadeIn 0.5s cubic-bezier(0, 0, 0.2, 1);
@@ -30,60 +27,10 @@ const StyledModal = styled.div`
         animation: mmpopOut 0.5s cubic-bezier(0, 0, 0.2, 1);
       }
     }
-    .content-wrapper,
-    .overlay {
-      will-change: transform;
-    }
-    .close {
-      ${tw`absolute top-0 right-0 mr-8 mt-8 text-black text-2xl cursor-pointer transition-all duration-300 ease-linear`}
-      &:hover,
-            &:focus,
-            &:active {
-        ${tw`text-primary-400`}
-      }
-      @media (max-width: 767px) {
-        ${tw`mt-12`}
-      }
-    }
-  }
-  @keyframes mmfadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes mmfadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-
-  @keyframes mmpopUp {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes mmpopOut {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0);
-    }
   }
 `;
 
-const Modal = ({ slideIndex, children }) => {
+const Modal = ({ slideIndex, slides }) => {
   if (typeof window !== `undefined`) {
     MicroModal.init({
       openTrigger: "data-modal-open",
@@ -113,8 +60,11 @@ const Modal = ({ slideIndex, children }) => {
               role="dialog"
               aria-modal="true"
             >
-              <SliderTeamMembers slideIndex={slideIndex} children={children} />
-              <i className="close fal fa-times" data-modal-close></i>
+              <SliderTeamMembers slideIndex={slideIndex} slides={slides} />
+              <i
+                className="fal fa-times absolute top-0 right-0 mr-8 mt-8 text-secondary-900 hover:text-primary-900 text-2xl cursor-pointer transition-colors duration-300 ease-linear"
+                data-modal-close
+              ></i>
             </div>
           </div>
         </div>

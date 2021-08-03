@@ -197,7 +197,7 @@ const MainNav = ({
       id="main-navigation"
       className={`pt-3.5 pb-2 lg:py-3 bg-white w-full transition duration-300 ease-linear ${
         headerStyle === "overlap" ? "lg:bg-transparent" : "lg:bg-white"
-      } ${headerHasBorder && "border-b border-solid border-primary-400"} ${
+      } ${headerHasBorder && "border-b border-solid border-gray-300"} ${
         offcanvasOpen ? "" : ""
       } ${className}`}
       role="navigation"
@@ -259,7 +259,7 @@ const MainNav = ({
             <li className="group">
               <AniLink
                 fade
-                to="#"
+                to="/dialysis-services"
                 className="font-heading text-secondary-900 hover:text-primary-900"
               >
                 Dialysis
@@ -269,7 +269,7 @@ const MainNav = ({
             <li className="group">
               <AniLink
                 fade
-                to="#"
+                to="/nephrology"
                 className="font-heading text-secondary-900 hover:text-primary-900"
               >
                 Nephrology

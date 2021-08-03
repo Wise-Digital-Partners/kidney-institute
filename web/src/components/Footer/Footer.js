@@ -18,16 +18,6 @@ const Footer = () => {
   `);
 
   const navigation = {
-    nephrologyLocations: [
-      {
-        name: "Coachella Valley Nephrology - Indio",
-        href: "",
-      },
-      {
-        name: "Coachella Valley Nephrology - La Quinta",
-        href: "",
-      },
-    ],
     about: [
       {
         name: "Dialysis",
@@ -69,6 +59,16 @@ const Footer = () => {
       },
       {
         name: "La Quinta Kidney Center",
+        href: "",
+      },
+    ],
+    nephrologyLocations: [
+      {
+        name: "Coachella Valley Nephrology - Indio",
+        href: "",
+      },
+      {
+        name: "Coachella Valley Nephrology - La Quinta",
         href: "",
       },
     ],

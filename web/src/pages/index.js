@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import Layout from "../components/Layout";
 import SearchEngineOptimization from "../components/SEO";
@@ -10,10 +9,10 @@ import Testimonials from "../components/Repeating/Testimonials";
 import ValueProps from "../components/Repeating/ValueProps";
 import About from "../components/Repeating/About";
 import AreasWeServe from "../components/Repeating/AreasWeServe";
+import Resources from "../components/Repeating/Resources";
 import CallToAction from "../components/Repeating/CTA";
 import ButtonSolid from "../components/Button/ButtonSolid";
 import ButtonGhost from "../components/Button/ButtonGhost";
-import ButtonWithUnderline from "../components/Button/ButtonWithUnderline";
 
 const Page = ({ data }) => {
   return (
@@ -65,7 +64,7 @@ const Page = ({ data }) => {
             </p>
           </header>
 
-          <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-14 items-center mb-20 md:mb-32">
+          <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-10 lg:gap-x-20 items-center mb-20 md:mb-32">
             <div className="order-2 md:order-1">
               <h2>Dialysis Services</h2>
               <p>
@@ -85,7 +84,7 @@ const Page = ({ data }) => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-14 items-center">
+          <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-10 lg:gap-x-20 items-center">
             <div>
               <GatsbyImage
                 image={data.nephrologyExperts.childImageSharp.gatsbyImageData}
@@ -109,71 +108,7 @@ const Page = ({ data }) => {
 
       <AreasWeServe />
       <ValueProps />
-
-      <section className="mb-24 md:mb-36">
-        <div className="container">
-          <div className="grid md:grid-cols-3 gap-y-10 md:gap-x-5 lg:gap-x-10">
-            <AniLink fade to="/resources" className="group">
-              <div className="rounded-xl overflow-hidden mb-6">
-                <GatsbyImage
-                  image={data.resources.childImageSharp.gatsbyImageData}
-                  alt="New Patient Resources"
-                  className="transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
-                />
-              </div>
-              <h3 className="text-mobile-3xl md:text-3xl font-semibold mb-3.5">
-                New Patient Resources
-              </h3>
-              <p className="md:mb-0">
-                Fill out required forms before your visit. That way, we’re ready
-                to begin your care when you arrive.
-              </p>
-              <ButtonWithUnderline className="md:hidden" text="Learn More" />
-            </AniLink>
-
-            <AniLink
-              fade
-              to="/kidney-nutrition-dialysis-diet"
-              className="group"
-            >
-              <div className="rounded-xl overflow-hidden mb-6">
-                <GatsbyImage
-                  image={data.nutrition.childImageSharp.gatsbyImageData}
-                  alt="Nutrition"
-                  className="transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
-                />
-              </div>
-              <h3 className="text-mobile-3xl md:text-3xl font-semibold mb-3.5">
-                Nutrition
-              </h3>
-              <p className="md:mb-0">
-                Our nutritionists can help you develop a kidney- friendly diet.
-                Plans are tailored to each patient.
-              </p>
-              <ButtonWithUnderline className="md:hidden" text="Learn More" />
-            </AniLink>
-
-            <AniLink fade to="/traveling-on-dialysis" className="group">
-              <div className="rounded-xl overflow-hidden mb-6">
-                <GatsbyImage
-                  image={data.travel.childImageSharp.gatsbyImageData}
-                  alt="Travel"
-                  className="transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
-                />
-              </div>
-              <h3 className="text-mobile-3xl md:text-3xl font-semibold mb-3.5">
-                Travel
-              </h3>
-              <p className="md:mb-0">
-                Home dialysis options have made it possible for patients to
-                travel safely and continue treatment.
-              </p>
-              <ButtonWithUnderline className="md:hidden" text="Learn More" />
-            </AniLink>
-          </div>
-        </div>
-      </section>
-
+      <Resources />
       <Testimonials />
       <About />
       <CallToAction />
@@ -216,21 +151,6 @@ export const query = graphql`
     dialysisServices: file(relativePath: { eq: "home/dialysis-services.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, width: 560)
-      }
-    }
-    resources: file(relativePath: { eq: "home/resources.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 746)
-      }
-    }
-    nutrition: file(relativePath: { eq: "home/nutrition.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 746)
-      }
-    }
-    travel: file(relativePath: { eq: "home/travel.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 746)
       }
     }
   }

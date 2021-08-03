@@ -5,9 +5,6 @@ import tw from "twin.macro";
 
 const StyledModal = styled.div`
   .modal {
-    &.is-open {
-      ${tw`block`}
-    }
     &[aria-hidden="false"] {
       .overlay {
         animation: mmfadeIn 0.5s cubic-bezier(0, 0, 0.2, 1);
@@ -27,42 +24,6 @@ const StyledModal = styled.div`
       .content-wrapper {
         animation: mmpopOut 0.5s cubic-bezier(0, 0, 0.2, 1);
       }
-    }
-    .content-wrapper,
-    .overlay {
-      will-change: transform;
-    }
-  }
-  @keyframes mmfadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes mmfadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-  @keyframes mmpopUp {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
-  @keyframes mmpopOut {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0);
     }
   }
 `;

@@ -75,7 +75,6 @@ export default class Form extends Component {
                 type="text"
                 name="name"
                 onChange={this.handleChange}
-                id="name"
                 placeholder="Your Name"
                 required={true}
                 className="w-full p-3 h-[45px] rounded text-sm font-semibold"
@@ -89,7 +88,6 @@ export default class Form extends Component {
                 type="email"
                 name="email"
                 onChange={this.handleChange}
-                id="email"
                 placeholder="Your Email"
                 required={true}
                 className="w-full p-3 h-[45px] rounded text-sm font-semibold"
