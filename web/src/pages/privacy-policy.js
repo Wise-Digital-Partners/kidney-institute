@@ -4,19 +4,19 @@ import Layout from "../components/Layout";
 
 const Page = () => {
   return (
-    <Layout headerStyle="overlap">
-      <section className="pt-20 md:pt-40 pb-22 md:pb-32">
+    <Layout headerHasBorder={true}>
+      <section className="pt-12 md:pt-16 pb-20 md:pb-32">
         <div className="container">
           <h1>Privacy Policy</h1>
           <p>
             Protecting your private information is our priority. This Statement
-            of Privacy applies to https://hotelcleaningservices.com, and Hotel
-            Cleaning Services and governs data collection and usage. For the
-            purposes of this Privacy Policy, unless otherwise noted, all
-            references to Kidney Institute include
-            https://hotelcleaningservices.com. The Kidney Institute website is a
-            general informational site. By using the Kidney Institute website,
-            you consent to the data practices described in this statement. 
+            of Privacy applies to https://www.kidneyinstitutes.com, and Kidney
+            Institute and governs data collection and usage. For the purposes of
+            this Privacy Policy, unless otherwise noted, all references to
+            Kidney Institute include https://www.kidneyinstitutes.com. The
+            Kidney Institute website is a general informational site. By using
+            the Kidney Institute website, you consent to the data practices
+            described in this statement. 
           </p>
           <h3>Collection of your Personal Information</h3>
           <p>
@@ -253,7 +253,7 @@ const Page = () => {
             Email Address: 
             <br />
           </p>
-          <p>Effective as of July 10, 2021 </p>
+          <p>Effective as of August 17, 2021 </p>
         </div>
       </section>
     </Layout>
