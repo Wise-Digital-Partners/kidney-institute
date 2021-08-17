@@ -1,15 +1,24 @@
 import React from "react";
 import Accordion from "../Accordion/Accordion";
 
-import KidneyInstituteOfTheDesert from "../Form/KidneyInstituteOfTheDesert";
+import DialysisCoachella from "../Form/DialysisCoachella";
 
 const ModalContent = () => {
   const dayOfWeek = new Date().getDay();
+  let dayHours = "";
+
+  dayOfWeek === 0 && (dayHours = "Sunday — Closed");
+  dayOfWeek === 2 && (dayHours = "Monday — 5:30am - 6:00pm");
+  dayOfWeek === 2 && (dayHours = "Tuesday — Closed");
+  dayOfWeek === 3 && (dayHours = "Wednesday — 5:30am - 6:00pm");
+  dayOfWeek === 4 && (dayHours = "Thursday — Closed");
+  dayOfWeek === 5 && (dayHours = "Friday — 5:30am - 6:00pm");
+  dayOfWeek === 6 && (dayHours = "Saturday — Closed");
 
   return (
     <>
       <p className="font-heading text-xl text-secondary-900 font-semibold mb-8">
-        Kidney Institute of the Desert - Indio
+        Coachella Kidney Institute
       </p>
 
       <div className="grid md:grid-cols-2 md:gap-x-18 gap-y-4 text-sm mb-8">
@@ -17,13 +26,13 @@ const ModalContent = () => {
           <div className="mb-4">
             <div className="font-bold text-secondary-900 mb-1">Address</div>
             <a
-              href="https://goo.gl/maps/5JnxVT4dTVSj4KgA8"
+              href="https://goo.gl/maps/VGR6Ywq8BK1i3V2J7"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary-900"
             >
               <address className="not-italic">
-                81715 Doctor Carreon Blvd, Suite B2 Indio, CA 92201
+                1413 6th St. Coachella, CA 92236
               </address>
             </a>
           </div>
@@ -31,8 +40,8 @@ const ModalContent = () => {
             <div className="font-bold text-secondary-900 mb-1">
               Phone Number
             </div>
-            <a href="tel:+760-347-8181" className="hover:text-primary-900">
-              (760) 347-8181
+            <a href="tel:+760-391-5300" className="hover:text-primary-900">
+              (760) 391-5300
             </a>
           </div>
         </div>
@@ -41,18 +50,7 @@ const ModalContent = () => {
           <div className="font-bold text-secondary-900 mb-1">
             Business Hours
           </div>
-
-          <Accordion
-            title={
-              (dayOfWeek === 0 && "Sunday — Closed",
-              dayOfWeek === 1 && "Monday — 5:30am - 6:00pm",
-              dayOfWeek === 2 && "Tuesday — 5:30am - 6:00pm",
-              dayOfWeek === 2 && "Wednesday — 5:30am - 6:00pm",
-              dayOfWeek === 2 && "Thursday — 5:30am - 6:00pm",
-              dayOfWeek === 2 && "Friday — 5:30am - 6:00pm",
-              dayOfWeek === 2 && "Saturday — 5:30am - 6:00pm")
-            }
-          >
+          <Accordion title={dayHours}>
             <div className="flex flex-col space-y-1 max-w-[210px]">
               <div className="flex justify-between space-x-1">
                 <div>
@@ -64,7 +62,7 @@ const ModalContent = () => {
                 <div>
                   <b className="text-secondary-900">Tuesday</b>
                 </div>
-                <div>5:30am - 6:00pm</div>
+                <div>Closed</div>
               </div>
               <div className="flex justify-between space-x-1">
                 <div>
@@ -76,7 +74,7 @@ const ModalContent = () => {
                 <div>
                   <b className="text-secondary-900">Thursday</b>
                 </div>
-                <div>5:30am - 6:00pm</div>
+                <div>Closed</div>
               </div>
               <div className="flex justify-between space-x-1">
                 <div>
@@ -88,7 +86,7 @@ const ModalContent = () => {
                 <div>
                   <b className="text-secondary-900">Saturday</b>
                 </div>
-                <div>5:30am - 6:00pm</div>
+                <div>Closed</div>
               </div>
               <div className="flex justify-between space-x-1">
                 <div>
@@ -101,7 +99,7 @@ const ModalContent = () => {
         </div>
       </div>
 
-      <KidneyInstituteOfTheDesert />
+      <DialysisCoachella />
     </>
   );
 };

@@ -54,13 +54,13 @@ export default class Form extends Component {
       .then(
         () =>
           (document.getElementById(
-            "kidney-institute-desert-form-ajax-response"
+            "nephrology-la-quinta-form-ajax-response"
           ).innerHTML =
             "Thank you for contacting us! We will get in touch with you shortly."),
         form.remove(),
         (window.dataLayer = window.dataLayer || []),
         window.dataLayer.push({
-          event: "kidneyInstituteDesertFormSubmission",
+          event: "nephrologyLaQuintaFormSubmission",
         })
       )
       .catch((error) => alert(error));
@@ -69,9 +69,9 @@ export default class Form extends Component {
   render() {
     return (
       <StyledForm>
-        <div id="kidney-institute-desert-form-ajax-response"></div>
+        <div id="nephrology-la-quinta-form-ajax-response"></div>
         <form
-          name="Kidney Institute of the Desert - Indio"
+          name="Coachella Valley Nephrology - La Quinta"
           method="post"
           action=""
           data-netlify="true"
@@ -82,7 +82,7 @@ export default class Form extends Component {
           <input
             type="hidden"
             name="form-name"
-            value="Kidney Institute of the Desert - Indio"
+            value="Coachella Valley Nephrology - La Quinta"
           />
           <div hidden>
             <label>

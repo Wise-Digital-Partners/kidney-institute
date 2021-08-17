@@ -6,7 +6,12 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 import Contact from "../Form/Contact";
-import KidneyInstituteOfTheDesert from "../ModalContent/KidneyInstituteOfTheDesert";
+import DialysisIndio from "../ModalContent/DialysisIndio";
+import DialysisRanchoMirage from "../ModalContent/DialysisRanchoMirage";
+import DialysisLaQuinta from "../ModalContent/DialysisLaQuinta";
+import DialysisCoachella from "../ModalContent/DialysisCoachella";
+import NephrologyIndio from "../ModalContent/NephrologyIndio";
+import NephrologyLaQuinta from "../ModalContent/NephrologyLaQuinta";
 
 const StyledModal = styled.div`
   .modal {
@@ -119,8 +124,8 @@ const Modal = () => {
     setDialysisBackState1("hidden");
     setDialysisBackState2("block");
     setDisalysisLocationsState("hidden");
-    setModalContentState("hidden");
     setDialysisIndioState("block");
+    setModalContentState("hidden");
   }
 
   function showDialysisRanchoMirage() {
@@ -128,6 +133,7 @@ const Modal = () => {
     setDialysisBackState2("block");
     setDisalysisLocationsState("hidden");
     setDialysisRanchoMirageState("block");
+    setModalContentState("hidden");
   }
 
   function showDialysisLaQuinta() {
@@ -135,6 +141,7 @@ const Modal = () => {
     setDialysisBackState2("block");
     setDisalysisLocationsState("hidden");
     setDialysisLaQuintaState("block");
+    setModalContentState("hidden");
   }
 
   function showDialysisCoachella() {
@@ -142,6 +149,7 @@ const Modal = () => {
     setDialysisBackState2("block");
     setDisalysisLocationsState("hidden");
     setDialysisCoachellaState("block");
+    setModalContentState("hidden");
   }
 
   function showNephrologyIndio() {
@@ -149,6 +157,7 @@ const Modal = () => {
     setNephrologyBackState2("block");
     setNephrologyLocationsState("hidden");
     setNephrologyIndioState("block");
+    setModalContentState("hidden");
   }
 
   function showNephrologyLaQuinta() {
@@ -156,6 +165,7 @@ const Modal = () => {
     setNephrologyBackState2("block");
     setNephrologyLocationsState("hidden");
     setNephrologyLaQuintaState("block");
+    setModalContentState("hidden");
   }
 
   return (
@@ -235,32 +245,32 @@ const Modal = () => {
             <div className="pt-8 px-6 md:px-18 pb-24">
               {/* Kidney Institute of the Desert - Indio */}
               <div className={`${setDialysisIndio}`}>
-                <KidneyInstituteOfTheDesert />
+                <DialysisIndio />
               </div>
 
               {/* Kidney Institute at Eisenhower Medical Center */}
               <div className={`${setDialysisRanchoMirage}`}>
-                <KidneyInstituteOfTheDesert />
+                <DialysisRanchoMirage />
               </div>
 
               {/* La Quinta Kidney Center */}
               <div className={`${setDialysisLaQuinta}`}>
-                <KidneyInstituteOfTheDesert />
+                <DialysisLaQuinta />
               </div>
 
               {/* Coachella Kidney Institute */}
               <div className={`${setDialysisCoachella}`}>
-                <KidneyInstituteOfTheDesert />
+                <DialysisCoachella />
               </div>
 
               {/* Coachella Valley Nephrology - Indio */}
               <div className={`${setNephrologyIndio}`}>
-                <KidneyInstituteOfTheDesert />
+                <NephrologyIndio />
               </div>
 
               {/* Coachella Valley Nephrology - La Quinta */}
               <div className={`${setNephrologyLaQuinta}`}>
-                <KidneyInstituteOfTheDesert />
+                <NephrologyLaQuinta />
               </div>
 
               <div className={`${setModalContent}`}>
