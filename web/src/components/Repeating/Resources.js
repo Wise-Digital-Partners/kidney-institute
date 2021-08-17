@@ -3,8 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-import ButtonWithUnderline from "../Button/ButtonWithUnderline";
-
 const ValueProps = ({ className }) => {
   const data = useStaticQuery(graphql`
     {
@@ -52,7 +50,7 @@ const ValueProps = ({ className }) => {
   ];
 
   return (
-    <section className={`${className || "mb-24 md:mb-36"}`}>
+    <section className={`${className || "mb-20 md:mb-32"}`}>
       <div className="container">
         <div className="grid md:grid-cols-3 gap-y-10 md:gap-x-5 lg:gap-x-10">
           {content.map((content, i) => {
@@ -65,11 +63,10 @@ const ValueProps = ({ className }) => {
                     className="transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
                   />
                 </div>
-                <h3 className="text-mobile-3xl md:text-3xl font-semibold mb-3.5">
+                <h3 className="font-heading text-mobile-3xl md:text-3xl font-semibold mb-3.5">
                   {content.heading}
                 </h3>
-                <p className="md:mb-0">{content.text}</p>
-                <ButtonWithUnderline className="md:hidden" text="Learn More" />
+                <p className="mb-0">{content.text}</p>
               </AniLink>
             );
           })}

@@ -25,11 +25,12 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       borderRadius: {
-        xl: "0.625rem",
         "4xl": "1.875rem",
+        "5xl": "2.5rem",
       },
       boxShadow: {
         "2xl": "inset 0px 2px 8px rgba(51, 51, 51, 0.08)",
+        "3xl": "0px 4px 20px rgba(0, 0, 0, 0.1)",
       },
       colors: {
         gray: {

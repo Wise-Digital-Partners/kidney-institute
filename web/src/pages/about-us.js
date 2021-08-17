@@ -34,7 +34,11 @@ const Page = ({ data }) => {
                 Coachella Valley in Indio, Rancho Mirage, Coachella, and La
                 Quinta.
               </p>
-              <ButtonSolid modal="modal-contact" text="Find a Location" />
+              <ButtonSolid
+                modal="modal-contact"
+                icon="fas fa-map-marker-alt"
+                text="Find a Location"
+              />
             </div>
             <div className="order-1 md:order-2">
               <GatsbyImage
@@ -92,7 +96,7 @@ export const query = graphql`
         gatsbyImageData(layout: CONSTRAINED, width: 560)
       }
     }
-    meetTheTeam: file(relativePath: { eq: "about/Meet the Team.jpg" }) {
+    meetTheTeam: file(relativePath: { eq: "about/2.0-meet-the-team.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, width: 560)
       }

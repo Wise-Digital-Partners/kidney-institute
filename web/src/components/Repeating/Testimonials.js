@@ -28,7 +28,7 @@ const StyledSlider = styled.div`
   .slick-dots {
     ${tw`relative flex! items-center space-x-3 mt-10`}
     li {
-      ${tw`h-2.5 w-2.5 rounded-full bg-white bg-opacity-40 mr-0 transition-all duration-300 ease-linear`}
+      ${tw`h-2.5 w-2.5 rounded-full bg-primary-900 md:bg-white bg-opacity-40 mr-0 transition-all duration-300 ease-linear`}
       &.slick-active {
         ${tw`bg-opacity-100`}
       }
@@ -60,7 +60,7 @@ const Testimonial = ({ className, headingLevel }) => {
       }
       backgroundMobile: file(
         relativePath: {
-          eq: "repeating/testimonials/testimonials-bg-desktop.jpg"
+          eq: "repeating/testimonials/testimonials-bg-mobile.jpg"
         }
       ) {
         childImageSharp {
@@ -88,17 +88,23 @@ const Testimonial = ({ className, headingLevel }) => {
   const HeadingTag = headingLevel || "h2";
 
   return (
-    <div className="container relative">
+    <div className="container relative px-0 md:px-4">
+      <div className="md:hidden">
+        <GatsbyImage
+          image={data.backgroundMobile.childImageSharp.gatsbyImageData}
+        />
+      </div>
       <img
         src={data.quotes.publicURL}
         alt="Quotes icon"
-        className="absolute -top-8 z-10 left-6 md:left-10 lg:left-20"
+        className="relative md:absolute -top-8 md:z-10 left-4 md:left-10 lg:left-20"
       />
       <Background
         backgroundImages={
           data.backgroundDesktop.childImageSharp.gatsbyImageData
         }
-        padding="py-24 md:py-36 px-6 md:px-10 lg:px-20"
+        mobileRemoveBackground={true}
+        padding="md:py-36 md:px-10 lg:px-20"
         className={`${
           className || "rounded-4xl overflow-hidden mb-20 md:mb-32"
         }`}
@@ -114,10 +120,10 @@ const Testimonial = ({ className, headingLevel }) => {
                 <div key={i}>
                   <blockquote className="md:max-w-md md:w-3/4">
                     <q>{testimonial.quote}</q>
-                    <footer className="mt-12 md:mt-10 mx-auto">
+                    <footer className="mt-10 mx-auto">
                       <div>
                         <cite className="not-italic">
-                          <div className="font-heading text-secondary-900 uppercase font-bold tracking-wide mb-2">
+                          <div className="font-heading text-sm md:text-base text-secondary-900 uppercase font-bold tracking-wide mb-2">
                             {testimonial.name}
                           </div>
                           <GatsbyImage image={testimonial.platform} />

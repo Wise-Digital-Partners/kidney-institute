@@ -37,7 +37,7 @@ const CTA = ({ heading, headingLevel, subtext, className }) => {
   // ];
 
   return (
-    <section className={`bg-secondary-900 py-16 md:py-22 ${className || ""}`}>
+    <section className={`bg-secondary-900 py-20 md:py-22 ${className || ""}`}>
       <div className="container">
         <div className="md:flex md:items-end md:space-x-24 lg:space-x-40">
           <header className="text-center md:text-left">
@@ -58,6 +58,7 @@ const CTA = ({ heading, headingLevel, subtext, className }) => {
             <ButtonGhost
               modal="modal-contact"
               altStyle={true}
+              icon="fas fa-map-marker-alt"
               text="Find a Location"
               className="w-full md:w-auto"
             />

@@ -265,7 +265,7 @@ const Modal = () => {
 
               <div className={`${setModalContent}`}>
                 <div className="mb-7 md:mb-8 text-center">
-                  <p className="text-mobile-4xl md:text-4xl text-gray-900 font-bold mb-3">
+                  <p className="font-body text-mobile-4xl md:text-4xl text-gray-900 font-bold mb-3">
                     Contact Us
                   </p>
                 </div>

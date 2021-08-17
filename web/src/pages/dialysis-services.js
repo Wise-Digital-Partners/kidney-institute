@@ -171,7 +171,7 @@ const Page = ({ data }) => {
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
-      <section className="bg-gray-100 pt-10 md:pt-18 pb-20 mb-20 md:mb-32">
+      <section className="bg-gray-100 pt-10 md:pt-18 pb-14 mb-20 md:mb-32">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-10 lg:gap-x-20 items-center">
             <div className="order-2 md:order-1">
@@ -182,7 +182,11 @@ const Page = ({ data }) => {
                 social workers, and nephrologists work together to provide the
                 best treatment possible.
               </p>
-              <ButtonSolid modal="modal-contact" text="Find a Location" />
+              <ButtonSolid
+                modal="modal-contact"
+                icon="fas fa-map-marker-alt"
+                text="Find a Location"
+              />
             </div>
             <div className="order-1 md:order-2">
               <GatsbyImage
@@ -289,7 +293,7 @@ const Page = ({ data }) => {
         </div>
       </section>
 
-      <section className="mb-20 md:mb-32">
+      <section className="md:mb-32 hidden md:block">
         <div className="container">
           <img src={data.gradientBorder.publicURL} alt="Gradient border" />
         </div>
@@ -301,7 +305,7 @@ const Page = ({ data }) => {
             <h2>Our Dialysis Clinics</h2>
           </header>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-2.5 md:gap-x-6">
             {content.dialysisClinics.map((content, i) => {
               return (
                 <AniLink
@@ -320,7 +324,7 @@ const Page = ({ data }) => {
                       Dialysis
                     </div>
                   </div>
-                  <p className="font-heading font-semibold text-secondary-900 mb-0">
+                  <p className="text-sm md:text-base font-heading font-semibold text-secondary-900 mb-0">
                     {content.heading}
                   </p>
                 </AniLink>

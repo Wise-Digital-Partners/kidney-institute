@@ -8,7 +8,7 @@ import tw from "twin.macro";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-const AreasWeServe = ({ className, headingLevel, heading }) => {
+const AreasWeServe = ({ className, headingLevel, heading, subtext }) => {
   const data = useStaticQuery(graphql`
     {
       indio: file(
@@ -110,32 +110,40 @@ const AreasWeServe = ({ className, headingLevel, heading }) => {
       ${tw`flex justify-center flex-wrap`}
     }
     .react-tabs__tab-list {
-      ${tw`flex space-x-10 relative mb-6 md:mb-10 border-none after:content after:w-full after:h-px after:bg-black after:bg-opacity-20 after:absolute after:bottom-0 after:left-0`}
+      ${tw`hidden md:flex space-x-10 relative mb-6 md:mb-10 border-none after:content after:w-full after:h-px after:bg-black after:bg-opacity-20 after:absolute after:bottom-0 after:left-0`}
     }
     .react-tabs__tab {
-      ${tw`text-secondary-900 text-opacity-40 font-semibold border-none pt-0 px-0 pb-3 transition-colors duration-300 ease-linear after:content after:w-0 after:h-2 after:bg-primary-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-linear`}
+      ${tw`font-heading text-secondary-900 text-opacity-40 font-semibold border-none pt-0 px-0 pb-3 transition-colors duration-300 ease-linear after:content after:w-0 after:h-2 after:bg-primary-900 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-linear`}
     }
     .react-tabs__tab--selected {
-      ${tw`text-opacity-100 after:w-full`}
+      ${tw`text-opacity-100 after:w-full bg-transparent`}
+    }
+    .react-tabs__tab-panel:not(.react-tabs__tab-panel--selected) {
+      ${tw`block md:hidden`}
     }
   `;
 
   return (
     <section className={`${className || "mb-18 md:mb-32"}`}>
       <div className="container">
-        <header className="mb-10 md:mb-10 text-center">
+        <header
+          className={`${
+            subtext ? "mb-10 md:mb-16" : "mb-8 md:mb-12"
+          } md:text-center max-w-2xl mx-auto`}
+        >
           <HeadingTag>{heading || "Where We’re Located"}</HeadingTag>
+          {subtext || <p>{subtext}</p>}
         </header>
 
         <StyledTabs>
-          <Tabs>
+          <Tabs forceRenderTabPanel={true}>
             <TabList>
               <Tab>Dialysis Clinics</Tab>
               <Tab>Nephrology Offices</Tab>
             </TabList>
 
             <TabPanel>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-6">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-2.5 md:gap-x-6">
                 {content.dialysisClinics.map((content, i) => {
                   return (
                     <AniLink
@@ -154,7 +162,7 @@ const AreasWeServe = ({ className, headingLevel, heading }) => {
                           Dialysis
                         </div>
                       </div>
-                      <p className="font-heading font-semibold text-secondary-900 mb-0">
+                      <p className="text-sm md:text-base font-heading font-semibold text-secondary-900 mb-0">
                         {content.heading}
                       </p>
                     </AniLink>
@@ -162,8 +170,9 @@ const AreasWeServe = ({ className, headingLevel, heading }) => {
                 })}
               </div>
             </TabPanel>
+
             <TabPanel>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-6">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-2.5 md:gap-x-6">
                 {content.nephrologyOffices.map((content, i) => {
                   return (
                     <AniLink
@@ -184,7 +193,7 @@ const AreasWeServe = ({ className, headingLevel, heading }) => {
                           Nephrology
                         </div>
                       </div>
-                      <p className="font-heading font-semibold text-secondary-900 mb-0">
+                      <p className="text-sm md:text-base font-heading font-semibold text-secondary-900 mb-0">
                         {content.heading}
                       </p>
                     </AniLink>

@@ -7,25 +7,27 @@ const Button = ({
   outboundLink,
   onClick,
   type,
-  darkmode,
+  altStyle,
   text,
 }) => {
   const Tag = href ? AniLink : "button";
   const target = outboundLink && "_blank";
   const rel = outboundLink && "noopener noreferrer";
+  let link = true;
+
+  href && (link = !href.includes("tel:", "mailto:"));
 
   return (
     <Tag
       className={`group uppercase tracking-widest leading-[22px] inline-flex items-center justify-center space-x-6 underline ${
-        darkmode ? `text-white` : `text-primary-400 hover:text-primary-400`
+        altStyle ? `text-white` : `text-primary-400 hover:text-primary-400`
       } ${className}`}
-      fade
-      to={href}
+      {...(link ? { fade: "true", to: href } : { href: href })}
       target={target}
       rel={rel}
       onClick={onClick}
       type={type}
-      darkmode={darkmode}
+      altStyle={altStyle}
     >
       <div>{text}</div>
 

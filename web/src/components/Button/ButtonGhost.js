@@ -9,11 +9,15 @@ const Button = ({
   onClick,
   type,
   altStyle,
+  icon,
   text,
 }) => {
   const Tag = href ? AniLink : "button";
   const target = outboundLink && "_blank";
   const rel = outboundLink && "noopener noreferrer";
+  let link = true;
+
+  href && (link = !href.includes("tel:", "mailto:"));
 
   return (
     <Tag
@@ -22,8 +26,7 @@ const Button = ({
           ? "text-white hover:text-white border-primary-900 hover:bg-primary-900"
           : "text-primary-900 hover:text-white border-primary-900 hover:bg-primary-900"
       } ${className || ""}`}
-      fade
-      to={href}
+      {...(link ? { fade: "true", to: href } : { href: href })}
       target={target}
       rel={rel}
       data-modal-open={modal}
@@ -31,6 +34,13 @@ const Button = ({
       type={type}
       altStyle={altStyle}
     >
+      {icon && (
+        <i
+          className={`mr-2 ${
+            altStyle ? "text-primary-900" : "text-white"
+          } ${icon}`}
+        ></i>
+      )}
       {text}
     </Tag>
   );

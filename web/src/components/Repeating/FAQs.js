@@ -17,7 +17,7 @@ const FAQs = ({ className, headingLevel, questionsAnswers }) => {
       <div className="container">
         <div className="grid md:grid-cols-12 gap-y-12 md:gap-x-10 lg:gap-x-20">
           <div className="md:col-start-1 md:col-span-5">
-            <HeadingTag className="text-mobile-4xl md:text-4xl ">
+            <HeadingTag className="font-body text-mobile-4xl md:text-4xl ">
               Frequently Asked Questions
             </HeadingTag>
             <p className="text-sm text-gray-900">

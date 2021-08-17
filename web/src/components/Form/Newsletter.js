@@ -94,7 +94,7 @@ export default class Form extends Component {
               />
             </div>
           </div>
-          <ButtonSolid type="submit" darkmode={true} text="Subscribe" />
+          <ButtonSolid type="submit" altStyle={true} text="Subscribe" />
         </form>
       </StyledForm>
     );

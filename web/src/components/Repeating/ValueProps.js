@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 // import { GatsbyImage } from "gatsby-plugin-image";
 
-const ValueProps = ({ className, headingLevel, heading }) => {
+const ValueProps = ({ className, headingLevel, heading, locationsText }) => {
   const data = useStaticQuery(graphql`
     {
       convenientLocations: file(
@@ -39,7 +39,9 @@ const ValueProps = ({ className, headingLevel, heading }) => {
     {
       icon: data.convenientLocations.publicURL,
       heading: "Convenient Locations",
-      text: "We have six kidney and dialysis clinics located in Indio, Rancho Mirage, Coachella, and La Quinta.",
+      text:
+        locationsText ||
+        "We have six kidney and dialysis clinics located in Indio, Rancho Mirage, Coachella, and La Quinta.",
     },
   ];
 
@@ -51,7 +53,7 @@ const ValueProps = ({ className, headingLevel, heading }) => {
         {/* <header className="max-w-2xl mx-auto mb-14 text-center">
           <HeadingTag>{heading || ""}</HeadingTag>
         </header> */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-10 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-10 text-center">
           {content.map((content, i) => {
             return (
               <div key={i}>

@@ -9,7 +9,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import Burger from "./Burger";
 import OffCanvas from "../OffCanvas/OffCanvas";
 import ButtonSolid from "../Button/ButtonSolid";
-// import ButtonGhost from "../Button/ButtonGhost";
+import ButtonGhost from "../Button/ButtonGhost";
 import Accordion from "./Accordion";
 
 const StyledMainNav = styled.nav`
@@ -35,19 +35,10 @@ const StyledMainNav = styled.nav`
         ${({ headerLinkColor }) =>
     headerLinkColor === "white"
       ? tw`text-white hover:text-white`
-      : tw`text-gray-900 hover:text-primary-400`};
+      : tw`text-gray-900 hover:text-primary-900`};
       }
     }
   } */
-
-  #navigation-mobile {
-    > li {
-      > a,
-      button {
-        ${tw`font-heading text-2xl text-black hover:text-primary-900 font-bold no-underline focus:outline-none transition-colors duration-300 ease-linear`}
-      }
-    }
-  }
 `;
 
 const MainNav = ({
@@ -173,23 +164,6 @@ const MainNav = ({
         href: "/rancho-mirage-coachella-valley-nephrology",
       },
     ],
-    // social: [
-    //   {
-    //     name: "Facebook",
-    //     href: ",
-    //     icon: "fab fa-facebook-f",
-    //   },
-    //   {
-    //     name: "Linkedin",
-    //     href: ",
-    //     icon: "fab fa-linkedin-in",
-    //   },
-    //   {
-    //     name: "Yelp",
-    //     href: ",
-    //     icon: "fab fa-yelp",
-    //   },
-    // ],
   };
 
   return (
@@ -223,7 +197,7 @@ const MainNav = ({
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M3.62 7.79C5.06 10.62 7.38 12.93 10.21 14.38L12.41 12.18C12.68 11.91 13.08 11.82 13.43 11.94C14.55 12.31 15.76 12.51 17 12.51C17.55 12.51 18 12.96 18 13.51V17C18 17.55 17.55 18 17 18C7.61 18 0 10.39 0 1C0 0.45 0.45 0 1 0H4.5C5.05 0 5.5 0.45 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z"
-                className={`fill-current group-hover:text-primary-400 transition-colors duration-300 ease-linear transform ${
+                className={`fill-current group-hover:text-primary-900 transition-colors duration-300 ease-linear transform ${
                   headerStyle === "overlap"
                     ? "text-primary-400"
                     : "text-primary-400"
@@ -282,17 +256,17 @@ const MainNav = ({
                 to="/resources"
                 onMouseEnter={isHoveringSubMenu2}
                 onMouseLeave={notHoveringSubMenu2}
-                className="font-heading text-secondary-900 hover:text-primary-400 9b-12"
+                className="font-heading text-secondary-900 hover:text-primary-900 pb-12"
               >
                 Resources
               </AniLink>
-              <ul className="absolute top-0 bg-white shadow-4xl flex flex-col space-y-2.5 w-auto invisible group-hover:visible transform -translate-x-8 translate-y-20 group-hover:translate-y-[58px] opacity-0 group-hover:opacity-100 px-10 pt-6 pb-8 z-10 transition-all duration-300 ease-linear">
+              <ul className="absolute top-0 bg-white shadow-3xl flex flex-col space-y-2.5 w-auto invisible group-hover:visible transform -translate-x-8 translate-y-20 group-hover:translate-y-[58px] rounded-md opacity-0 group-hover:opacity-100 px-6 py-5 z-10 transition-all duration-300 ease-linear">
                 {navigation.resources.map((item) => (
                   <li key={item.name} className="whitespace-nowrap">
                     <AniLink
                       fade
                       to={item.href}
-                      className="relative block font-heading text-base text-secondary-900 hover:text-primary-900 no-underline"
+                      className="relative block font-heading text-secondary-900 hover:text-primary-900"
                     >
                       {item.name}
                     </AniLink>
@@ -307,17 +281,17 @@ const MainNav = ({
                 to="/about-us"
                 onMouseEnter={isHoveringSubMenu1}
                 onMouseLeave={notHoveringSubMenu1}
-                className="font-heading text-secondary-900 hover:text-primary-400 9b-12"
+                className="font-heading text-secondary-900 hover:text-primary-900 pb-12"
               >
                 About
               </AniLink>
-              <ul className="absolute top-0 bg-white shadow-4xl flex flex-col space-y-2.5 w-auto invisible group-hover:visible transform -translate-x-8 translate-y-20 group-hover:translate-y-[58px] opacity-0 group-hover:opacity-100 px-10 pt-6 pb-8 z-10 transition-all duration-300 ease-linear">
+              <ul className="absolute top-0 bg-white shadow-3xl flex flex-col space-y-2.5 w-auto invisible group-hover:visible transform -translate-x-8 translate-y-20 group-hover:translate-y-[58px] rounded-md opacity-0 group-hover:opacity-100 px-6 pt-6 pb-8 z-10 transition-all duration-300 ease-linear">
                 {navigation.about.map((item) => (
                   <li key={item.name} className="whitespace-nowrap">
                     <AniLink
                       fade
                       to={item.href}
-                      className="relative block font-heading text-base text-secondary-900 hover:text-primary-900 no-underline"
+                      className="relative block font-heading text-secondary-900 hover:text-primary-900"
                     >
                       {item.name}
                     </AniLink>
@@ -332,17 +306,17 @@ const MainNav = ({
                 to="/locations"
                 onMouseEnter={isHoveringSubMenu3}
                 onMouseLeave={notHoveringSubMenu3}
-                className="font-heading text-secondary-900 hover:text-primary-400 9b-12"
+                className="font-heading text-secondary-900 hover:text-primary-900 pb-12"
               >
                 Locations
               </AniLink>
-              <ul className="absolute top-0 bg-white shadow-4xl flex flex-col space-y-2.5 w-auto invisible group-hover:visible transform -translate-x-8 translate-y-20 group-hover:translate-y-[58px] opacity-0 group-hover:opacity-100 px-10 pt-6 pb-8 z-10 transition-all duration-300 ease-linear">
+              <ul className="absolute top-0 bg-white shadow-3xl flex flex-col space-y-2.5 w-auto invisible group-hover:visible transform -translate-x-8 translate-y-20 group-hover:translate-y-[58px] rounded-md opacity-0 group-hover:opacity-100 px-6 pt-6 pb-8 z-10 transition-all duration-300 ease-linear">
                 {navigation.locations.map((item) => (
                   <li key={item.name} className="whitespace-nowrap">
                     <AniLink
                       fade
                       to={item.href}
-                      className="relative block font-heading text-base text-secondary-900 hover:text-primary-900 no-underline"
+                      className="relative block font-heading text-secondary-900 hover:text-primary-900"
                     >
                       {item.name}
                     </AniLink>
@@ -367,10 +341,33 @@ const MainNav = ({
             <OffCanvas offcanvasOpen={offcanvasOpen} id="offcanvas-navigation">
               <ul
                 id="navigation-mobile"
-                className="flex flex-col space-y-7 mb-20 text-center"
+                className="flex flex-col space-y-7 mb-20 border-t border-white/20 pt-6"
               >
-                <li>
-                  <Accordion title="About" className="submenu-parent">
+                <li className="border-b border-white/20 pb-6">
+                  <AniLink
+                    fade
+                    to="/dialysis-services"
+                    onKeyDown={clickHandler}
+                    onClick={clickHandler}
+                    className="font-heading text-2xl text-white hover:text-white font-bold no-underline"
+                  >
+                    Dialysis
+                  </AniLink>
+                </li>
+
+                <li className="border-b border-white/20 pb-6">
+                  <AniLink
+                    fade
+                    to="/nephrology"
+                    onKeyDown={clickHandler}
+                    onClick={clickHandler}
+                    className="font-heading text-2xl text-white hover:text-white font-bold no-underline"
+                  >
+                    Nephrology
+                  </AniLink>
+                </li>
+                <li className="border-b border-white/20 pb-6">
+                  <Accordion title="About">
                     {navigation.about.map((item) => (
                       <li key={item.name}>
                         <AniLink
@@ -378,7 +375,7 @@ const MainNav = ({
                           to={item.href}
                           onKeyDown={clickHandler}
                           onClick={clickHandler}
-                          className="font-body text-gray-900 no-underline"
+                          className="font-body text-white text-lg no-underline"
                         >
                           {item.name}
                         </AniLink>
@@ -386,8 +383,8 @@ const MainNav = ({
                     ))}
                   </Accordion>
                 </li>
-                <li>
-                  <Accordion title="Resources" className="submenu-parent">
+                <li className="border-b border-white/20 pb-6">
+                  <Accordion title="Resources">
                     {navigation.resources.map((item) => (
                       <li key={item.name} className="whitespace-nowrap">
                         <AniLink
@@ -395,7 +392,7 @@ const MainNav = ({
                           to={item.href}
                           onKeyDown={clickHandler}
                           onClick={clickHandler}
-                          className="font-body text-gray-900 no-underline"
+                          className="font-body text-white text-lg no-underline"
                         >
                           {item.name}
                         </AniLink>
@@ -403,8 +400,8 @@ const MainNav = ({
                     ))}
                   </Accordion>
                 </li>
-                <li>
-                  <Accordion title="Locations" className="submenu-parent">
+                <li className="border-b border-white/20 pb-6">
+                  <Accordion title="Locations">
                     {navigation.locations.map((item) => (
                       <li key={item.name}>
                         <AniLink
@@ -412,7 +409,7 @@ const MainNav = ({
                           to={item.href}
                           onKeyDown={clickHandler}
                           onClick={clickHandler}
-                          className="font-body text-gray-900 no-underline"
+                          className="font-body text-white text-lg no-underline"
                         >
                           {item.name}
                         </AniLink>
@@ -421,26 +418,15 @@ const MainNav = ({
                   </Accordion>
                 </li>
               </ul>
-              {/* 
-              <div className="flex flex-row justify-center space-x-4 mb-10">
-                {navigation.social.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-900 hover:text-white bg-transparent hover:bg-gray-900 rounded-full w-8 h-8 flex items-center justify-center border border-gray-900 border-opacity-40 no-underline"
-                  >
-                    <span className="sr-only">{item.name}</span>
-                    <i
-                      className={`text-base ${item.icon}`}
-                      aria-hidden="true"
-                    ></i>
-                  </a>
-                ))}
-              </div> */}
 
               <div className="grid gap-y-4">
+                <ButtonGhost
+                  modal="modal-contact"
+                  altStyle={true}
+                  icon="fas fa-map-marker-alt"
+                  text="Find a Location"
+                  className="w-full md:w-auto"
+                />
                 <ButtonSolid modal="modal-contact" text="Contact Us" />
               </div>
             </OffCanvas>
