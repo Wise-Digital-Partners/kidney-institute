@@ -21,7 +21,7 @@ const Button = ({
 
   return (
     <Tag
-      className={`group bg-transparent border border-solid px-5 py-3 min-w-[160px] h-[50px] rounded-4xl inline-flex items-center justify-center text-center font-heading font-semibold no-underline ${
+      className={`group bg-transparent border border-solid px-5 py-3 min-w-[160px] h-[50px] rounded-4xl inline-flex items-center justify-center text-center font-heading font-semibold no-underline whitespace-nowrap ${
         altStyle
           ? "text-white hover:text-white border-primary-900 hover:bg-primary-900"
           : "text-primary-900 hover:text-white border-primary-900 hover:bg-primary-900"
