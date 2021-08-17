@@ -31,7 +31,7 @@ const Page = ({ data }) => {
         className="mb-8 md:mb-14"
       >
         <div className="max-w-2xl">
-          <h1 className="font-heading text-secondary-900 md:text-white text-mobile-7xl md:text-7xl text-secondary-600 font-extrabold mb-4 md:mb-6">
+          <h1 className="text-secondary-900 md:text-white text-mobile-7xl md:text-7xl font-extrabold mb-4 md:mb-6">
             Expert Kidney Care. Serving Thermal Since 1987.
           </h1>
           <p className="text-xl md:text-white font-semibold mb-7">

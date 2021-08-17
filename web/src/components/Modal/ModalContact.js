@@ -40,10 +40,10 @@ const StyledModal = styled.div`
 
 const StyledTabs = styled.div`
   .react-tabs__tab-list {
-    ${tw`grid grid-cols-2 mb-6 md:mb-10 border-none`}
+    ${tw`grid grid-cols-2 mb-6 md:mb-10 border-none rounded-4xl shadow-2xl bg-gray-100`}
   }
   .react-tabs__tab {
-    ${tw`text-sm  text-black text-opacity-40 font-semibold py-2 px-4 bg-gray-50 rounded flex items-center justify-center w-full border-none transition-colors duration-300 ease-linear first:rounded-l-4xl last:rounded-r-4xl`}
+    ${tw`text-sm text-secondary-900 text-opacity-40 font-semibold py-2 px-4 bg-gray-100 rounded flex items-center justify-center w-full border-none transition-colors duration-300 ease-linear first:rounded-l-4xl last:rounded-r-4xl`}
   }
   .react-tabs__tab--selected {
     ${tw`text-white text-opacity-100 bg-primary-900 rounded-4xl`}

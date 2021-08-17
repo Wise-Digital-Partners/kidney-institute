@@ -83,9 +83,9 @@ const Slider = ({ slideIndex, slides }) => {
                       </p>
                     </header>
                     {content.description}
-                    <div onClick={closeClickHandler}>
+                    <button onClick={closeClickHandler}>
                       <ButtonSolid modal="modal-apply" text="Apply Now" />
-                    </div>
+                    </button>
                   </div>
 
                   <div className="md:col-end-13 md:col-span-4 hidden md:block">
@@ -97,9 +97,9 @@ const Slider = ({ slideIndex, slides }) => {
                         Let's do it! We'll ask you to fill in a few details
                         about yourself and send your resume.
                       </p>
-                      <div onClick={closeClickHandler}>
+                      <button onClick={closeClickHandler}>
                         <ButtonSolid modal="modal-apply" text="Apply Now" />
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>

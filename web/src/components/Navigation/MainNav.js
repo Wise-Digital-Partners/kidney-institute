@@ -152,7 +152,7 @@ const MainNav = ({
         href: "/coachella-kidney-institute",
       },
       {
-        name: "La Qunita Kidney Center",
+        name: "La Quinta Kidney Center",
         href: "/la-quinta-kidney-center",
       },
       {

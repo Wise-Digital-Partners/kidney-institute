@@ -24,7 +24,7 @@ const ReviewCards = ({ gridLayout }) => {
       }
       google: file(relativePath: { eq: "reviews/google.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 84)
+          gatsbyImageData(layout: FIXED, width: 86)
         }
       }
       facebook: file(relativePath: { eq: "reviews/facebook.png" }) {
@@ -48,34 +48,40 @@ const ReviewCards = ({ gridLayout }) => {
 
   const reviews = [
     {
-      name: "LeoPercopo",
+      name: "User Name",
+      platform: data.google.childImageSharp.gatsbyImageData,
       quote:
-        "HCS have repeatedly impressed us with their commitment to excellence and drive to exceed our expectations. It’s been a pleasure working with the HCS Executive Manager for our property. Our weekly meetings have led to great results.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis mentum facilisis fringilla.",
     },
     {
-      name: "Patrick Dahms",
+      name: "User Name",
+      platform: data.google.childImageSharp.gatsbyImageData,
       quote:
-        "I brought HCS with me from The Aspen St. Regis Resort last year because I saw their savings, quality of performance, and their capacity to consistently exceed the expectations of a five diamond resort.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel",
     },
     {
-      name: "Jill	Madzik",
+      name: "User Name",
+      platform: data.google.childImageSharp.gatsbyImageData,
       quote:
-        "The staff has proven to very dependable; they do an exceptional job and are a pleasure to work with. The Sedona Area Manager and National Client Development Manager have always met our housekeeping needs, even with short notice.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa vitae tortor condimentum lacinia quis vel eros donec ac odio",
     },
     {
-      name: "Brent M. DeNardo",
+      name: "User Name",
+      platform: data.google.childImageSharp.gatsbyImageData,
       quote:
-        "We have enjoyed our partnership with HCS and look forward to continued partnership with an organization that has met and exceeded our properties expectations.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra",
     },
     {
-      name: "Donna Jacobs",
+      name: "User Name",
+      platform: data.google.childImageSharp.gatsbyImageData,
       quote:
-        "I needed a company that I could trust for the floors, to keep them preserved, but also looking beautiful. They know my main requirement is that these floors never look like they need to be cleaned or buffed. They have never let me down.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel",
     },
     {
-      name: "Rick	Schatz",
+      name: "User Name",
+      platform: data.google.childImageSharp.gatsbyImageData,
       quote:
-        "I am amazed at the lack of turnover. I know I have a partner who cares about what I care about. They have gone above and beyond the scope of the contract to meet our need.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis mentum facilisis fringilla.",
     },
   ];
 
@@ -84,10 +90,10 @@ const ReviewCards = ({ gridLayout }) => {
       {reviews.map((review, i) => {
         return (
           <div
-            className={`w-full bg-white border border-solid border-gray-200 rounded-lg mb-8 md:mb-10 p-6 md:pt-8 md:px-7 md:mx-3 lg:mx-5 ${gridItemClass}`}
+            className={`w-full bg-white border border-solid border-gray-300 rounded-lg mb-8 md:mb-10 p-6 md:py-8 md:px-7 md:mx-3 lg:mx-5 ${gridItemClass}`}
             key={i}
           >
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-5">
               <div className="flex items-center">
                 <img
                   className="rounded-full"
@@ -96,7 +102,7 @@ const ReviewCards = ({ gridLayout }) => {
                   width="40"
                 />
                 <div className="ml-4">
-                  <span className="text-gray-900 tracking-wider font-bold">
+                  <span className="text-secondary-900 font-semibold">
                     {review.name}
                   </span>
                 </div>
@@ -109,9 +115,7 @@ const ReviewCards = ({ gridLayout }) => {
               </div>
             </div>
             <blockquote>
-              <q className="block text-gray-900 mb-6 md:mb-0 before:hidden">
-                {review.quote}
-              </q>
+              <q className="block mb-6 md:mb-0 before:hidden">{review.quote}</q>
             </blockquote>
             <div className="block md:hidden">
               <GatsbyImage image={review.platform} alt="Social platform logo" />

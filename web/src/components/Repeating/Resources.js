@@ -32,7 +32,7 @@ const ValueProps = ({ className }) => {
     {
       image: data.resources.childImageSharp.gatsbyImageData,
       heading: "New Patient Resources",
-      text: "Fill out required forms before your visit. That way, we’re ready to begin your care when you arrive. ",
+      text: "Fill out our forms before your visit. That way, we’re ready to begin your care when you arrive.",
       link: "/resources",
     },
     {

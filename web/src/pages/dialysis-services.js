@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "@emotion/styled";
 // import tw from "twin.macro";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import ModalTeamMembers from "../components/Modal/ModalTeamMembers";
+// import ModalTeamMembers from "../components/Modal/ModalTeamMembers";
 
 import Layout from "../components/Layout";
 import SearchEngineOptimization from "../components/SEO";
@@ -22,7 +22,7 @@ const StyledContent = styled.div``;
 const Page = ({ data }) => {
   const url = typeof window !== "undefined" ? window.location.pathname : "";
 
-  const [slideIndex, setSlideIndex] = useState(0);
+  // const [slideIndex, setSlideIndex] = useState(0);
 
   const content = {
     dialysisClinics: [
@@ -52,112 +52,16 @@ const Page = ({ data }) => {
         image: data.yvonneHamilton.childImageSharp.gatsbyImageData,
         name: "Yvonne Hamilton",
         location: "La Quinta Kidney Center",
-        title: "Title Goes Here",
-        bio: (
-          <>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Fermentum et sollicitudin ac orci.
-            </p>
-            <p>
-              Eu mi bibendum neque egestas congue quisque egestas. Suspendisse
-              faucibus interdum posuere lorem. Dolor sit amet consectetur
-              adipiscing.
-            </p>
-            <p>
-              Nibh sit amet commodo nulla facilisi. Eget magna fermentum iaculis
-              eu. Fermentum odio eu feugiat pretium nibh ipsum consequat. Elit
-              at imperdiet dui accumsan sit amet nulla facilisi.
-            </p>
-            <p>
-              Integer malesuada nunc vel risus commodo viverra maecenas
-              accumsan. In ante metus dictum at. Id eu nisl nunc mi ipsum
-              faucibus vitae. Ullamcorper dignissim cras tincidunt lobortis
-              feugiat vivamus at augue eget.
-            </p>
-            <p>
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-              Mauris vitae ultricies leo integer malesuada nunc vel. Diam
-              phasellus vestibulum lorem sed risus ultricies tristique nulla
-              aliquet. Sit amet aliquam id diam.
-            </p>
-          </>
-        ),
       },
       {
         image: data.mariluFuentes.childImageSharp.gatsbyImageData,
         name: "Marilu Fuentes",
         location: "Kidney Institute of the Desert Indio",
-        title: "Title Goes Here",
-        bio: (
-          <>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Fermentum et sollicitudin ac orci.
-            </p>
-            <p>
-              Eu mi bibendum neque egestas congue quisque egestas. Suspendisse
-              faucibus interdum posuere lorem. Dolor sit amet consectetur
-              adipiscing.
-            </p>
-            <p>
-              Nibh sit amet commodo nulla facilisi. Eget magna fermentum iaculis
-              eu. Fermentum odio eu feugiat pretium nibh ipsum consequat. Elit
-              at imperdiet dui accumsan sit amet nulla facilisi.
-            </p>
-            <p>
-              Integer malesuada nunc vel risus commodo viverra maecenas
-              accumsan. In ante metus dictum at. Id eu nisl nunc mi ipsum
-              faucibus vitae. Ullamcorper dignissim cras tincidunt lobortis
-              feugiat vivamus at augue eget.
-            </p>
-            <p>
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-              Mauris vitae ultricies leo integer malesuada nunc vel. Diam
-              phasellus vestibulum lorem sed risus ultricies tristique nulla
-              aliquet. Sit amet aliquam id diam.
-            </p>
-          </>
-        ),
       },
       {
         image: data.donnaDeLaO.childImageSharp.gatsbyImageData,
         name: "Donna De La O",
         location: "Kidney Institute at EMC & Coachella Kidney Institute",
-        title: "Title Goes Here",
-        bio: (
-          <>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Fermentum et sollicitudin ac orci.
-            </p>
-            <p>
-              Eu mi bibendum neque egestas congue quisque egestas. Suspendisse
-              faucibus interdum posuere lorem. Dolor sit amet consectetur
-              adipiscing.
-            </p>
-            <p>
-              Nibh sit amet commodo nulla facilisi. Eget magna fermentum iaculis
-              eu. Fermentum odio eu feugiat pretium nibh ipsum consequat. Elit
-              at imperdiet dui accumsan sit amet nulla facilisi.
-            </p>
-            <p>
-              Integer malesuada nunc vel risus commodo viverra maecenas
-              accumsan. In ante metus dictum at. Id eu nisl nunc mi ipsum
-              faucibus vitae. Ullamcorper dignissim cras tincidunt lobortis
-              feugiat vivamus at augue eget.
-            </p>
-            <p>
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-              Mauris vitae ultricies leo integer malesuada nunc vel. Diam
-              phasellus vestibulum lorem sed risus ultricies tristique nulla
-              aliquet. Sit amet aliquam id diam.
-            </p>
-          </>
-        ),
       },
     ],
   };
@@ -343,25 +247,19 @@ const Page = ({ data }) => {
           <div className="grid md:grid-cols-3 gap-y-10 md:gap-x-5 lg:gap-x-10">
             {content.team.map((content, i) => {
               return (
-                <button
-                  aria-label="Modal trigger"
-                  data-modal-open="modal-team-members"
-                  onClick={() => setSlideIndex(i)}
-                  key={i}
-                  className="group relative text-left"
-                >
+                <div>
                   <div className="rounded-xl overflow-hidden mb-3">
                     <GatsbyImage
                       image={content.image}
                       alt={content.heading}
-                      className="mx-auto w-full transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
+                      className="mx-auto w-full"
                     />
                   </div>
                   <p className="font-heading text-xl font-semibold text-secondary-900 mb-1.5">
                     {content.name}
                   </p>
                   <p className="text-sm mb-0">{content.location}</p>
-                </button>
+                </div>
               );
             })}
           </div>
@@ -372,7 +270,7 @@ const Page = ({ data }) => {
       <Resources />
       <CallToAction />
 
-      <ModalTeamMembers slideIndex={slideIndex} slides={content.team} />
+      {/* <ModalTeamMembers slideIndex={slideIndex} slides={content.team} /> */}
     </Layout>
   );
 };

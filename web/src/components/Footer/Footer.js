@@ -145,17 +145,17 @@ const Footer = () => {
     social: [
       {
         name: "Facebook",
-        href: "",
+        href: "https://www.facebook.com/Kidney-Institute-of-the-Desert-134446316605496/",
         icon: "fab fa-facebook-f",
       },
       {
         name: "Linkedin",
-        href: "",
+        href: "https://www.linkedin.com/company/kidney/about/",
         icon: "fab fa-linkedin-in",
       },
       {
         name: "Twitter",
-        href: "",
+        href: "https://twitter.com/KidneyInsDesert",
         icon: "fab fa-twitter",
       },
     ],
@@ -306,7 +306,7 @@ const Footer = () => {
                       ></i>
                     </span>
                     <ul
-                      className={`bg-white text-left absolute bottom-0 pt-5 px-4 pb-4 flex flex-col space-y-1.5 max-h-28 overflow-y-scroll transform transition-all duration-300 ease-linear ${
+                      className={`bg-white text-left absolute bottom-0 right-0 pt-5 px-4 pb-4 flex flex-col space-y-1.5 max-h-28 overflow-y-scroll transform transition-all duration-300 ease-linear ${
                         cityDropdownOpen
                           ? "opacity-100 -translate-y-10 visible"
                           : "opacity-0 -translate-y-4 invisible"

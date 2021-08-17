@@ -40,7 +40,7 @@ const Page = ({ data }) => {
       {
         image: data.narenChandrashekar.childImageSharp.gatsbyImageData,
         name: "Dr. Naren Chandrashekar",
-        title: "Title Goes Here",
+        location: "La Quinta Kidney Center & Kidney Institute at EMC ",
         bio: (
           <>
             <p>
@@ -97,7 +97,7 @@ const Page = ({ data }) => {
       {
         image: data.jamburChandrashekar.childImageSharp.gatsbyImageData,
         name: "Dr. Jambur Chandrashekar",
-        title: "Title Goes Here",
+        location: "Kidney Institute at EMC",
         bio: (
           <>
             <p>
@@ -140,7 +140,7 @@ const Page = ({ data }) => {
       {
         image: data.khurramMumtaz.childImageSharp.gatsbyImageData,
         name: "Dr. Khurram Mumtaz",
-        title: "Title Goes Here",
+        location: "Kidney Institute at EMC ",
         bio: (
           <>
             <p>
@@ -251,7 +251,7 @@ const Page = ({ data }) => {
                     Kidney Institutes— are experts in kidney health, the
                     treatment of kidney failure and disease, and treatment
                     therapies. A nephrologist is different from a urologist who
-                    specializes in the urinary tract system. m.
+                    specializes in the urinary tract system.
                   </p>
                 </div>
 
@@ -363,7 +363,7 @@ const Page = ({ data }) => {
                   <p className="font-heading text-xl font-semibold text-secondary-900 mb-1.5">
                     {content.name}
                   </p>
-                  <p className="text-sm mb-0">{content.title}</p>
+                  <p className="text-sm mb-0">{content.location}</p>
                 </button>
               );
             })}

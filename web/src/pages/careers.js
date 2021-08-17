@@ -449,7 +449,7 @@ const Page = ({ data }) => {
                 career? If you're a kidney care specialist who always puts
                 patients first, we want to hear from you.
               </p>
-              <ButtonSolid modal="modal-contact" text="Let’s Connect" />
+              <ButtonSolid modal="modal-apply" text="Let’s Connect" />
             </div>
             <div className="order-1 md:order-2">
               <GatsbyImage
@@ -488,14 +488,15 @@ const Page = ({ data }) => {
             </div>
 
             <p className="text-center">
-              Something about not seeing the position you are looking for?{" "}
+              Don't see a position you're looking for?{" "}
               <button
                 data-modal-open="modal-contact"
                 className="text-primary-900 underline"
               >
-                Get in touch
+                Get in touch.
               </button>{" "}
-              we’re always looking for people who are lorem ipsum.
+              We're always interested to hear from those seeking a career in
+              kidney care.
             </p>
           </div>
         </div>

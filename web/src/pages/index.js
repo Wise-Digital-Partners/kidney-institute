@@ -31,7 +31,7 @@ const Page = ({ data }) => {
         className="mb-8 md:mb-14"
       >
         <div className="max-w-2xl">
-          <p className="font-heading text-secondary-900 md:text-white text-mobile-7xl md:text-7xl text-secondary-600 font-extrabold mb-4 md:mb-6">
+          <p className="text-secondary-900 md:text-white text-mobile-7xl md:text-7xl font-extrabold mb-4 md:mb-6">
             Expert Kidney Care. Serving the Desert Since 1987.
           </p>
           <p className="text-xl md:text-white font-semibold mb-7">
@@ -70,11 +70,11 @@ const Page = ({ data }) => {
               Top Nephrologists & Kidney Dialysis Clinics in Coachella Valley
             </h1>
             <p>
-              At Kidney Institute of the Desert, we’re a About of friendly
-              kidney doctors and dialysis clinic nurses with years of experience
-              caring for patients. Our goal is to help educate our patients
-              about their kidney care and support them with treatments that are
-              as comfortable and stress-free as possible.
+              At Kidney Institute of the Desert, we’re a team of friendly kidney
+              doctors and dialysis clinic nurses with years of experience caring
+              for patients. Our goal is to help educate our patients about their
+              kidney care and support them with treatments that are as
+              comfortable and stress-free as possible.
             </p>
           </header>
 

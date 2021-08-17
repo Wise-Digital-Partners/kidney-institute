@@ -76,7 +76,7 @@ const Slider = ({ slideIndex, slides }) => {
                         {content.name}
                       </div>
                       <p className="text-gray-400 font-bold uppercase mb-0">
-                        {content.title}
+                        {content.location}
                       </p>
                     </header>
                     {content.bio}
