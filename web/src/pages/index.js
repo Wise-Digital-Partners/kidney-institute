@@ -31,7 +31,7 @@ const Page = ({ data }) => {
         className="mb-8 md:mb-14"
       >
         <div className="max-w-2xl">
-          <p className="text-secondary-900 md:text-white text-mobile-7xl md:text-7xl font-extrabold mb-4 md:mb-6">
+          <p className="font-heading text-secondary-900 md:text-white text-mobile-7xl md:text-7xl font-extrabold mb-4 md:mb-6">
             Expert Kidney Care. Serving the Desert Since 1987.
           </p>
           <p className="text-xl md:text-white font-semibold mb-7">
