@@ -19,7 +19,7 @@ const Page = ({ data }) => {
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
         title="Kidney Institute of the Desert | Nephrology | Dialysis"
-        description="At Kidney Institute of the Desert's six locations, you get top care from experts in nephrology, plus a team of caring dialysis nurses. "
+        description="Looking for a top Indian Wells dialysis clinic & nephrologists? At the Kidney Institutes, we specialize in the diagnosis and treatment of kidney disease."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

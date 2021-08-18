@@ -135,61 +135,173 @@ const Page = ({ data }) => {
 
             <ScrollContent className="lg:col-end-13 lg:col-span-8">
               <StyledContent>
-                <div id="anchor-1" className="mb-14 lg:mb-12">
-                  <h2 className="mb-12">Dialysis Basics</h2>
+                <div id="anchor-1" className="mb-16 lg:mb-24">
+                  <h2 className="mb-8 md:mb-10">Dialysis Basics</h2>
 
-                  <h3 className="text-mobile-3xl md:text-3xl font-semibold">
-                    Why It’s Needed
-                  </h3>
-                  <p>
-                    Dialysis helps remove excess fluid and waste from the
-                    bloodstream, keeping a body in balance when the kidneys can
-                    no longer function. It also helps the body regulate safe
-                    blood pressure and ensures the appropriate levels of
-                    chemicals are present in the body's bloodstream.
-                  </p>
-                  <p>
-                    Aiding patients who require dialysis services—and making it
-                    a comfortable and stress-free treatment—is one of the Kidney
-                    Institute's primary goals.
-                  </p>
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="text-mobile-3xl md:text-3xl font-semibold">
+                      Why It’s Needed
+                    </h3>
+                    <p>
+                      Dialysis helps remove excess fluid and waste from the
+                      bloodstream, keeping a body in balance when the kidneys
+                      can no longer function. It also helps the body regulate
+                      safe blood pressure and ensures the appropriate levels of
+                      chemicals are present in the body's bloodstream.
+                    </p>
+                    <p>
+                      Aiding patients who require dialysis services—and making
+                      it a comfortable and stress-free treatment—is one of the
+                      Kidney Institute's primary goals.
+                    </p>
+                  </div>
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="text-mobile-3xl md:text-3xl font-semibold">
+                      How Dialysis Works
+                    </h3>
+                    <p>
+                      There are two types of dialysis treatments, both of which
+                      are available at the Kidney Institute.
+                    </p>
+                    <p>
+                      Hemodialysis involves a dialysis machine pumping blood out
+                      of the body through an artificial kidney membrane.
+                    </p>
+                    <p>
+                      With peritoneal dialysis, a plastic tube is placed in a
+                      patient's abdomen. Then a sterile cleansing fluid, along
+                      with the internal lining in the body called the
+                      peritoneum, works together to clean the blood.
+                    </p>
+                  </div>
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="text-mobile-3xl md:text-3xl font-semibold">
+                      The Benefits of Dialysis
+                    </h3>
+                    <p>
+                      Although dialysis helps alleviate the symptoms of fatigue
+                      and weakness due to kidney failure, the primary benefit of
+                      the treatment is extending a person's life.
+                    </p>
+                    <p>
+                      That's what makes the work we do at the Kidney Institute
+                      so important to us. Our physicians and nurses want to make
+                      sure you get the best healthcare possible with a
+                      comprehensive, therapeutic care plan.
+                    </p>
+                  </div>
                 </div>
 
-                <div id="anchor-2" className="mb-14 lg:mb-12">
-                  <h3 className="text-mobile-3xl md:text-3xl font-semibold">
-                    How Dialysis Works
-                  </h3>
-                  <p>
-                    There are two types of dialysis treatments, both of which
-                    are available at the Kidney Institute.
-                  </p>
-                  <p>
-                    Hemodialysis involves a dialysis machine pumping blood out
-                    of the body through an artificial kidney membrane.
-                  </p>
-                  <p>
-                    With peritoneal dialysis, a plastic tube is placed in a
-                    patient's abdomen. Then a sterile cleansing fluid, along
-                    with the internal lining in the body called the peritoneum,
-                    works together to clean the blood.
-                  </p>
+                <div id="anchor-2" className="mb-16 lg:mb-24">
+                  <h2 className="mb-8 md:mb-10">
+                    Hemodialysis: Filtering by Machine
+                  </h2>
+
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="text-mobile-3xl md:text-3xl font-semibold">
+                      Why It’s Needed
+                    </h3>
+                    <p>
+                      When someone discovers they'll require kidney failure
+                      treatment, it can be emotionally challenging. However,
+                      working with specialists at the Kidney Institute, and
+                      meeting others who are also experiencing kidney failure,
+                      can help ease a patient's concerns and provide the support
+                      they need.
+                    </p>
+                  </div>
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="text-mobile-3xl md:text-3xl font-semibold">
+                      How Hemodialysis Works
+                    </h3>
+                    <p>
+                      Hemodialysis is most often performed at a kidney dialysis
+                      center, such as one of the Kidney Institute locations.
+                      Treatments are scheduled three times a week, and each
+                      session lasts three to four hours.
+                    </p>
+                    <p>
+                      Our team of nephrologists can also help find a facility at
+                      travel destinations for those planning on leaving town.
+                    </p>
+                  </div>
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="text-mobile-3xl md:text-3xl font-semibold">
+                      The Benefits of Hemodialysis
+                    </h3>
+                    <p>
+                      Many kidney failure patients prefer to go to a dialysis
+                      center, like one of our Kidney Institute clinics. That's
+                      because trained hemodialysis nurses and nephrologists
+                      professionally administer their treatment.
+                    </p>
+                    <p>
+                      Patients can also socialize with fellow dialysis patients
+                      and the friendly staff. And hemodialysis, which is
+                      required only three times a week, allows for four days of
+                      no treatment.
+                    </p>
+                  </div>
                 </div>
 
                 <div id="anchor-3">
-                  <h3 className="text-mobile-3xl md:text-3xl font-semibold">
-                    The Benefits of Dialysis
-                  </h3>
-                  <p>
-                    Although dialysis helps alleviate the symptoms of fatigue
-                    and weakness due to kidney failure, the primary benefit of
-                    the treatment is extending a person's life.
-                  </p>
-                  <p>
-                    That's what makes the work we do at the Kidney Institute so
-                    important to us. Our physicians and nurses want to make sure
-                    you get the best healthcare possible with a comprehensive,
-                    therapeutic care plan.
-                  </p>
+                  <h2 className="mb-8 md:mb-10">
+                    Peritoneal Dialysis: Filtering via Your Abdomen
+                  </h2>
+
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="text-mobile-3xl md:text-3xl font-semibold">
+                      Why It’s Needed
+                    </h3>
+                    <p>
+                      Peritoneal dialysis is the most common method of home
+                      dialysis. When someone discovers they'll require kidney
+                      failure treatment, it can be emotionally challenging.
+                      However, working with specialists at the Kidney Institute,
+                      and meeting others who are also experiencing kidney
+                      failure, can help ease a patient's concerns and provide
+                      the support they need.
+                    </p>
+                  </div>
+
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="text-mobile-3xl md:text-3xl font-semibold">
+                      How Peritoneal Dialysis Works
+                    </h3>
+                    <p>There are two types of peritoneal dialysis.</p>
+                    <p>
+                      Continuous ambulatory peritoneal dialysis (CAPD) is
+                      performed four times throughout the day with short,
+                      30-minute exchanges. Patients can manually perform the
+                      dialysis exchanges almost anywhere, even while at work.
+                    </p>
+                    <p>
+                      Automated peritoneal dialysis (APD) can be performed at
+                      night by an automated machine while a patient sleeps. When
+                      you meet with a kidney doctor at the Kidney Institutes, we
+                      will discuss your lifestyle and decide which treatment
+                      method will complement your routine.
+                    </p>
+                  </div>
+
+                  <div className="mb-8 md:mb-12">
+                    <h3 className="text-mobile-3xl md:text-3xl font-semibold">
+                      The Benefits of Peritoneal Dialysis
+                    </h3>
+                    <p>
+                      With peritoneal dialysis, there can be fewer dietary
+                      constraints, which allows a patient to maintain a more
+                      normal lifestyle. The treatment is also very convenient
+                      because supplies can be directly shipped to a patient's
+                      home or vacation destination.
+                    </p>
+                    <p>
+                      Those who choose peritoneal dialysis tend to be more
+                      involved in their treatment. At Kidney Institute of the
+                      Desert, we provide the training and support for patients
+                      who select this as their treatment option.
+                    </p>
+                  </div>
                 </div>
               </StyledContent>
             </ScrollContent>

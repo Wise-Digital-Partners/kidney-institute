@@ -19,7 +19,7 @@ const Page = ({ data }) => {
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
         title="La Quinta Dialysis Clinic & Nephrologists"
-        description="Get top experts by your side. Our La Quinta dialysis clinic and nephrologists are specialists in the diagnosis and treatment of kidney disease."
+        description="Looking for a top La Quinta dialysis clinic & nephrologists? At the Kidney Institutes, we specialize in the diagnosis and treatment of kidney disease."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
