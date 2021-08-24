@@ -4,7 +4,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import ModalContact from "../Modal/ModalContact";
 
-const Footer = () => {
+const Footer = ({ modalTabIndex }) => {
   const getYear = () => {
     return new Date().getFullYear();
   };
@@ -363,7 +363,7 @@ const Footer = () => {
         </div>
       </footer>
 
-      <ModalContact />
+      <ModalContact modalTabIndex={modalTabIndex} />
     </>
   );
 };

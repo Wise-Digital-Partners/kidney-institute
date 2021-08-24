@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "@emotion/styled";
@@ -22,7 +22,7 @@ const StyledContent = styled.div``;
 const Page = ({ data }) => {
   const url = typeof window !== "undefined" ? window.location.pathname : "";
 
-  // const [slideIndex, setSlideIndex] = useState(0);
+  const [modalTabIndex, setModalTabIndex] = useState(0);
 
   const content = {
     dialysisClinics: [
@@ -67,7 +67,7 @@ const Page = ({ data }) => {
   };
 
   return (
-    <Layout headerHasBorder={true}>
+    <Layout headerHasBorder={true} modalTabIndex={modalTabIndex}>
       <SearchEngineOptimization
         title="Dialysis Services | Kidney Institute of the Desert"
         description="Our nurses, dietitians, social workers, and nephrologists work together to provide you with the best dialysis services at the Kidney Institutes."
@@ -88,6 +88,7 @@ const Page = ({ data }) => {
               </p>
               <ButtonSolid
                 modal="modal-contact"
+                onClick={() => setModalTabIndex(1)}
                 icon="fas fa-map-marker-alt"
                 text="Find a Location"
               />

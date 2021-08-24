@@ -32,7 +32,7 @@ const Button = ({
       data-modal-open={modal}
       onClick={onClick}
       type={type}
-      altStyle={altStyle}
+      alt-style={altStyle}
     >
       {icon && (
         <i

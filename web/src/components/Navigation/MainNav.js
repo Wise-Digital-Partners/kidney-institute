@@ -29,22 +29,13 @@ const StyledMainNav = styled.nav`
       ${tw`block`}
     }
   }
-  /* #navigation-desktop {
-    > li {
-      > a {
-        ${({ headerLinkColor }) =>
-    headerLinkColor === "white"
-      ? tw`text-white hover:text-white`
-      : tw`text-gray-900 hover:text-primary-900`};
-      }
-    }
-  } */
 `;
 
 const MainNav = ({
   headerStyle,
   headerHasBorder,
   headerLinkColor,
+  onClick,
   scrolled,
 }) => {
   // determine if offcanvas is open

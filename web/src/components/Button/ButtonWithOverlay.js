@@ -25,7 +25,7 @@ const Button = ({
       rel={rel}
       onClick={onClick}
       type={type}
-      altStyle={altStyle}
+      alt-style={altStyle}
     >
       <span className="z-10">{text}</span>
       <span className="absolute h-full w-2 left-0 bg-primary-400 group-hover:w-full transition-all duration-500 ease-in-out"></span>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MicroModal from "micromodal";
 import styled from "@emotion/styled";
 import tw from "twin.macro";
@@ -53,7 +53,7 @@ const StyledTabs = styled.div`
   }
 `;
 
-const Modal = () => {
+const Modal = ({ modalTabIndex }) => {
   if (typeof window !== "undefined") {
     MicroModal.init({
       openTrigger: "data-modal-open",
@@ -64,6 +64,12 @@ const Modal = () => {
       awaitCloseAnimation: true,
     });
   }
+
+  const [tabIndex, setTabIndex] = useState(modalTabIndex);
+
+  useEffect(() => {
+    setTabIndex(modalTabIndex);
+  }, [modalTabIndex]);
 
   const [setDisalysisLocations, setDisalysisLocationsState] =
     useState("hidden");
@@ -291,7 +297,10 @@ const Modal = () => {
                 </div>
 
                 <StyledTabs>
-                  <Tabs>
+                  <Tabs
+                    selectedIndex={tabIndex}
+                    onSelect={(index) => setTabIndex(index)}
+                  >
                     <TabList>
                       <Tab>
                         <svg
@@ -303,7 +312,7 @@ const Modal = () => {
                           className="mr-2"
                         >
                           <path
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             clip-rule="evenodd"
                             d="M3.26539 0.653076H16.3266C17.6713 0.653076 18.7688 1.74647 18.7756 3.08957C18.7757 3.09661 18.7757 3.10364 18.7756 3.11067V12.898C18.7756 14.2468 17.6754 15.347 16.3266 15.347H3.26539C1.91658 15.347 0.816406 14.2468 0.816406 12.898V3.1132M2.53606 2.73794L9.79598 7.81989L17.0559 2.73792C16.9209 2.47097 16.6433 2.28573 16.3266 2.28573H3.26539C2.94868 2.28573 2.67106 2.47098 2.53606 2.73794ZM3.26539 0.653076C1.92177 0.653076 0.824877 1.7448 0.816455 3.0865L3.26539 0.653076ZM2.44906 4.66995V12.898C2.44906 13.3451 2.81827 13.7143 3.26539 13.7143H16.3266C16.7737 13.7143 17.1429 13.3451 17.1429 12.898V4.66993L10.2641 9.4851C9.98304 9.68186 9.60893 9.68186 9.32785 9.4851L2.44906 4.66995Z"
                             className="fill-current	text-secondary-900/40"
@@ -323,16 +332,16 @@ const Modal = () => {
                           <path
                             d="M16.5 8.33325C16.5 14.1666 9 19.1666 9 19.1666C9 19.1666 1.5 14.1666 1.5 8.33325C1.5 6.34413 2.29018 4.43647 3.6967 3.02995C5.10322 1.62343 7.01088 0.833252 9 0.833252C10.9891 0.833252 12.8968 1.62343 14.3033 3.02995C15.7098 4.43647 16.5 6.34413 16.5 8.33325Z"
                             className="stroke-current	text-secondary-900/40"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                           <path
                             d="M9 10.8333C10.3807 10.8333 11.5 9.71396 11.5 8.33325C11.5 6.95254 10.3807 5.83325 9 5.83325C7.61929 5.83325 6.5 6.95254 6.5 8.33325C6.5 9.71396 7.61929 10.8333 9 10.8333Z"
                             className="stroke-current	text-secondary-900/40"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                         </svg>
                         Find a Location
@@ -501,16 +510,16 @@ const Modal = () => {
                             <path
                               d="M16.5 8.33325C16.5 14.1666 9 19.1666 9 19.1666C9 19.1666 1.5 14.1666 1.5 8.33325C1.5 6.34413 2.29018 4.43647 3.6967 3.02995C5.10322 1.62343 7.01088 0.833252 9 0.833252C10.9891 0.833252 12.8968 1.62343 14.3033 3.02995C15.7098 4.43647 16.5 6.34413 16.5 8.33325Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                             <path
                               d="M9 10.8333C10.3807 10.8333 11.5 9.71396 11.5 8.33325C11.5 6.95254 10.3807 5.83325 9 5.83325C7.61929 5.83325 6.5 6.95254 6.5 8.33325C6.5 9.71396 7.61929 10.8333 9 10.8333Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                           </svg>
 
@@ -538,16 +547,16 @@ const Modal = () => {
                             <path
                               d="M16.5 8.33325C16.5 14.1666 9 19.1666 9 19.1666C9 19.1666 1.5 14.1666 1.5 8.33325C1.5 6.34413 2.29018 4.43647 3.6967 3.02995C5.10322 1.62343 7.01088 0.833252 9 0.833252C10.9891 0.833252 12.8968 1.62343 14.3033 3.02995C15.7098 4.43647 16.5 6.34413 16.5 8.33325Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                             <path
                               d="M9 10.8333C10.3807 10.8333 11.5 9.71396 11.5 8.33325C11.5 6.95254 10.3807 5.83325 9 5.83325C7.61929 5.83325 6.5 6.95254 6.5 8.33325C6.5 9.71396 7.61929 10.8333 9 10.8333Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                           </svg>
 
@@ -575,16 +584,16 @@ const Modal = () => {
                             <path
                               d="M16.5 8.33325C16.5 14.1666 9 19.1666 9 19.1666C9 19.1666 1.5 14.1666 1.5 8.33325C1.5 6.34413 2.29018 4.43647 3.6967 3.02995C5.10322 1.62343 7.01088 0.833252 9 0.833252C10.9891 0.833252 12.8968 1.62343 14.3033 3.02995C15.7098 4.43647 16.5 6.34413 16.5 8.33325Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                             <path
                               d="M9 10.8333C10.3807 10.8333 11.5 9.71396 11.5 8.33325C11.5 6.95254 10.3807 5.83325 9 5.83325C7.61929 5.83325 6.5 6.95254 6.5 8.33325C6.5 9.71396 7.61929 10.8333 9 10.8333Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                           </svg>
 
@@ -612,16 +621,16 @@ const Modal = () => {
                             <path
                               d="M16.5 8.33325C16.5 14.1666 9 19.1666 9 19.1666C9 19.1666 1.5 14.1666 1.5 8.33325C1.5 6.34413 2.29018 4.43647 3.6967 3.02995C5.10322 1.62343 7.01088 0.833252 9 0.833252C10.9891 0.833252 12.8968 1.62343 14.3033 3.02995C15.7098 4.43647 16.5 6.34413 16.5 8.33325Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                             <path
                               d="M9 10.8333C10.3807 10.8333 11.5 9.71396 11.5 8.33325C11.5 6.95254 10.3807 5.83325 9 5.83325C7.61929 5.83325 6.5 6.95254 6.5 8.33325C6.5 9.71396 7.61929 10.8333 9 10.8333Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                           </svg>
 
@@ -653,16 +662,16 @@ const Modal = () => {
                             <path
                               d="M16.5 8.33325C16.5 14.1666 9 19.1666 9 19.1666C9 19.1666 1.5 14.1666 1.5 8.33325C1.5 6.34413 2.29018 4.43647 3.6967 3.02995C5.10322 1.62343 7.01088 0.833252 9 0.833252C10.9891 0.833252 12.8968 1.62343 14.3033 3.02995C15.7098 4.43647 16.5 6.34413 16.5 8.33325Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                             <path
                               d="M9 10.8333C10.3807 10.8333 11.5 9.71396 11.5 8.33325C11.5 6.95254 10.3807 5.83325 9 5.83325C7.61929 5.83325 6.5 6.95254 6.5 8.33325C6.5 9.71396 7.61929 10.8333 9 10.8333Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                           </svg>
 
@@ -690,16 +699,16 @@ const Modal = () => {
                             <path
                               d="M16.5 8.33325C16.5 14.1666 9 19.1666 9 19.1666C9 19.1666 1.5 14.1666 1.5 8.33325C1.5 6.34413 2.29018 4.43647 3.6967 3.02995C5.10322 1.62343 7.01088 0.833252 9 0.833252C10.9891 0.833252 12.8968 1.62343 14.3033 3.02995C15.7098 4.43647 16.5 6.34413 16.5 8.33325Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                             <path
                               d="M9 10.8333C10.3807 10.8333 11.5 9.71396 11.5 8.33325C11.5 6.95254 10.3807 5.83325 9 5.83325C7.61929 5.83325 6.5 6.95254 6.5 8.33325C6.5 9.71396 7.61929 10.8333 9 10.8333Z"
                               className="stroke-current	text-secondary-900 group-hover:text-primary-900 transition-colors duration-300 ease-linear"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                           </svg>
 

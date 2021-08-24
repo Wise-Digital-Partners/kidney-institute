@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 
@@ -10,6 +10,7 @@ const Layout = ({
   headerStyle,
   headerLinkColor,
   headerHasBorder,
+  modalTabIndex,
 }) => {
   return (
     <div>
@@ -22,7 +23,7 @@ const Layout = ({
       <main id="body-content" className="bg-white">
         {children}
       </main>
-      <Footer />
+      <Footer modalTabIndex={modalTabIndex} />
     </div>
   );
 };

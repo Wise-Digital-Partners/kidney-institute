@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
@@ -15,8 +15,10 @@ import ButtonSolid from "../components/Button/ButtonSolid";
 import ButtonGhost from "../components/Button/ButtonGhost";
 
 const Page = ({ data }) => {
+  const [modalTabIndex, setModalTabIndex] = useState(0);
+
   return (
-    <Layout headerHasBorder={true}>
+    <Layout headerHasBorder={true} modalTabIndex={modalTabIndex}>
       <SearchEngineOptimization
         title="La Quinta Dialysis Clinic & Nephrologists"
         description="Looking for a top La Quinta dialysis clinic & nephrologists? At the Kidney Institutes, we specialize in the diagnosis and treatment of kidney disease."
@@ -41,6 +43,7 @@ const Page = ({ data }) => {
 
           <ButtonSolid
             modal="modal-contact"
+            onClick={() => setModalTabIndex(1)}
             icon="fas fa-map-marker-alt"
             text="Find a Location"
           />

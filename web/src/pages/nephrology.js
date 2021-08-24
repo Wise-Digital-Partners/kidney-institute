@@ -23,6 +23,8 @@ const Page = ({ data }) => {
 
   const [slideIndex, setSlideIndex] = useState(0);
 
+  const [modalTabIndex, setModalTabIndex] = useState(0);
+
   const content = {
     nephrologyOffices: [
       {
@@ -171,7 +173,7 @@ const Page = ({ data }) => {
   };
 
   return (
-    <Layout headerHasBorder={true}>
+    <Layout headerHasBorder={true} modalTabIndex={modalTabIndex}>
       <SearchEngineOptimization
         title="Nephrology | Kidney Institute of the Desert"
         description="Kidney Institute's nephrologists are committed to compassionate, supportive kidney care. Our goal is to make you comfortable and ensure you're stress-free."
@@ -200,6 +202,7 @@ const Page = ({ data }) => {
               </p>
               <ButtonSolid
                 modal="modal-contact"
+                onClick={() => setModalTabIndex(1)}
                 icon="fas fa-map-marker-alt"
                 text="Find a Location"
               />

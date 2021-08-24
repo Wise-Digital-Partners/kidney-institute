@@ -27,7 +27,7 @@ const Button = ({
       rel={rel}
       onClick={onClick}
       type={type}
-      altStyle={altStyle}
+      alt-style={altStyle}
     >
       <div>{text}</div>
 

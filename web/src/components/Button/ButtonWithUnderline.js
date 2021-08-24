@@ -25,7 +25,7 @@ const Button = ({
       data-modal-open={modal}
       onClick={onClick}
       type={type}
-      altStyle={altStyle}
+      alt-style={altStyle}
     >
       {text}
       <span className="absolute w-full bottom-0 left-0 right-auto bg-primary-400 h-0.5 group-hover:w-0 group-hover:right-0 group-hover:left-auto transition-all duration-500 ease-in-out"></span>
