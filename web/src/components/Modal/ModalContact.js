@@ -43,7 +43,7 @@ const StyledTabs = styled.div`
     ${tw`grid grid-cols-2 mb-6 md:mb-10 border-none rounded-4xl shadow-2xl bg-gray-100`}
   }
   .react-tabs__tab {
-    ${tw`text-sm text-secondary-900 text-opacity-40 font-semibold py-2 px-4 bg-gray-100 rounded flex items-center justify-center w-full border-none transition-colors duration-300 ease-linear first:rounded-l-4xl last:rounded-r-4xl`}
+    ${tw`text-sm text-secondary-900 text-opacity-40 font-semibold py-2 px-4 bg-gray-100 rounded flex items-center justify-center w-full border-none first:rounded-l-4xl last:rounded-r-4xl`}
   }
   .react-tabs__tab--selected {
     ${tw`text-white text-opacity-100 bg-primary-900 rounded-4xl`}
@@ -186,27 +186,37 @@ const Modal = () => {
             aria-modal="true"
           >
             <div className="group flex justify-between items-center pt-12 pb-4 md:py-4 px-5 border-b border-gray-200">
-              <div className={`flex space-x-8 ${setPhoneNumbers}`}>
+              <div className={`flex space-x-6 md:space-x-8 ${setPhoneNumbers}`}>
                 <a
                   href="tel:123-456-7890"
-                  className="text-secondary-900 hover:text-primary-900 font-semibold text-sm no-underline flex items-center"
+                  className="text-secondary-900 hover:text-primary-900 font-semibold text-xs md:text-sm no-underline flex items-center"
                 >
-                  <i className="fas fa-phone-alt text-primary-900 mr-2"></i>
-                  <span>For Dialysis: (123) 456-7890</span>
+                  <div className="mr-2 w-8 md:w-auto h-8 md:h-auto bg-primary-900/20 md:bg-transparent rounded-full flex justify-center items-center">
+                    <i className="fas fa-phone-alt text-primary-900"></i>
+                  </div>
+                  <span>
+                    For Dialysis:
+                    <br className="md:hidden" /> (123) 456-7890
+                  </span>
                 </a>
 
                 <a
                   href="tel:123-456-7890"
-                  className="text-secondary-900 hover:text-primary-900 font-semibold text-sm no-underline flex items-center"
+                  className="text-secondary-900 hover:text-primary-900 font-semibold text-xs md:text-sm no-underline flex items-center"
                 >
-                  <i className="fas fa-phone-alt text-primary-900 mr-2"></i>
-                  <span>For Nephrology: (123) 456-7890</span>
+                  <div className="mr-2 w-8 md:w-auto h-8 md:h-auto bg-primary-900/20 md:bg-transparent rounded-full flex justify-center items-center">
+                    <i className="fas fa-phone-alt text-primary-900"></i>
+                  </div>
+                  <span>
+                    For Nephrology:
+                    <br className="md:hidden" /> (123) 456-7890
+                  </span>
                 </a>
               </div>
 
               <button
                 onClick={showServiceCards}
-                className={`text-secondary-900 hover:text-secondary-900 group-hover:text-primary-900 font-semibold text-sm no-underline flex items-center space-x-2 ${setDialysisBack1}`}
+                className={`text-secondary-900 hover:text-secondary-900 group-hover:text-primary-900 font-semibold text-xs md:text-sm no-underline flex items-center space-x-2 ${setDialysisBack1}`}
               >
                 <i className="far fa-arrow-left text-primary-900"></i>
                 <span>Go Back</span>
@@ -214,7 +224,7 @@ const Modal = () => {
 
               <button
                 onClick={showDialysisLocations}
-                className={`text-secondary-900 hover:text-secondary-900 group-hover:text-primary-900 font-semibold text-sm no-underline flex items-center space-x-2 ${setDialysisBack2}`}
+                className={`text-secondary-900 hover:text-secondary-900 group-hover:text-primary-900 font-semibold text-xs md:text-sm no-underline flex items-center space-x-2 ${setDialysisBack2}`}
               >
                 <i className="far fa-arrow-left text-primary-900"></i>
                 <span>Go Back</span>
@@ -222,7 +232,7 @@ const Modal = () => {
 
               <button
                 onClick={showServiceCards}
-                className={`text-secondary-900 hover:text-secondary-900 group-hover:text-primary-900 font-semibold text-sm no-underline flex items-center space-x-2 ${setNephrologyBack1}`}
+                className={`text-secondary-900 hover:text-secondary-900 group-hover:text-primary-900 font-semibold text-xs md:text-sm no-underline flex items-center space-x-2 ${setNephrologyBack1}`}
               >
                 <i className="far fa-arrow-left text-primary-900"></i>
                 <span>Go Back</span>
@@ -230,7 +240,7 @@ const Modal = () => {
 
               <button
                 onClick={showNephrologyLocations}
-                className={`text-secondary-900 hover:text-secondary-900 group-hover:text-primary-900 font-semibold text-sm no-underline flex items-center space-x-2 ${setNephrologyBack2}`}
+                className={`text-secondary-900 hover:text-secondary-900 group-hover:text-primary-900 font-semibold text-xs md:text-sm no-underline flex items-center space-x-2 ${setNephrologyBack2}`}
               >
                 <i className="far fa-arrow-left text-primary-900"></i>
                 <span>Go Back</span>
@@ -296,7 +306,7 @@ const Modal = () => {
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M3.26539 0.653076H16.3266C17.6713 0.653076 18.7688 1.74647 18.7756 3.08957C18.7757 3.09661 18.7757 3.10364 18.7756 3.11067V12.898C18.7756 14.2468 17.6754 15.347 16.3266 15.347H3.26539C1.91658 15.347 0.816406 14.2468 0.816406 12.898V3.1132M2.53606 2.73794L9.79598 7.81989L17.0559 2.73792C16.9209 2.47097 16.6433 2.28573 16.3266 2.28573H3.26539C2.94868 2.28573 2.67106 2.47098 2.53606 2.73794ZM3.26539 0.653076C1.92177 0.653076 0.824877 1.7448 0.816455 3.0865L3.26539 0.653076ZM2.44906 4.66995V12.898C2.44906 13.3451 2.81827 13.7143 3.26539 13.7143H16.3266C16.7737 13.7143 17.1429 13.3451 17.1429 12.898V4.66993L10.2641 9.4851C9.98304 9.68186 9.60893 9.68186 9.32785 9.4851L2.44906 4.66995Z"
-                            className="fill-current	text-secondary-900/40 transition-colors duration-300 ease-linear"
+                            className="fill-current	text-secondary-900/40"
                           />
                         </svg>
                         General Inquiry
@@ -312,14 +322,14 @@ const Modal = () => {
                         >
                           <path
                             d="M16.5 8.33325C16.5 14.1666 9 19.1666 9 19.1666C9 19.1666 1.5 14.1666 1.5 8.33325C1.5 6.34413 2.29018 4.43647 3.6967 3.02995C5.10322 1.62343 7.01088 0.833252 9 0.833252C10.9891 0.833252 12.8968 1.62343 14.3033 3.02995C15.7098 4.43647 16.5 6.34413 16.5 8.33325Z"
-                            className="stroke-current	text-secondary-900/40 transition-colors duration-300 ease-linear"
+                            className="stroke-current	text-secondary-900/40"
                             stroke-width="1.5"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                           />
                           <path
                             d="M9 10.8333C10.3807 10.8333 11.5 9.71396 11.5 8.33325C11.5 6.95254 10.3807 5.83325 9 5.83325C7.61929 5.83325 6.5 6.95254 6.5 8.33325C6.5 9.71396 7.61929 10.8333 9 10.8333Z"
-                            className="stroke-current	text-secondary-900/40 transition-colors duration-300 ease-linear"
+                            className="stroke-current	text-secondary-900/40"
                             stroke-width="1.5"
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -411,7 +421,7 @@ const Modal = () => {
                           </div>
 
                           <div>
-                            <div className="font-heading text-xl text-secondary-900 group-hover:text-primary-900 font-semibold mb-0 leading-none transition-colors duration-300 ease-linear">
+                            <div className="font-heading text-lg md:text-xl text-secondary-900 group-hover:text-primary-900 font-semibold mb-0 leading-none transition-colors duration-300 ease-linear">
                               Dialysis Clinic
                             </div>
                           </div>
@@ -456,7 +466,7 @@ const Modal = () => {
                           </div>
 
                           <div>
-                            <div className="font-heading text-xl text-secondary-900 group-hover:text-primary-900 font-semibold mb-0 leading-none transition-colors duration-300 ease-linear">
+                            <div className="font-heading text-lg md:text-xl text-secondary-900 group-hover:text-primary-900 font-semibold mb-0 leading-none transition-colors duration-300 ease-linear">
                               Nephrology Office
                             </div>
                           </div>

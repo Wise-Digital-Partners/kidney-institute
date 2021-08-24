@@ -149,7 +149,9 @@ export default class Form extends Component {
                     required={true}
                   />
                   <i className="far fa-check"></i>
-                  <span className="radio-custom">Dialysis Clinic</span>
+                  <span className="radio-custom text-sm md:text-base">
+                    Dialysis Clinic
+                  </span>
                 </label>
 
                 <label className="relative cursor-pointer">
@@ -160,7 +162,9 @@ export default class Form extends Component {
                     onChange={this.handleChange}
                   />
                   <i className="far fa-check"></i>
-                  <span className="radio-custom">Nephrology Office</span>
+                  <span className="radio-custom text-sm md:text-base ">
+                    Nephrology Office
+                  </span>
                 </label>
               </div>
             </fieldset>

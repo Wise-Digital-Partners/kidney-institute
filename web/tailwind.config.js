@@ -98,7 +98,7 @@ module.exports = {
         "mobile-4xl": ["1.563rem", "2.128rem"],
         "mobile-5xl": ["1.75rem", "2.384rem"],
         "mobile-6xl": ["2.188rem", "3rem"],
-        "mobile-7xl": ["2.5rem", "3.125rem"],
+        "mobile-7xl": ["2.25rem", "2.723rem"],
         // "mobile-8xl": ["rem", "rem"],
       },
       keyframes: {

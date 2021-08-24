@@ -26,7 +26,6 @@ const Page = ({ data }) => {
 
       <Background
         backgroundImages={data.heroDesktop.childImageSharp.gatsbyImageData}
-        backgroundPosition="50% 100%"
         mobileRemoveBackground={true}
         padding="pt-4 md:pt-36 md:pb-56"
         className="mb-8 md:mb-14"
@@ -142,7 +141,7 @@ export const query = graphql`
     ) {
       publicURL
     }
-    heroDesktop: file(relativePath: { eq: "home/hero-desktop.png" }) {
+    heroDesktop: file(relativePath: { eq: "home/1.0-hero-whole.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
       }
