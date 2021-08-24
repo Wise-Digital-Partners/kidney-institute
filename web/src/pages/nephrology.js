@@ -40,7 +40,6 @@ const Page = ({ data }) => {
       {
         image: data.narenChandrashekar.childImageSharp.gatsbyImageData,
         name: "Dr. Naren Chandrashekar",
-        location: "La Quinta Kidney Center & Kidney Institute at EMC ",
         bio: (
           <>
             <p>
@@ -97,7 +96,6 @@ const Page = ({ data }) => {
       {
         image: data.jamburChandrashekar.childImageSharp.gatsbyImageData,
         name: "Dr. Jambur Chandrashekar",
-        location: "Kidney Institute at EMC",
         bio: (
           <>
             <p>
@@ -140,7 +138,6 @@ const Page = ({ data }) => {
       {
         image: data.khurramMumtaz.childImageSharp.gatsbyImageData,
         name: "Dr. Khurram Mumtaz",
-        location: "Kidney Institute at EMC ",
         bio: (
           <>
             <p>
@@ -186,12 +183,20 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-10 lg:gap-x-20 items-center">
             <div className="order-2 md:order-1">
-              <h1>We’re Your Nephrology Experts</h1>
+              <GatsbyImage
+                image={data.cvLogo.childImageSharp.gatsbyImageData}
+                className="mb-4 md:mb-6"
+              />
+              <h1>Your Nephrology Experts</h1>
               <p>
-                Kidney Institute’s nephrologists are committed to compassionate,
+                Coachella Valley Nephrology is committed to compassionate,
                 supportive care. The kidney health of every patient we see is
                 important to us, and we want the care we provide to be as
-                comfortable and stress-free as possible.
+                comfortable and stress-free as possible. We’re experts in kidney
+                health, the treatment of kidney diseases, blood pressure
+                management, and electrolyte disorders. Also, we serve as the
+                medical directors and take care of patients at the Kidney
+                Institutes. .
               </p>
               <ButtonSolid
                 modal="modal-contact"
@@ -217,7 +222,7 @@ const Page = ({ data }) => {
               <li>
                 <AnchorLink
                   to={url + "#anchor-1"}
-                  title="Nephrologist = Kidney Specialist"
+                  title="Nephrologists"
                   stripHash
                   className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
                 />
@@ -225,7 +230,7 @@ const Page = ({ data }) => {
               <li>
                 <AnchorLink
                   to={url + "#anchor-2"}
-                  title="Why Your Kidneys Are Vital"
+                  title="Kidney Function"
                   stripHash
                   className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
                 />
@@ -233,7 +238,23 @@ const Page = ({ data }) => {
               <li>
                 <AnchorLink
                   to={url + "#anchor-3"}
-                  title="When Should You See a Nephrologist?"
+                  title="When to Seek Help"
+                  stripHash
+                  className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
+                />
+              </li>
+              <li>
+                <AnchorLink
+                  to={url + "#anchor-3"}
+                  title="Conditions We Treat"
+                  stripHash
+                  className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
+                />
+              </li>
+              <li>
+                <AnchorLink
+                  to={url + "#anchor-5"}
+                  title="Procedures"
                   stripHash
                   className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
                 />
@@ -245,13 +266,15 @@ const Page = ({ data }) => {
                 <div id="anchor-1" className="mb-14 lg:mb-12">
                   <h2>Nephrologist = Kidney Specialist</h2>
                   <p>
-                    It’s a common question we get - what is nephrology? It’s an
-                    internal medicine specialty focused on the kidneys. Doctors
-                    who specialize in nephrology—like our team here at the
-                    Kidney Institutes— are experts in kidney health, the
-                    treatment of kidney failure and disease, and treatment
-                    therapies. A nephrologist is different from a urologist who
-                    specializes in the urinary tract system.
+                    It’s a common question we get—what is nephrology? It’s an
+                    internal medicine specialty focused on the functions of the
+                    kidneys. Doctors who specialize in nephrology—like our team
+                    here at Coachella Valley Nephrology—are experts in kidney
+                    health, the treatment of kidney diseases, blood pressure
+                    management, and electrolyte disorders. A nephrologist is
+                    different from a urologist who specializes in the urinary
+                    tract system including the bladder, prostate, and tumors of
+                    the kidneys.
                   </p>
                 </div>
 
@@ -267,15 +290,15 @@ const Page = ({ data }) => {
                   </p>
                 </div>
 
-                <div id="anchor-3">
+                <div id="anchor-3" className="mb-14 lg:mb-12">
                   <h2>When Should You See a Nephrologist?</h2>
                   <p>
-                    When may your primary care physician refer you to a
+                    When may your primary care provider refer you to a
                     nephrologist? If you have symptoms that indicate a possible
                     problem with your kidneys, or for any of the following
                     reasons:
                   </p>
-                  <ul className="list-disc pl-6">
+                  <ul className="list-disc pl-6 mb-6">
                     <li>
                       A large amount of blood or protein is found in your urine.
                     </li>
@@ -289,6 +312,37 @@ const Page = ({ data }) => {
                       kidney problems (such as diabetes or a heart condition).
                     </li>
                   </ul>
+                </div>
+
+                <div id="anchor-4" className="mb-14 lg:mb-12">
+                  <h2>Conditions a Nephrologist Treats</h2>
+                  <p>
+                    Kidneys perform vital functions, and a nephrologist can
+                    treat you for conditions such as:
+                  </p>
+                  <ul className="list-disc pl-6 mb-6">
+                    <li>Kidney Infections</li>
+                    <li>Blood or Protein In Your Urine</li>
+                    <li>Abnormal Growths</li>
+                    <li>Kidney Swelling</li>
+                    <li>Kidney Stones</li>
+                    <li>Kidney Cancer</li>
+                    <li>Chronic Kidney Disease</li>
+                    <li>End-Stage Kidney Disease</li>
+                    <li>Kidney Failure</li>
+                  </ul>
+                </div>
+
+                <div id="anchor-5">
+                  <h2>What Procedures a Nephrologist Performs</h2>
+                  <p>
+                    Nephrologists help detect and diagnose kidney problems by
+                    performing blood and urine tests, imaging testing (i.e.,
+                    ultrasounds, CT scans, and X-rays), and biopsies. They're
+                    also involved in patient care and treatment, including
+                    hemodialysis, and are a vital member of a kidney transplant
+                    team.
+                  </p>
                 </div>
               </StyledContent>
             </ScrollContent>
@@ -360,10 +414,9 @@ const Page = ({ data }) => {
                       className="mx-auto w-full transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
                     />
                   </div>
-                  <p className="font-heading text-xl font-semibold text-secondary-900 mb-1.5">
+                  <p className="font-heading text-xl font-semibold text-secondary-900 mb-0">
                     {content.name}
                   </p>
-                  <p className="text-sm mb-0">{content.location}</p>
                 </button>
               );
             })}
@@ -398,6 +451,15 @@ export const query = graphql`
     nephrology: file(relativePath: { eq: "nephrology/1.0-hero-desktop.png" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, width: 625)
+      }
+    }
+    cvLogo: file(
+      relativePath: {
+        eq: "nephrology/1.1 Coachella-Valley-Nephrology-Gray.png"
+      }
+    ) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, width: 160)
       }
     }
     indioNephrology: file(

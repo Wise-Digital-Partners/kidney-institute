@@ -5,10 +5,10 @@ import DialysisCoachella from "../Form/DialysisCoachella";
 
 const ModalContent = () => {
   const dayOfWeek = new Date().getDay();
-  let dayHours = "";
+  let dayHours;
 
   dayOfWeek === 0 && (dayHours = "Sunday — Closed");
-  dayOfWeek === 2 && (dayHours = "Monday — 5:30am - 6:00pm");
+  dayOfWeek === 1 && (dayHours = "Monday — 5:30am - 6:00pm");
   dayOfWeek === 2 && (dayHours = "Tuesday — Closed");
   dayOfWeek === 3 && (dayHours = "Wednesday — 5:30am - 6:00pm");
   dayOfWeek === 4 && (dayHours = "Thursday — Closed");

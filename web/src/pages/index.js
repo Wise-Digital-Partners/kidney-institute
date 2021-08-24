@@ -26,6 +26,7 @@ const Page = ({ data }) => {
 
       <Background
         backgroundImages={data.heroDesktop.childImageSharp.gatsbyImageData}
+        backgroundPosition="50% 100%"
         mobileRemoveBackground={true}
         padding="pt-4 md:pt-36 md:pb-56"
         className="mb-8 md:mb-14"
@@ -49,10 +50,9 @@ const Page = ({ data }) => {
 
       <div className="relative md:hidden mb-14">
         <GatsbyImage image={data.heroMobile.childImageSharp.gatsbyImageData} />
-        <GatsbyImage
-          image={data.doctor.childImageSharp.gatsbyImageData}
-          className="absolute bottom-0 right-0 w-3/4"
-        />
+        <div className="absolute bottom-0 right-0 w-3/4">
+          <GatsbyImage image={data.doctor.childImageSharp.gatsbyImageData} />
+        </div>
       </div>
 
       <section className="mb-20 md:mb-32">
@@ -94,7 +94,7 @@ const Page = ({ data }) => {
               <GatsbyImage
                 image={data.dialysisServices.childImageSharp.gatsbyImageData}
                 width="560"
-                className="rounded-4xl"
+                className="rounded-xl md:rounded-4xl"
               />
             </div>
           </div>
@@ -104,7 +104,7 @@ const Page = ({ data }) => {
               <GatsbyImage
                 image={data.nephrologyExperts.childImageSharp.gatsbyImageData}
                 width="560"
-                className="rounded-4xl"
+                className="rounded-xl md:rounded-4xl"
               />
             </div>
             <div>

@@ -35,7 +35,7 @@ const Page = ({ data }) => {
               <GatsbyImage
                 image={data.hero.childImageSharp.gatsbyImageData}
                 width="560"
-                className="rounded-4xl"
+                className="rounded-xl md:rounded-4xl"
               />
             </div>
           </div>

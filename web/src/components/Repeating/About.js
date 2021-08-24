@@ -25,7 +25,7 @@ const MeetTheTeam = ({ className, headingLevel, heading, text }) => {
             <GatsbyImage
               image={data.team.childImageSharp.gatsbyImageData}
               width="560"
-              className="rounded-4xl"
+              className="rounded-xl md:rounded-4xl"
             />
           </div>
           <div>

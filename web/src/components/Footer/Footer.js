@@ -17,7 +17,9 @@ const Footer = () => {
 
   const data = useStaticQuery(graphql`
     {
-      logo: file(relativePath: { eq: "global/Logo-grayscale.png" }) {
+      kidneyInstitutelogo: file(
+        relativePath: { eq: "global/Logo-grayscale stacked.png" }
+      ) {
         publicURL
       }
     }
@@ -169,9 +171,9 @@ const Footer = () => {
             <div>
               <AniLink fade to="/">
                 <img
-                  src={data.logo.publicURL}
+                  src={data.kidneyInstitutelogo.publicURL}
                   alt="Kidney Institute Logo"
-                  width="146"
+                  width="120"
                   className="mx-auto lg:mx-0"
                 />
               </AniLink>

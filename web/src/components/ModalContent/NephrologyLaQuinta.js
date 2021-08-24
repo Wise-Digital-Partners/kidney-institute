@@ -5,10 +5,10 @@ import NephrologyLaQuinta from "../Form/NephrologyLaQuinta";
 
 const ModalContent = () => {
   const dayOfWeek = new Date().getDay();
-  let dayHours = "";
+  let dayHours;
 
   dayOfWeek === 0 && (dayHours = "Sunday — Closed");
-  dayOfWeek === 2 && (dayHours = "Monday — 8:00am - 5:00pm");
+  dayOfWeek === 1 && (dayHours = "Monday — 8:00am - 5:00pm");
   dayOfWeek === 2 && (dayHours = "Tuesday — 8:00am - 5:00pm");
   dayOfWeek === 3 && (dayHours = "Wednesday — 8:00am - 5:00pm");
   dayOfWeek === 4 && (dayHours = "Thursday — 8:00am - 5:00pm");

@@ -44,7 +44,7 @@ const Page = ({ data }) => {
               <GatsbyImage
                 image={data.whoWeAre.childImageSharp.gatsbyImageData}
                 width="560"
-                className="rounded-4xl"
+                className="rounded-xl md:rounded-4xl"
               />
             </div>
           </div>
@@ -54,7 +54,7 @@ const Page = ({ data }) => {
               <GatsbyImage
                 image={data.meetTheTeam.childImageSharp.gatsbyImageData}
                 width="560"
-                className="rounded-4xl"
+                className="rounded-xl md:rounded-4xl"
               />
             </div>
             <div>

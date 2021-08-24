@@ -16,7 +16,6 @@ const Page = ({ data }) => {
       {
         image: data.narenChandrashekar.childImageSharp.gatsbyImageData,
         name: "Dr. Naren Chandrashekar",
-        location: "La Quinta Kidney Center & Kidney Institute at EMC ",
         bio: (
           <>
             <p>
@@ -73,7 +72,6 @@ const Page = ({ data }) => {
       {
         image: data.jamburChandrashekar.childImageSharp.gatsbyImageData,
         name: "Dr. Jambur Chandrashekar",
-        location: "Kidney Institute at EMC",
         bio: (
           <>
             <p>
@@ -116,7 +114,6 @@ const Page = ({ data }) => {
       {
         image: data.khurramMumtaz.childImageSharp.gatsbyImageData,
         name: "Dr. Khurram Mumtaz",
-        location: "Kidney Institute at EMC ",
         bio: (
           <>
             <p>
@@ -149,17 +146,14 @@ const Page = ({ data }) => {
       {
         image: data.yvonneHamilton.childImageSharp.gatsbyImageData,
         name: "Yvonne Hamilton",
-        location: "La Quinta Kidney Center",
       },
       {
         image: data.mariluFuentes.childImageSharp.gatsbyImageData,
         name: "Marilu Fuentes",
-        location: "Kidney Institute of the Desert Indio",
       },
       {
         image: data.donnaDeLaO.childImageSharp.gatsbyImageData,
         name: "Donna De La O",
-        location: "Kidney Institute at EMC & Coachella Kidney Institute",
       },
     ],
   };
@@ -205,10 +199,9 @@ const Page = ({ data }) => {
                       className="mx-auto w-full transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
                     />
                   </div>
-                  <p className="font-heading text-xl font-semibold text-secondary-900 mb-1.5">
+                  <p className="font-heading text-xl font-semibold text-secondary-900 mb-0">
                     {content.name}
                   </p>
-                  <p className="text-sm mb-0">{content.location}</p>
                 </button>
               );
             })}

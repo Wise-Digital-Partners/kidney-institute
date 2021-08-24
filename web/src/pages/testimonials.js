@@ -20,6 +20,7 @@ const Page = ({ data }) => {
 
       <Background
         backgroundImages={data.heroDesktop.childImageSharp.gatsbyImageData}
+        backgroundPosition="50% 100%"
         padding="py-20 md:py-24"
         className="mb-16 md:mb-24"
       >
