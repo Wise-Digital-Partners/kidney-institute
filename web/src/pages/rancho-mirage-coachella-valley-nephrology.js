@@ -30,10 +30,9 @@ const Page = ({ data }) => {
               <h1>Coachella Valley Nephrology - La Quinta</h1>
               <p>
                 At Coachella Valley Nephrology in La Quinta, we’re a team of
-                friendly kidney doctors and dialysis clinic nurses with years of
-                experience caring for patients. Our goal is to help educate our
-                patients about their kidney care and support them with
-                treatments that are as comfortable and stress-free as possible.
+                friendly kidney doctors with years of experience caring for
+                patients. Our goal is to use the most up-to-date information to
+                help diagnose and manage your kidney conditions.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
@@ -87,25 +86,12 @@ const Page = ({ data }) => {
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-14 items-center mb-20 md:mb-32">
             <div>
               <GatsbyImage
-                image={data.dialysis.childImageSharp.gatsbyImageData}
+                image={data.nephrology.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
               />
             </div>
             <div>
-              <h2>Easy Access to Dialysis Services in Coachella Valley</h2>
-              <p>
-                Our number one priority is a patient’s health and comfort,
-                whether their treatment involves hemodialysis or peritoneal
-                dialysis. We provide expert, supportive dialysis services for
-                those who are living with kidney disease.
-              </p>
-              <ButtonGhost href="/dialysis-services" text="Learn More" />
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-14 items-center">
-            <div className="order-2 md:order-1">
               <h2>Top Nephrology Experts By Your Side</h2>
               <p>
                 At Coachella Valley Nephrology in Indio, our physicians have
@@ -116,9 +102,22 @@ const Page = ({ data }) => {
               </p>
               <ButtonGhost href="/nephrology" text="Learn More" />
             </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-14 items-center">
+            <div className="order-2 md:order-1">
+              <h2>Easy Access to Dialysis Services in Coachella Valley</h2>
+              <p>
+                Our number one priority is a patient’s health and comfort,
+                whether their treatment involves hemodialysis or peritoneal
+                dialysis. We provide expert, supportive dialysis services for
+                those who are living with kidney disease.
+              </p>
+              <ButtonGhost href="/dialysis-services" text="Learn More" />
+            </div>
             <div className="order-1 md:order-2">
               <GatsbyImage
-                image={data.nephrology.childImageSharp.gatsbyImageData}
+                image={data.dialysis.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
               />
@@ -138,12 +137,16 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+      relativePath: {
+        eq: "open-graph/facebook/Coachella Valley Nephrology?La Quinta.jpg"
+      }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+      relativePath: {
+        eq: "open-graph/twitter/Coachella Valley Nephrology?La Quinta.jpg"
+      }
     ) {
       publicURL
     }

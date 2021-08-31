@@ -83,7 +83,7 @@ module.exports = {
         sm: ["0.875rem", "1.375rem"],
         base: ["1rem", "1.625rem"],
         lg: ["1.125rem", "1.875rem"],
-        xl: ["1.25rem", "1.513rem"],
+        xl: ["1.25rem", "1.875rem"],
         "2xl": ["1.375rem", "1.813rem"],
         "3xl": ["1.5rem", "2.125rem"],
         "4xl": ["1.875rem", "2.353rem"],

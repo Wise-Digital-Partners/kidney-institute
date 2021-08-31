@@ -289,17 +289,34 @@ const Page = ({ data }) => {
                     the body. As a result, a person experiencing kidney failure
                     may have high blood pressure, headaches that don't seem to
                     go away, swelling in certain areas of their body, and feel
-                    extremely tired.
+                    extremely tired. Kidneys perform vital functions. These
+                    functions include:
                   </p>
+
+                  <ul className="list-disc pl-6 mb-6">
+                    <li>Removal of waste products and drugs from the body</li>
+                    <li>
+                      Regulating the body’s salt, potassium, and acid content
+                    </li>
+                    <li>Releasing hormones that regulate blood pressure</li>
+                    <li>
+                      Producing hormones that promote strong, healthy bones
+                    </li>
+                    <li>Controlling the production of red blood cells</li>
+                  </ul>
                 </div>
 
                 <div id="anchor-3" className="mb-14 lg:mb-12">
                   <h2>When Should You See a Nephrologist?</h2>
                   <p>
-                    When may your primary care provider refer you to a
-                    nephrologist? If you have symptoms that indicate a possible
-                    problem with your kidneys, or for any of the following
-                    reasons:
+                    Most people don't go to a nephrologist without a referral
+                    from their primary care doctor. Typically, seeing a
+                    nephrologist means that you have kidney-related symptoms
+                    from an unknown cause or that you have health issues only a
+                    renal specialist knows how to treat. When may your primary
+                    care provider refer you to a nephrologist? If you have
+                    symptoms that indicate a possible problem with your kidneys,
+                    or for any of the following reasons:
                   </p>
                   <ul className="list-disc pl-6 mb-6">
                     <li>
@@ -324,15 +341,12 @@ const Page = ({ data }) => {
                     treat you for conditions such as:
                   </p>
                   <ul className="list-disc pl-6 mb-6">
-                    <li>Kidney Infections</li>
                     <li>Blood or Protein In Your Urine</li>
-                    <li>Abnormal Growths</li>
-                    <li>Kidney Swelling</li>
-                    <li>Kidney Stones</li>
-                    <li>Kidney Cancer</li>
+                    <li>Recurrent Kidney Stones</li>
                     <li>Chronic Kidney Disease</li>
-                    <li>End-Stage Kidney Disease</li>
                     <li>Kidney Failure</li>
+                    <li>Electrolyte and Mineral Imbalances</li>
+                    <li>Kidney Transplant Follow-Up Care</li>
                   </ul>
                 </div>
 
@@ -439,12 +453,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+      relativePath: { eq: "open-graph/facebook/Nephrology.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+      relativePath: { eq: "open-graph/twitter/Nephrology.jpg" }
     ) {
       publicURL
     }

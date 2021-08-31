@@ -28,9 +28,9 @@ const Page = ({ data }) => {
               <p className="mb-0">
                 Here's everything you need to start being a “kidney warrior”
                 when it comes to your kidney care. Get access to the forms
-                you’ll need if you’re a new Kidney Institute patient, view a
-                list of health insurance plans we accept, find a clinic, and tap
-                into educational resources.
+                you’ll need if you’re a new Kidney Institute or Coachella Valley
+                Nephrology patient, view a list of health insurance plans we
+                accept, find a clinic, and tap into educational resources.
               </p>
             </div>
             <div className="order-1 md:order-2">
@@ -46,7 +46,7 @@ const Page = ({ data }) => {
 
       <section className="mb-8 md:mb-32">
         <div className="container">
-          <div className="bg-[#A68098] bg-opacity-20 px-6 py-20 rounded-xl md:rounded-3xl">
+          <div className="bg-[#A68098] bg-opacity-20 px-6 md:px-10 lg:px-20 py-20 rounded-xl md:rounded-3xl">
             <header className="max-w-2xl mx-auto text-center">
               <div className="text-primary-900 font-bold tracking-wide uppercase mb-2">
                 Step 01
@@ -58,28 +58,73 @@ const Page = ({ data }) => {
                 procedures ahead of time. That way, we can begin your care as
                 soon as you arrive.
               </p>
-              <div class="flex items-center justify-center flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-10">
-                <a
-                  href={englishForm}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-white shadow-3xl text-secondary-900 font-semibold px-5 py-3 rounded-4xl flex items-center justify-center space-x-4 text-center"
-                >
-                  <span>Download English Form</span>
-                  <img src={data.downloadIcon.publicURL} alt="Download icon" />
-                </a>
-
-                <a
-                  href={spanishForm}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-white shadow-3xl text-secondary-900 font-semibold px-5 py-3 rounded-4xl flex items-center justify-center space-x-4 text-center"
-                >
-                  <span>Download Spanish Form</span>
-                  <img src={data.downloadIcon.publicURL} alt="Download icon" />
-                </a>
-              </div>
             </header>
+
+            <div class="grid md:grid-cols-2 gap-x-10 gap-y-8">
+              <div className="bg-white shadow-3xl px-6 lg:px-8 py-7 rounded-xl">
+                <p className="font-heading text-secondary-900 text-xl font-semibold">
+                  Kidney Institiute Dialysis Forms
+                </p>
+
+                <div className="flex space-x-1.5 mb-3">
+                  <img src={data.downloadIcon.publicURL} alt="Download icon" />
+                  <a
+                    href={englishForm}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-primary-900 underline font-bold"
+                  >
+                    <span>Download Intake Form</span>
+                  </a>
+                  <span>English</span>
+                </div>
+
+                <div className="inline-flex space-x-1.5">
+                  <img src={data.downloadIcon.publicURL} alt="Download icon" />
+                  <a
+                    href={spanishForm}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-primary-900 underline font-bold"
+                  >
+                    <span>Download Intake Form</span>
+                  </a>
+                  <span>Spanish</span>
+                </div>
+              </div>
+
+              <div className="bg-white shadow-3xl px-6 lg:px-8 py-7 rounded-xl">
+                <p className="font-heading text-secondary-900 text-xl font-semibold">
+                  CV Nephrology ESRD New Patient Packet
+                </p>
+
+                <div className="flex space-x-1.5 mb-3">
+                  <img src={data.downloadIcon.publicURL} alt="Download icon" />
+                  <a
+                    href="https://thekidneyhub.org/new-esrd-patient-education/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-primary-900 underline font-bold"
+                  >
+                    <span>Download Intake Form</span>
+                  </a>
+                  <span>English</span>
+                </div>
+
+                <div className="inline-flex space-x-1.5">
+                  <img src={data.downloadIcon.publicURL} alt="Download icon" />
+                  <a
+                    href="https://thekidneyhub.org/new-esrd-patient-education-spanish/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-primary-900 underline font-bold"
+                  >
+                    <span>Download Intake Form</span>
+                  </a>
+                  <span>Spanish</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -104,10 +149,11 @@ const Page = ({ data }) => {
                 Check Insurance Coverage
               </h2>
               <p className="md:text-xl">
-                At the Kidney Institutes, we have a comprehensive list of health
-                insurance plans we accept. They include:
+                At the Kidney Institutes and Coachella Valley Nephrology, we
+                have a comprehensive list of health insurance plans we accept.
+                They include:
               </p>
-              <div className="grid md:grid-cols-2 gap-x-4">
+              <div className="grid md:grid-cols-2 gap-x-4 mb-8">
                 <div>
                   <ul className="list-disc pl-6">
                     <li>Aetna</li>
@@ -135,6 +181,17 @@ const Page = ({ data }) => {
                   </ul>
                 </div>
               </div>
+              <p class="italic text-sm">
+                Don’t see your insurance plan?
+                <AniLink
+                  fade
+                  to="/locations/"
+                  className="text-primary-900 underline"
+                >
+                  Call us
+                </AniLink>
+                for the most up-to-date list of insurances we accept.
+              </p>
             </div>
           </div>
         </div>
@@ -205,12 +262,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+      relativePath: { eq: "open-graph/facebook/Global.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+      relativePath: { eq: "open-graph/twitter/Global.jpg" }
     ) {
       publicURL
     }

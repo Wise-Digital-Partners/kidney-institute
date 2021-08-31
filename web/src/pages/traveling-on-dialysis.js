@@ -87,12 +87,13 @@ const Page = ({ data }) => {
         <div className="container">
           <header className="mb-10 md:mb-14 text-center max-w-2xl mx-auto">
             <h2 className="font-body text-mobile-4xl md:text-4xl">
-              Just Visiting? Stop By One of Our Clinics
+              Just Visiting?
             </h2>
             <p>
-              If you plan on traveling to Palm Springs or the surrounding
-              Coachella Valley, we can arrange dialysis at one of our clinics
-              while you’re in town:
+              Please get in touch with us to see about accommodating you during
+              your stay. If you plan on traveling to Palm Springs or the
+              surrounding Coachella Valley, we can arrange dialysis at one of
+              our clinics while you’re in town:
             </p>
           </header>
 
@@ -182,12 +183,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+      relativePath: { eq: "open-graph/facebook/Travel.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+      relativePath: { eq: "open-graph/twitter/Travel.jpg" }
     ) {
       publicURL
     }

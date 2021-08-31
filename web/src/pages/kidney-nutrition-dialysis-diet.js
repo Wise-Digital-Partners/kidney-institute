@@ -181,9 +181,9 @@ const Page = ({ data }) => {
                   Fluids
                 </p>
                 <p className="mb-0">
-                  When you drink too many fluids, your kidneys can have trouble
-                  getting rid of the excess water. For most dialysis patients,
-                  32 ounces per day is the limit.
+                  Kidneys that are not functioning well may have trouble getting
+                  rid of the excess water. For most dialysis patients, 32 ounces
+                  per day is the limit.
                 </p>
               </div>
             </div>
@@ -333,12 +333,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+      relativePath: { eq: "open-graph/facebook/Nutrition.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+      relativePath: { eq: "open-graph/twitter/Nutrition.jpg" }
     ) {
       publicURL
     }
