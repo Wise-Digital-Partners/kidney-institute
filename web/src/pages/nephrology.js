@@ -185,10 +185,7 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-10 lg:gap-x-20 items-center">
             <div className="order-2 md:order-1">
-              <GatsbyImage
-                image={data.cvLogo.childImageSharp.gatsbyImageData}
-                className="mb-4 md:mb-6"
-              />
+              <img src={data.cvLogo.publicURL} className="mb-4 md:mb-6" />
               <h1>Your Nephrology Experts</h1>
               <p>
                 Coachella Valley Nephrology is committed to compassionate,
@@ -471,13 +468,9 @@ export const query = graphql`
       }
     }
     cvLogo: file(
-      relativePath: {
-        eq: "nephrology/1.1 Coachella-Valley-Nephrology-Gray.png"
-      }
+      relativePath: { eq: "nephrology/1.1 CV Nephrology Logo.svg" }
     ) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 160)
-      }
+      publicURL
     }
     indioNephrology: file(
       relativePath: {
