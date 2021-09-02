@@ -137,7 +137,7 @@ export default class Form extends Component {
             </div>
           </div>
 
-          <div className="mb-5">
+          {/* <div className="mb-5">
             <label
               className="font-body text-sm font-semibold text-secondary-900 block mb-1"
               htmlFor="what-can-we-help-you-with"
@@ -155,7 +155,7 @@ export default class Form extends Component {
               <option value="Option 3">Option 3</option>
               <option value="Other">Other</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="mb-5">
             <label
