@@ -217,7 +217,7 @@ export default class Form extends Component {
           action=""
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          // onSubmit={this.handleSubmit}
+          onSubmit={this.handleSubmit}
           className="hidden"
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
@@ -276,7 +276,7 @@ export default class Form extends Component {
           <input
             type="radio"
             name="looking-for"
-            value="Dialysis Clinic"
+            // value="Dialysis Clinic"
             // onChange={this.handleChange}
           />
           {/* <i className="far fa-check"></i>
@@ -289,7 +289,7 @@ export default class Form extends Component {
           <input
             type="radio"
             name="looking-for"
-            value="Nephrology Office"
+            // value="Nephrology Office"
             // onChange={this.handleChange}
           />
           {/* <i className="far fa-check"></i>
