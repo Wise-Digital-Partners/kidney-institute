@@ -167,8 +167,7 @@ export default class Form extends Component {
                     type="radio"
                     name="looking-for"
                     value="Dialysis Clinic"
-                    // onChange={this.handleChange}
-                    onChange={this.changeFormName}
+                    onChange={(this.changeFormName, this.handleChange)}
                     required={true}
                   />
                   <i className="far fa-check"></i>
@@ -182,8 +181,7 @@ export default class Form extends Component {
                     type="radio"
                     name="looking-for"
                     value="Nephrology Office"
-                    onChange={this.changeFormName}
-                    // onChange={this.handleChange}
+                    onChange={(this.changeFormName, this.handleChange)}
                   />
                   <i className="far fa-check"></i>
                   <span className="radio-custom text-sm md:text-base ">
