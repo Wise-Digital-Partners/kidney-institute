@@ -48,40 +48,16 @@ const ReviewCards = ({ gridLayout }) => {
 
   const reviews = [
     {
-      name: "User Name",
-      platform: data.google.childImageSharp.gatsbyImageData,
+      name: "Norma Valladares",
+      platform: data.facebook.childImageSharp.gatsbyImageData,
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis mentum facilisis fringilla.",
+        "The institute is very good in the care and attention they give. Blessings to the nurses and technicians.",
     },
     {
-      name: "User Name",
-      platform: data.google.childImageSharp.gatsbyImageData,
+      name: "Patrick Boatsman",
+      platform: data.facebook.childImageSharp.gatsbyImageData,
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel",
-    },
-    {
-      name: "User Name",
-      platform: data.google.childImageSharp.gatsbyImageData,
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa vitae tortor condimentum lacinia quis vel eros donec ac odio",
-    },
-    {
-      name: "User Name",
-      platform: data.google.childImageSharp.gatsbyImageData,
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra",
-    },
-    {
-      name: "User Name",
-      platform: data.google.childImageSharp.gatsbyImageData,
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel",
-    },
-    {
-      name: "User Name",
-      platform: data.google.childImageSharp.gatsbyImageData,
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis mentum facilisis fringilla.",
+        "I had a very good experience at the clinic in Rancho Mirage and also Indio. Good team effort!",
     },
   ];
 
