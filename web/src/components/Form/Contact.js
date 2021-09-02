@@ -36,9 +36,9 @@ export default class Form extends Component {
     this.state = { isValidated: false };
   }
 
-  changeFormName(event) {
+  changeFormName = (e) => {
     // The value of the subject field.
-    var value = event.target.value;
+    var value = e.target.value;
     // The name we want to apply to the form, based on the value.
     var name = "Contact-" + value;
     // The form element in the DOM.
@@ -51,7 +51,9 @@ export default class Form extends Component {
     );
     // Apply the new name to the [name="form-name"] field within the form.
     if (formName) formName.setAttribute("value", name);
-  }
+
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -167,7 +169,7 @@ export default class Form extends Component {
                     type="radio"
                     name="looking-for"
                     value="Dialysis Clinic"
-                    onChange={(this.changeFormName, this.handleChange)}
+                    onChange={this.changeFormName}
                     required={true}
                   />
                   <i className="far fa-check"></i>
@@ -181,7 +183,7 @@ export default class Form extends Component {
                     type="radio"
                     name="looking-for"
                     value="Nephrology Office"
-                    onChange={(this.changeFormName, this.handleChange)}
+                    onChange={this.changeFormName}
                   />
                   <i className="far fa-check"></i>
                   <span className="radio-custom text-sm md:text-base ">
