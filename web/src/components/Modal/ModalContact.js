@@ -193,7 +193,7 @@ const Modal = ({ modalTabIndex }) => {
           >
             <div className="group flex justify-between items-center pt-12 pb-4 md:py-4 px-5 border-b border-gray-200">
               <div className={`flex space-x-6 md:space-x-8 ${setPhoneNumbers}`}>
-                <a
+                {/* <a
                   href="tel:123-456-7890"
                   className="text-secondary-900 hover:text-primary-900 font-semibold text-xs md:text-sm no-underline flex items-center"
                 >
@@ -217,7 +217,7 @@ const Modal = ({ modalTabIndex }) => {
                     For Nephrology:
                     <br className="md:hidden" /> (123) 456-7890
                   </span>
-                </a>
+                </a> */}
               </div>
 
               <button
