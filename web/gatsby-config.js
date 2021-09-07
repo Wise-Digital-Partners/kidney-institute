@@ -30,6 +30,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
