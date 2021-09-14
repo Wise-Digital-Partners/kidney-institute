@@ -158,7 +158,7 @@ export const query = graphql`
     }
     doctor: file(relativePath: { eq: "home/hero-doctor.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
+        gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
       }
     }
     introVector: file(relativePath: { eq: "home/intro.svg" }) {
