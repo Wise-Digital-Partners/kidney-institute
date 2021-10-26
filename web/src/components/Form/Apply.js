@@ -162,7 +162,7 @@ export default class Form extends Component {
             />
           </div>
 
-          <ButtonSolid type="submit" text="Send Message" />
+          <ButtonSolid type="submit" text="Submit" />
         </form>
       </StyledForm>
     );
