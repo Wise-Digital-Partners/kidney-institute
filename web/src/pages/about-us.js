@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
@@ -12,10 +12,10 @@ import ButtonSolid from "../components/Button/ButtonSolid";
 import ButtonGhost from "../components/Button/ButtonGhost";
 
 const Page = ({ data }) => {
-  const [modalTabIndex, setModalTabIndex] = useState(0);
+  ////const [modalTabIndex, setModalTabIndex] = useState(0);
 
   return (
-    <Layout headerHasBorder={true} modalTabIndex={modalTabIndex}>
+    <Layout headerHasBorder={true}>
       <SearchEngineOptimization
         title="About Kidney Institute of the Desert | Nephrology"
         description="Our patients and their kidney care journey mean everything to us. Meet the team of expert nephrologists whose number one priority is your kidney health."
@@ -38,7 +38,6 @@ const Page = ({ data }) => {
               </p>
               <ButtonSolid
                 modal="modal-contact"
-                onClick={() => setModalTabIndex(1)}
                 icon="fas fa-map-marker-alt"
                 text="Find a Location"
               />

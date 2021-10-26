@@ -51,12 +51,12 @@ const Modal = ({ slideIndex, slides }) => {
           aria-hidden="false"
         >
           <div
-            className="overlay fixed flex items-center justify-center top-0 right-0 left-0 bottom-0 bg-black bg-opacity-75 outline-none"
+            className="overlay fixed flex justify-center top-0 right-0 left-0 bottom-0 bg-black bg-opacity-75 outline-none"
             tabIndex="-1"
             data-modal-close
           >
             <div
-              className="content-wrapper bg-white w-full h-screen overflow-auto pt-24 pb-40 md:py-20 px-4 md:px-6"
+              className="content-wrapper max-w-5xl overflow-auto bg-white w-full my-10 pt-24 pb-40 md:py-20 px-4 md:px-6"
               role="dialog"
               aria-modal="true"
             >

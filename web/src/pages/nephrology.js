@@ -23,7 +23,7 @@ const Page = ({ data }) => {
 
   const [slideIndex, setSlideIndex] = useState(0);
 
-  const [modalTabIndex, setModalTabIndex] = useState(0);
+  //const [modalTabIndex, setModalTabIndex] = useState(0);
 
   const content = {
     nephrologyOffices: [
@@ -173,7 +173,7 @@ const Page = ({ data }) => {
   };
 
   return (
-    <Layout headerHasBorder={true} modalTabIndex={modalTabIndex}>
+    <Layout headerHasBorder={true}>
       <SearchEngineOptimization
         title="Nephrology | Kidney Institute of the Desert"
         description="Kidney Institute's nephrologists are committed to compassionate, supportive kidney care. Our goal is to make you comfortable and ensure you're stress-free."
@@ -185,7 +185,11 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-10 lg:gap-x-20 items-center">
             <div className="order-2 md:order-1">
-              <img src={data.cvLogo.publicURL} className="mb-4 md:mb-6" />
+              <img
+                src={data.cvLogo.publicURL}
+                alt="Coachella Valley Nephrology logo"
+                className="mb-4 md:mb-6"
+              />
               <h1>Your Nephrology Experts</h1>
               <p>
                 Coachella Valley Nephrology is committed to compassionate,
@@ -199,7 +203,6 @@ const Page = ({ data }) => {
               </p>
               <ButtonSolid
                 modal="modal-contact"
-                onClick={() => setModalTabIndex(1)}
                 icon="fas fa-map-marker-alt"
                 text="Find a Location"
               />

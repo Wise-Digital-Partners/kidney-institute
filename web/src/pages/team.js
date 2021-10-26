@@ -196,7 +196,7 @@ const Page = ({ data }) => {
                     <GatsbyImage
                       image={content.image}
                       alt={content.heading}
-                      className="mx-auto w-full transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
+                      className="mx-auto rounded-xl transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
                     />
                   </div>
                   <p className="font-heading text-xl font-semibold text-secondary-900 mb-0">
@@ -215,12 +215,8 @@ const Page = ({ data }) => {
             {content.team.slice(3).map((content, i) => {
               return (
                 <div>
-                  <div className="rounded-xl overflow-hidden mb-3">
-                    <GatsbyImage
-                      image={content.image}
-                      alt={content.heading}
-                      className="mx-auto w-full"
-                    />
+                  <div className="mb-3">
+                    <GatsbyImage image={content.image} alt={content.heading} />
                   </div>
                   <p className="font-heading text-xl font-semibold text-secondary-900 mb-1.5">
                     {content.name}
@@ -311,38 +307,38 @@ export const query = graphql`
     }
     yvonneHamilton: file(relativePath: { eq: "dialysis/Yvonne Hamilton.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 738)
+        gatsbyImageData(layout: CONSTRAINED, width: 369)
       }
     }
     mariluFuentes: file(relativePath: { eq: "dialysis/Marilu Fuentes.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 738)
+        gatsbyImageData(layout: CONSTRAINED, width: 369)
       }
     }
     donnaDeLaO: file(relativePath: { eq: "dialysis/Donna De La O.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 738)
+        gatsbyImageData(layout: CONSTRAINED, width: 369)
       }
     }
     narenChandrashekar: file(
       relativePath: { eq: "nephrology/Dr. Naren Chandrashekar.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 738)
+        gatsbyImageData(layout: CONSTRAINED, width: 369)
       }
     }
     jamburChandrashekar: file(
       relativePath: { eq: "nephrology/Dr. Jambur Chandrashekar.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 738)
+        gatsbyImageData(layout: CONSTRAINED, width: 369)
       }
     }
     khurramMumtaz: file(
       relativePath: { eq: "nephrology/Dr. Khurram Mumtaz.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 738)
+        gatsbyImageData(layout: CONSTRAINED, width: 369)
       }
     }
   }

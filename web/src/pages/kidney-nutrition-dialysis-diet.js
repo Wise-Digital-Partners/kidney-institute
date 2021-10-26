@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import SearchEngineOptimization from "../components/SEO";
 import AreasWeServe from "../components/Repeating/AreasWeServe";
 import CallToAction from "../components/Repeating/CTA";
-import ButtonSolid from "../components/Button/ButtonSolid";
 
 const Page = ({ data }) => {
   return (
@@ -47,16 +46,12 @@ const Page = ({ data }) => {
           <div className="bg-[#A68098] bg-opacity-20 px-6 py-20 rounded-xl md:rounded-3xl">
             <header className="max-w-3xl mx-auto text-center">
               <h2>Dietary Tips From Our Nutritionists</h2>
-              <p>
+              <p className="mb-0">
                 If you’re having kidney trouble or are on dialysis, a nutrition
                 plan will be key to your healthcare. At Kidney Institutes, our
                 nutritionists will help you develop a plan tailored specifically
-                for your needs. Here are some basics that you’ll need to know:
+                for your needs.
               </p>
-              <ButtonSolid
-                modal="modal-contact"
-                text="Talk to a Nutritionist"
-              />
             </header>
           </div>
         </div>

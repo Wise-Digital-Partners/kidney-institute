@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
@@ -15,10 +15,10 @@ import ButtonSolid from "../components/Button/ButtonSolid";
 import ButtonGhost from "../components/Button/ButtonGhost";
 
 const Page = ({ data }) => {
-  const [modalTabIndex, setModalTabIndex] = useState(0);
+  //const [modalTabIndex, setModalTabIndex] = useState(0);
 
   return (
-    <Layout headerHasBorder={true} modalTabIndex={modalTabIndex}>
+    <Layout headerHasBorder={true}>
       <SearchEngineOptimization
         title="Bermuda Dunes Dialysis Clinic & Nephrologists"
         description="Get top experts by your side. Our Bermuda Dunes dialysis clinic and nephrologists are specialists in the diagnosis and treatment of kidney disease."
@@ -43,7 +43,6 @@ const Page = ({ data }) => {
 
           <ButtonSolid
             modal="modal-contact"
-            onClick={() => setModalTabIndex(1)}
             icon="fas fa-map-marker-alt"
             text="Find a Location"
           />

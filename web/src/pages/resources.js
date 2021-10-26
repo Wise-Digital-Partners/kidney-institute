@@ -9,6 +9,8 @@ import AreasWeServe from "../components/Repeating/AreasWeServe";
 import CallToAction from "../components/Repeating/CTA";
 import englishForm from "../downloads/english-forms.pdf";
 import spanishForm from "../downloads/spanish-forms.pdf";
+import cvnEnglishForm from "../downloads/2021 CVN English.pdf";
+import cvnSpanishForm from "../downloads/CVN Spanish.pdf";
 
 const Page = ({ data }) => {
   return (
@@ -79,7 +81,7 @@ const Page = ({ data }) => {
                   <span>English</span>
                 </div>
 
-                <div className="inline-flex space-x-1.5">
+                <div className="inline-flex space-x-1.5 mb-3">
                   <img src={data.downloadIcon.publicURL} alt="Download icon" />
                   <a
                     href={spanishForm}
@@ -91,17 +93,43 @@ const Page = ({ data }) => {
                   </a>
                   <span>Spanish</span>
                 </div>
+
+                <div className="inline-flex space-x-1.5 mb-3">
+                  <img src={data.linkIcon.publicURL} alt="External link icon" />
+                  <a
+                    href="https://thekidneyhub.org/new-esrd-patient-education/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-primary-900 underline font-bold"
+                  >
+                    <span>Patient Resources</span>
+                  </a>
+                  <span>English</span>
+                </div>
+
+                <div className="inline-flex space-x-1.5">
+                  <img src={data.linkIcon.publicURL} alt="External link icon" />
+                  <a
+                    href="https://thekidneyhub.org/new-esrd-patient-education-spanish/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-primary-900 underline font-bold"
+                  >
+                    <span>Patient Resources</span>
+                  </a>
+                  <span>Spanish</span>
+                </div>
               </div>
 
               <div className="bg-white shadow-3xl px-6 lg:px-8 py-7 rounded-xl">
                 <p className="font-heading text-secondary-900 text-xl font-semibold">
-                  CV Nephrology ESRD New Patient Packet
+                  CV Nephrology New Patient Packet
                 </p>
 
-                <div className="flex space-x-1.5 mb-3">
+                <div className="inline-flex space-x-1.5 mb-3">
                   <img src={data.downloadIcon.publicURL} alt="Download icon" />
                   <a
-                    href="https://thekidneyhub.org/new-esrd-patient-education/"
+                    href={cvnEnglishForm}
                     target="_blank"
                     rel="noreferrer"
                     className="text-primary-900 underline font-bold"
@@ -114,7 +142,7 @@ const Page = ({ data }) => {
                 <div className="inline-flex space-x-1.5">
                   <img src={data.downloadIcon.publicURL} alt="Download icon" />
                   <a
-                    href="https://thekidneyhub.org/new-esrd-patient-education-spanish/"
+                    href={cvnSpanishForm}
                     target="_blank"
                     rel="noreferrer"
                     className="text-primary-900 underline font-bold"
@@ -287,6 +315,11 @@ export const query = graphql`
     }
     downloadIcon: file(
       relativePath: { eq: "Resources/Patient Forms/2.0-download-icon.svg" }
+    ) {
+      publicURL
+    }
+    linkIcon: file(
+      relativePath: { eq: "Resources/Patient Forms/external-link.svg" }
     ) {
       publicURL
     }
