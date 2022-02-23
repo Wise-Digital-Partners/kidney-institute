@@ -40,6 +40,10 @@ export default class Form extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  handleAttachment = (e) => {
+    this.setState({ [e.target.name]: e.target.files[0] });
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
