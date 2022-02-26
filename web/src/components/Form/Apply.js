@@ -5,9 +5,13 @@ import tw from "twin.macro";
 import ButtonSolid from "../Button/ButtonSolid";
 
 function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
+   const formData = new FormData();
+
+   for (const key of Object.keys(data)) {
+      formData.append(key, data[key]);
+   }
+
+   return formData;
 }
 
 const StyledForm = styled.div`
@@ -33,16 +37,16 @@ const StyledForm = styled.div`
 export default class Form extends Component {
   constructor(props) {
     super(props);
-    this.state = { isValidated: false };
+    this.state = {};
   }
 
-  handleChange = (e) => {
+ handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-  };
+ };
 
-  handleAttachment = (e) => {
+ handleAttachment = (e) => {
     this.setState({ [e.target.name]: e.target.files[0] });
-  };
+ };
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -50,10 +54,10 @@ export default class Form extends Component {
     fetch("/", {
       method: "POST",
 // headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
+    body: encode({
         "form-name": form.getAttribute("name"),
         ...this.state,
-      }),
+     }),
     })
       .then(
         () =>
