@@ -258,8 +258,8 @@ const Modal = () => {
                   // onSelect={(index) => setTabIndex(index)}
                   >
                     <TabList>
+                      <Tab>Dialysis Clinic</Tab>                    
                       <Tab>Nephrology Office</Tab>
-                      <Tab>Dialysis Clinic</Tab>
                     </TabList>
 
                     <TabPanel>
