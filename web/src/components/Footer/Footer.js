@@ -29,69 +29,69 @@ const Footer = ({ modalTabIndex }) => {
     about: [
       {
         name: "Dialysis",
-        href: "",
+        href: "/dialysis-services",
       },
       {
         name: "Nephrology",
-        href: "",
+        href: "/nephrology",
       },
       {
         name: "About Us",
-        href: "",
+        href: "/about-us",
       },
       {
         name: "Testimonials",
-        href: "",
+        href: "/testimonials",
       },
       {
         name: "Meet the Team",
-        href: "",
+        href: "/team",
       },
       {
         name: "Careers",
-        href: "",
+        href: "/careers",
       },
     ],
     dialysisLocations: [
       {
         name: "Kidney Institute of the Desert - Indio",
-        href: "",
+        href: "/indio-kidney-institute",
       },
       {
         name: "Coachella Kidney Institute",
-        href: "",
+        href: "/coachella-kidney-institute",
       },
       {
         name: "Kidney Institute at Eisenhower Medical Center",
-        href: "",
+        href: "/rancho-mirage-kidney-institute",
       },
       {
         name: "La Quinta Kidney Center",
-        href: "",
+        href: "/la-quinta-kidney-center",
       },
     ],
     nephrologyLocations: [
       {
         name: "Coachella Valley Nephrology - Indio",
-        href: "",
+        href: "/indio-coachella-valley-nephrology",
       },
       {
         name: "Coachella Valley Nephrology - La Quinta",
-        href: "",
+        href: "/rancho-mirage-coachella-valley-nephrology",
       },
     ],
     resources: [
       {
         name: "Forms",
-        href: "",
+        href: "/resources",
       },
       {
         name: "Nutrition",
-        href: "",
+        href: "/kidney-nutrition-dialysis-diet",
       },
       {
         name: "Travel",
-        href: "",
+        href: "/traveling-on-dialysis",
       },
     ],
     cities: [
