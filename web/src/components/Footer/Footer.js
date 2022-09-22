@@ -184,7 +184,7 @@ const Footer = ({ modalTabIndex }) => {
                 <a
                   key={item.name}
                   href={item.href}
-                  target="_blank"
+                  target="_self"
                   rel="noreferrer"
                   className="text-white hover:text-secondary-900 bg-white/20 hover:bg-white rounded-full w-7 h-7 flex items-center justify-center no-underline"
                 >
@@ -222,7 +222,7 @@ const Footer = ({ modalTabIndex }) => {
                       <li key={item.name}>
                         <a
                           href={item.href}
-                          target="_blank"
+                          target="_self"
                           rel="noopener noreferrer"
                           className="text-sm text-white hover:text-primary-900 no-underline"
                         >
@@ -336,7 +336,7 @@ const Footer = ({ modalTabIndex }) => {
                   <a
                     className="no-underline hover:text-primary-900"
                     href="https://www.wisedigitalpartners.com/affordable-web-design/"
-                    target="_blank"
+                    target="_self"
                     rel="noopener noreferrer"
                   >
                     Powered by NEST
@@ -350,7 +350,7 @@ const Footer = ({ modalTabIndex }) => {
                 <a
                   key={item.name}
                   href={item.href}
-                  target="_blank"
+                  target="_self"
                   rel="noreferrer"
                   className="text-white hover:text-secondary-900 bg-white/20 hover:bg-white rounded-full w-7 h-7 flex items-center justify-center no-underline"
                 >
