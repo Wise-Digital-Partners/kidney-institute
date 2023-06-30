@@ -199,7 +199,7 @@ const Page = ({ data }) => {
                 health, the treatment of kidney diseases, blood pressure
                 management, and electrolyte disorders. Also, we serve as the
                 medical directors and take care of patients at the Kidney
-                Institutes. .
+                Institutes.
               </p>
               <ButtonSolid
                 modal="modal-contact"
