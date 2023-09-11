@@ -1,5 +1,5 @@
 [build]
-  base = "web/project/"
+  base = "web/"
   publish = "public"
 
 [[plugins]]
