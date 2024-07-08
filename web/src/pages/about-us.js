@@ -30,11 +30,23 @@ const Page = ({ data }) => {
               <h1>Who We Are</h1>
               <p>
                 The Kidney Institute of the Desert first opened in Indio in 1987
-                to provide the community with quality dialysis care. Since then,
-                our team of dedicated nephrologists and dialysis nurses has
-                expanded. We now serve four locations throughout the greater
-                Coachella Valley in Indio, Rancho Mirage, Coachella, and La
-                Quinta.
+                to provide the community with quality{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/dialysis-services"
+                  className="font-bold text-[#162d6d]"
+                >
+                  dialysis
+                </a>{" "}
+                care. Since then, our team of dedicated{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/nephrology"
+                  className="font-bold text-[#162d6d]"
+                >
+                  nephrologists
+                </a>{" "}
+                and dialysis nurses has expanded. We now serve four locations
+                throughout the greater Coachella Valley in Indio, Rancho Mirage,
+                Coachella, and La Quinta.
               </p>
               <ButtonSolid
                 modal="modal-contact"

@@ -73,7 +73,13 @@ const Page = ({ data }) => {
               <p>
                 Whether you do your dialysis at a center or in your home, we can
                 help you find clinics at your travel destination. Even if you’re
-                a home dialysis patient, it’s important to know where clinics
+                a home dialysis patient, it’s important to know where{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/traveling-on-dialysis"
+                  className="font-bold text-[#162d6d]"
+                >
+                  clinics
+                </a>
                 are located on the off chance you forget something or need help
                 monitoring your results.
               </p>

@@ -97,8 +97,21 @@ const Page = ({ data }) => {
                 At Coachella Valley Nephrology in Indio, our physicians have
                 spent years building their expertise and knowledge in kidney
                 care both here and around the world. Our nephrologists are
-                specialists in both the diagnosis and treatment of kidney
-                disease.
+                specialists in both the{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/dialysis-services"
+                  className="font-bold text-[#162d6d]"
+                >
+                  diagnosis
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/nephrology"
+                  className="font-bold text-[#162d6d]"
+                >
+                  treatment of kidney disease
+                </a>
+                .
               </p>
               <ButtonGhost href="/nephrology" text="Learn More" />
             </div>

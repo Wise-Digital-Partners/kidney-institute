@@ -311,7 +311,8 @@ const Page = ({ data }) => {
                   <p>
                     Most people don't go to a nephrologist without a referral
                     from their primary care doctor. Typically, seeing a
-                    nephrologist means that you have kidney-related symptoms
+                    <a href="https://www.kidneyinstitutes.com/nephrology" 
+                    className="font-bold text-[#162d6d]">nephrologist</a> means that you have kidney-related symptoms
                     from an unknown cause or that you have health issues only a
                     renal specialist knows how to treat. When may your primary
                     care provider refer you to a nephrologist? If you have

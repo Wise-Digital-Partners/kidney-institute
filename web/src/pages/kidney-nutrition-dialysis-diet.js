@@ -47,10 +47,16 @@ const Page = ({ data }) => {
             <header className="max-w-3xl mx-auto text-center">
               <h2>Dietary Tips From Our Nutritionists</h2>
               <p className="mb-0">
-                If you’re having kidney trouble or are on dialysis, a nutrition
-                plan will be key to your healthcare. At Kidney Institutes, our
-                nutritionists will help you develop a plan tailored specifically
-                for your needs.
+                If you’re having kidney trouble or are on{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/kidney-nutrition-dialysis-diet"
+                  className="font-bold text-[#162d6d]"
+                >
+                  dialysis
+                </a>
+                , a nutrition plan will be key to your healthcare. At Kidney
+                Institutes, our nutritionists will help you develop a plan
+                tailored specifically for your needs.
               </p>
             </header>
           </div>

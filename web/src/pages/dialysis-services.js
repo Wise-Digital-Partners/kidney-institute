@@ -221,7 +221,7 @@ const Page = ({ data }) => {
                       session lasts three to four hours.
                     </p>
                     <p>
-                      Our team of nephrologists can also help find a facility at
+                      Our team of <a href="https://www.kidneyinstitutes.com/nephrology" className="font-bold text-[#162d6d]">nephrologists</a> can also help find a facility at
                       travel destinations for those planning on leaving town.
                     </p>
                   </div>
