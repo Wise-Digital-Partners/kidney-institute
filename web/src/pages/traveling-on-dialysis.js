@@ -79,7 +79,7 @@ const Page = ({ data }) => {
                   className="font-bold text-[#162d6d]"
                 >
                   clinics
-                </a>
+                </a>{" "}
                 are located on the off chance you forget something or need help
                 monitoring your results.
               </p>
