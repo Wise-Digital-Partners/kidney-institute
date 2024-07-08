@@ -335,7 +335,7 @@ const Footer = ({ modalTabIndex }) => {
                 <li className="text-sm text-gray-50 w-full md:w-auto">
                   <a
                     className="no-underline hover:text-primary-900"
-                    href="https://www.wisedigitalpartners.com/affordable-web-design/"
+                    href="https://www.wisedigitalpartners.com/technology/nest"
                     target="_self"
                     rel="noopener noreferrer"
                   >
