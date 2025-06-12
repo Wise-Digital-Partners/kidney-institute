@@ -56,8 +56,9 @@ const Page = ({ data }) => {
 
             <p>
               Dr. Chandrashekar has been a member of the Medical Executive
-              Committee at Eisenhower Health since 2010. Beginning in January
-              2022, he will be serving as the president of the medical staff.
+              Committee at Eisenhower Health from 2010 through 2025. He has
+              served in various offices include the President of the Medical
+              Staff from 2022 through 2023.
             </p>
 
             <p>
