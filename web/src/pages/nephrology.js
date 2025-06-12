@@ -137,38 +137,38 @@ const Page = ({ data }) => {
           </>
         ),
       },
-      {
-        image: data.khurramMumtaz.childImageSharp.gatsbyImageData,
-        name: "Dr. Khurram Mumtaz",
-        bio: (
-          <>
-            <p>
-              Dr. Mumtaz joined Coachella Valley Nephrology in July 2018. He
-              started his clinical nephrology career as a consultant
-              nephrologist in upstate New York and was a medical director for
-              hemodialysis and peritoneal dialysis programs. Later, he practiced
-              internal medicine and nephrology in Virginia, North Carolina,
-              Idaho, Washington state, and Sioux Falls, South Dakota.
-            </p>
+      // {
+      //   image: data.khurramMumtaz.childImageSharp.gatsbyImageData,
+      //   name: "Dr. Khurram Mumtaz",
+      //   bio: (
+      //     <>
+      //       <p>
+      //         Dr. Mumtaz joined Coachella Valley Nephrology in July 2018. He
+      //         started his clinical nephrology career as a consultant
+      //         nephrologist in upstate New York and was a medical director for
+      //         hemodialysis and peritoneal dialysis programs. Later, he practiced
+      //         internal medicine and nephrology in Virginia, North Carolina,
+      //         Idaho, Washington state, and Sioux Falls, South Dakota.
+      //       </p>
 
-            <p>
-              Dr. Mumtaz grew up in Africa and the Middle East and attended
-              Rawalpindi Medical College - the University of Punjab in Pakistan.
-              He received internal medicine residency training at Mercy Catholic
-              Medical Center – Drexel University College of Medicine in
-              Philadelphia, Pennsylvania. He also served as a chief medical
-              resident, followed by nephrology fellowship training at Albert
-              Einstein Medical Center Philadelphia, Pennsylvania.
-            </p>
+      //       <p>
+      //         Dr. Mumtaz grew up in Africa and the Middle East and attended
+      //         Rawalpindi Medical College - the University of Punjab in Pakistan.
+      //         He received internal medicine residency training at Mercy Catholic
+      //         Medical Center – Drexel University College of Medicine in
+      //         Philadelphia, Pennsylvania. He also served as a chief medical
+      //         resident, followed by nephrology fellowship training at Albert
+      //         Einstein Medical Center Philadelphia, Pennsylvania.
+      //       </p>
 
-            <p>
-              Dr. Mumtaz's practice includes all aspects of clinical nephrology
-              - acute kidney failure, chronic kidney disease, hypertension,
-              glomerular diseases, and kidney transplants.
-            </p>
-          </>
-        ),
-      },
+      //       <p>
+      //         Dr. Mumtaz's practice includes all aspects of clinical nephrology
+      //         - acute kidney failure, chronic kidney disease, hypertension,
+      //         glomerular diseases, and kidney transplants.
+      //       </p>
+      //     </>
+      //   ),
+      // },
     ],
   };
 

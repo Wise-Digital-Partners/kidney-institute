@@ -58,11 +58,11 @@ const Page = ({ data }) => {
         name: "Marilu Fuentes",
         location: "Kidney Institute of the Desert Indio",
       },
-      {
-        image: data.donnaDeLaO.childImageSharp.gatsbyImageData,
-        name: "Donna De La O",
-        location: "Kidney Institute at EMC & Coachella Kidney Institute",
-      },
+      // {
+      //   image: data.donnaDeLaO.childImageSharp.gatsbyImageData,
+      //   name: "Donna De La O",
+      //   location: "Kidney Institute at EMC & Coachella Kidney Institute",
+      // },
     ],
   };
 
@@ -221,8 +221,15 @@ const Page = ({ data }) => {
                       session lasts three to four hours.
                     </p>
                     <p>
-                      Our team of <a href="https://www.kidneyinstitutes.com/nephrology" className="font-bold text-[#162d6d]">nephrologists</a> can also help find a facility at
-                      travel destinations for those planning on leaving town.
+                      Our team of{" "}
+                      <a
+                        href="https://www.kidneyinstitutes.com/nephrology"
+                        className="font-bold text-[#162d6d]"
+                      >
+                        nephrologists
+                      </a>{" "}
+                      can also help find a facility at travel destinations for
+                      those planning on leaving town.
                     </p>
                   </div>
                   <div className="mb-8 md:mb-12">

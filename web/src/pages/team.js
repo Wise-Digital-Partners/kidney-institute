@@ -147,7 +147,7 @@ const Page = ({ data }) => {
           </header>
 
           <div className="grid md:grid-cols-3 gap-y-10 md:gap-x-5 lg:gap-x-10 mb-20 md:mb-24">
-            {content.team.slice(0, 3).map((content, i) => {
+            {content.team.slice(0, 2).map((content, i) => {
               return (
                 <button
                   aria-label="Modal trigger"
@@ -176,9 +176,9 @@ const Page = ({ data }) => {
           </header>
 
           <div className="grid md:grid-cols-3 gap-y-10 md:gap-x-5 lg:gap-x-10">
-            {content.team.slice(3).map((content, i) => {
+            {content.team.slice(2).map((content, i) => {
               return (
-                <div>
+                <div key={i}>
                   <div className="mb-3">
                     <GatsbyImage image={content.image} alt={content.heading} />
                   </div>
