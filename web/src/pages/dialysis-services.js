@@ -366,7 +366,7 @@ const Page = ({ data }) => {
           <div className="grid md:grid-cols-3 gap-y-10 md:gap-x-5 lg:gap-x-10">
             {content.team.map((content, i) => {
               return (
-                <div>
+                <div key={i}>
                   <div className="rounded-xl overflow-hidden mb-3">
                     <GatsbyImage
                       image={content.image}
