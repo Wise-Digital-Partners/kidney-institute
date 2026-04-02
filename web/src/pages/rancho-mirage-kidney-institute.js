@@ -9,13 +9,14 @@ import ValueProps from "../components/Repeating/ValueProps";
 import Resources from "../components/Repeating/Resources";
 import CallToAction from "../components/Repeating/CTA";
 import ButtonGhost from "../components/Button/ButtonGhost";
+import KidneyValueProps from "../components/Repeating/KidneyValueProps";
 
 const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
-        title="Kidney Institute at Eisenhower Medical Center"
-        description="At the Kidney Institute at Eisenhower Medical Center, we're a team of friendly kidney doctors and dialysis clinic nurses with years of experience."
+        title="Kidney Institute at Eisenhower Medical Center — Rancho Mirage"
+        description="Searching for a kidney doctor or dialysis center in Rancho Mirage? Our team at Eisenhower Medical Center is here for you. Call us today!"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
@@ -31,11 +32,13 @@ const Page = ({ data }) => {
                 Kidney Institute at Eisenhower Medical Center - Rancho Mirage
               </h1>
               <p>
-                At the Kidney Institute, we’re a team of friendly kidney doctors
-                and dialysis clinic nurses with years of experience caring for
-                patients. Our goal is to help educate our patients about their
-                kidney care and support them with treatments that are as
-                comfortable and stress-free as possible.
+                A kidney diagnosis changes everything about how you plan your
+                week, how you think about travel, and how you feel walking into
+                a clinic three times a week. We know that. The team at the
+                Kidney Institute at Eisenhower Medical Center is here not just
+                to manage your treatment, but to make sure you feel supported,
+                informed, and cared for every time you walk through our doors in
+                Rancho Mirage.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
@@ -95,12 +98,21 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h2>Easy Access to Dialysis Services in Rancho Mirage</h2>
+              <h2>Dialysis</h2>
               <p>
-                Our number one priority is a patient’s health and comfort,
-                whether their treatment involves hemodialysis or peritoneal
-                dialysis. We provide expert, supportive dialysis services for
-                those who are living with kidney disease.
+                Most dialysis patients have to manage two separate care
+                relationships: their dialysis clinic and their hospital. At our
+                Rancho Mirage location, those two are already connected. Our
+                team coordinates directly with Eisenhower Medical Center
+                physicians, so your{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/dialysis-services"
+                  className="font-bold text-[#162d6d]"
+                >
+                  hemodialysis or peritoneal dialysis
+                </a>{" "}
+                plan reflects everything happening with your health, not just
+                what happens during your treatment sessions.
               </p>
               <ButtonGhost href="/dialysis-services" text="Learn More" />
             </div>
@@ -108,12 +120,11 @@ const Page = ({ data }) => {
 
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-14 items-center">
             <div className="order-2 md:order-1">
-              <h2>Top Nephrology Experts By Your Side</h2>
+              <h2>Nephrology</h2>
               <p>
-                At the Kidney Institute at Eisenhower Medical Center in Rancho
-                Mirage, our physicians have spent years building their expertise
-                and knowledge in kidney care both here and around the world. Our
-                nephrologists are specialists in both the{" "}
+                Our nephrologists in Rancho Mirage see patients across the full
+                range of early chronic kidney disease, late-stage disease, and
+                everything in between. They&apos;re trained in both the{" "}
                 <a
                   href="https://www.kidneyinstitutes.com/dialysis-services"
                   className="font-bold text-[#162d6d]"
@@ -127,7 +138,10 @@ const Page = ({ data }) => {
                 >
                   treatment of kidney disease
                 </a>
-                .
+                , and they take the time to walk you through your options, your
+                lab results, and what to expect next. Kidney care is harder to
+                manage when you don&apos;t understand what&apos;s happening, and
+                that&apos;s something our physicians take seriously.
               </p>
               <ButtonGhost href="/nephrology" text="Learn More" />
             </div>
@@ -142,7 +156,7 @@ const Page = ({ data }) => {
         </div>
       </section>
 
-      <ValueProps locationsText="You’ll find our kidney clinic in the Probst Building at Eisenhower Medical Center (located along Bob Hope Drive)." />
+      <KidneyValueProps locationsText="You’ll find our kidney clinic in the Probst Building at Eisenhower Medical Center (located along Bob Hope Drive)." />
       <Testimonials />
       <Resources />
       <CallToAction />
