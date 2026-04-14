@@ -29,7 +29,7 @@ const Page = ({ data }) => {
                 Dialysis Clinic
               </div>
               <h1>
-                Kidney Institute at Eisenhower Medical Center - Rancho Mirage
+                Kidney Institute at Eisenhower Medical Center — Rancho Mirage
               </h1>
               <p>
                 A kidney diagnosis changes everything about how you plan your
@@ -53,7 +53,7 @@ const Page = ({ data }) => {
                     rel="noreferrer"
                     className="hover:text-primary-900"
                   >
-                    39000 Bob Hope Dr, Ste 103 Rancho Mirage, CA 92270
+                    39000 Bob Hope Dr, Ste 103, Rancho Mirage, CA 92270
                   </a>
                 </li>
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
