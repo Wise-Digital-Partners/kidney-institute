@@ -156,7 +156,7 @@ const Page = ({ data }) => {
         </div>
       </section>
 
-      <KidneyValueProps locationsText="You’ll find our kidney clinic in the Probst Building at Eisenhower Medical Center (located along Bob Hope Drive)." />
+      <KidneyValueProps locationsText="We're in the Probst Building on Bob Hope Drive. For patients already receiving care at Eisenhower, getting to us doesn't mean a separate trip across town." />
       <Testimonials />
       <Resources />
       <CallToAction />
