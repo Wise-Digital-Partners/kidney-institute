@@ -22,6 +22,7 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="La Quinta Dialysis Clinic & Nephrologists"
         description="Looking for a top La Quinta dialysis clinic & nephrologists? At the Kidney Institutes, we specialize in the diagnosis and treatment of kidney disease."
+        canonical="https://www.kidneyinstitutes.com/la-quinta"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

@@ -22,6 +22,7 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Thousand Palms Dialysis Clinic & Nephrologists"
         description="Looking for a top Thousand Palms dialysis clinic & nephrologists? At the Kidney Institutes, we specialize in the diagnosis and treatment of kidney disease."
+        canonical="https://www.kidneyinstitutes.com/thousand-palms"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

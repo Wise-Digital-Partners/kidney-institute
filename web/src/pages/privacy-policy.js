@@ -1,10 +1,16 @@
 import React from "react";
 
 import Layout from "../components/Layout";
+import SearchEngineOptimization from "../components/SEO";
 
 const Page = () => {
   return (
     <Layout headerHasBorder={true}>
+      <SearchEngineOptimization
+        title="Privacy Policy | Kidney Institute of the Desert"
+        description="Read our privacy policy to understand how we protect your personal information."
+        canonical="https://www.kidneyinstitutes.com/privacy-policy/"
+      />
       <section className="pt-12 md:pt-16 pb-20 md:pb-32">
         <div className="container">
           <h1>Privacy Policy</h1>

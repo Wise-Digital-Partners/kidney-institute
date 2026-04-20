@@ -11,6 +11,7 @@ const SEO = ({
   title,
   openGraphImage,
   twitterOpenGraphImage,
+  canonical,
 }) => {
   const { site } = useStaticQuery(graphql`
     query DefaultSEOQuery {
@@ -32,6 +33,16 @@ const SEO = ({
       htmlAttributes={{
         lang,
       }}
+      link={
+        canonical
+          ? [
+              {
+                rel: "canonical",
+                href: canonical,
+              },
+            ]
+          : []
+      }
       meta={[
         {
           name: `description`,
@@ -103,6 +114,7 @@ SEO.propTypes = {
   title: PropTypes.string,
   twitterOpenGraphImage: PropTypes.string,
   openGraphImage: PropTypes.string,
+  canonical: PropTypes.string,
 };
 
 export default SEO;

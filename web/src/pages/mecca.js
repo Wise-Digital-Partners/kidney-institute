@@ -22,6 +22,7 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Mecca Dialysis Clinic & Nephrologists"
         description="Get top experts by your side. Our Mecca dialysis clinic and nephrologists are specialists in the diagnosis and treatment of kidney disease."
+        canonical="https://www.kidneyinstitutes.com/mecca"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

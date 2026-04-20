@@ -22,6 +22,7 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Thermal Dialysis Clinic & Nephrologists"
         description="Get top experts by your side. Our Thermal dialysis clinic and nephrologists are specialists in the diagnosis and treatment of kidney disease."
+        canonical="https://www.kidneyinstitutes.com/thermal"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

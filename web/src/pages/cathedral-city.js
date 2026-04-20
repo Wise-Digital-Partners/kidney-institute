@@ -22,6 +22,7 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Cathedral City Dialysis Clinic & Nephrologists"
         description="Looking for a top Cathedral City dialysis clinic & nephrologists? At the Kidney Institutes, we specialize in the diagnosis and treatment of kidney disease."
+        canonical="https://www.kidneyinstitutes.com/cathedral-city"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

@@ -71,6 +71,7 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Dialysis Services | Kidney Institute of the Desert"
         description="Our nurses, dietitians, social workers, and nephrologists work together to provide you with the best dialysis services at the Kidney Institutes."
+        canonical="https://www.kidneyinstitutes.com/dialysis-services"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

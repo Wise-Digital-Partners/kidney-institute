@@ -18,6 +18,7 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Resources | Nephrology | Kidney Institute of the Desert"
         description="Get everything you need to be a 'kidney warrior.' Find a clinic, download the forms you'll need, check on insurance, and tap into educational resources."
+        canonical="https://www.kidneyinstitutes.com/resources"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

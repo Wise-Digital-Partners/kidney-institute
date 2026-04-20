@@ -22,6 +22,7 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Palm Springs Dialysis Clinic & Nephrologists"
         description="Get top experts by your side. Our Palm Springs dialysis clinic and nephrologists are specialists in the diagnosis and treatment of kidney disease."
+        canonical="https://www.kidneyinstitutes.com/palm-springs/"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
