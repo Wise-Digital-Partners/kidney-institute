@@ -14,8 +14,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
-        title="Kidney Institute of the Desert - Indio | Dialysis Clinic"
-        description="At the Kidney Institute of the Desert in Indio, we're a team of friendly kidney doctors and dialysis clinic nurses with years of experience caring for patients."
+        title="Indio Dialysis Clinic | Kidney Institute of the Desert"
+        description="World-class nephrology and dialysis services in Indio, CA. Hemodialysis, peritoneal dialysis, and specialist kidney care close to the Coachella Valley."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
