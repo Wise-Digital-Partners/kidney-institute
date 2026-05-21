@@ -20,6 +20,7 @@ const Background = ({
   backgroundRepeat,
   padding,
   mobileRemoveBackground,
+  altText,
   className,
 }) => (
   <div>
@@ -28,6 +29,7 @@ const Background = ({
         className={`${padding || ""} ${className || ""}`}
         image={backgroundImages}
         mobileRemoveBackground={mobileRemoveBackground}
+        alt={altText}
         style={{
           backgroundSize: backgroundSize || "cover",
           backgroundPosition: backgroundPosition || "center",

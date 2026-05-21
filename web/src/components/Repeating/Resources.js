@@ -38,6 +38,7 @@ const ValueProps = ({ className }) => {
     {
       image: data.nutrition.childImageSharp.gatsbyImageData,
       heading: "Nutrition",
+      alt: "Kidney-friendly blueberries recommended as a healthy fruit choice for renal diet and kidney nutrition plans",
       text: "Our nutritionists can help you develop a kidney- friendly diet. Plans are tailored to each patient.",
       link: "/kidney-nutrition-dialysis-diet",
     },
@@ -59,7 +60,7 @@ const ValueProps = ({ className }) => {
                 <div className="rounded-xl overflow-hidden mb-6">
                   <GatsbyImage
                     image={content.image}
-                    alt={content.heading}
+                    alt={content.alt || content.heading}
                     className="transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
                   />
                 </div>

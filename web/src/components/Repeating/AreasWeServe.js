@@ -72,21 +72,25 @@ const AreasWeServe = ({ className, headingLevel, heading, subtext }) => {
         image: data.indio.childImageSharp.gatsbyImageData,
         heading: "Kidney Institute of the Desert Indio",
         link: "/indio-kidney-institute",
+        alt: "Kidney care clinic building in Indio offering nephrology and dialysis services",
       },
       {
         image: data.laQuinta.childImageSharp.gatsbyImageData,
         heading: "La Quinta Kidney Center",
         link: "/la-quinta-kidney-center",
+        alt: "Kidney care clinic and dialysis center at La Quinta Kidney Center in California",
       },
       {
         image: data.eisenhower.childImageSharp.gatsbyImageData,
         heading: "Kidney Institute at Eisenhower Medical Center",
         link: "/rancho-mirage-kidney-institute",
+        alt: "Kidney Institute at Eisenhower Medical Center in Rancho Mirage providing kidney care and dialysis services for Coachella Valley patients",
       },
       {
         image: data.coachella.childImageSharp.gatsbyImageData,
         heading: "Coachella Kidney Institute",
         link: "/coachella-kidney-institute",
+        alt: "Coachella Kidney Institute clinic providing nephrology care and patient-centered dialysis services",
       },
     ],
     nephrologyOffices: [
@@ -94,11 +98,13 @@ const AreasWeServe = ({ className, headingLevel, heading, subtext }) => {
         image: data.indioNephrology.childImageSharp.gatsbyImageData,
         heading: "Coachella Valley Nephrology Indio",
         link: "/indio-coachella-valley-nephrology",
+        alt: "",
       },
       {
         image: data.ranchoMirage.childImageSharp.gatsbyImageData,
         heading: "Coachella Valley Nephrology La Quinta",
         link: "/rancho-mirage-coachella-valley-nephrology",
+        alt: "Kidney care clinic and dialysis center at La Quinta Kidney Center in California",
       },
     ],
   };
@@ -155,7 +161,7 @@ const AreasWeServe = ({ className, headingLevel, heading, subtext }) => {
                       <div className="rounded-xl overflow-hidden mb-3">
                         <GatsbyImage
                           image={content.image}
-                          alt={content.heading}
+                          alt={content.alt || content.heading}
                           className="mx-auto w-full transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
                         />
                         <div className="bg-[#A68098] rounded border border-white text-center text-white text-xs font-semibold px-2 py-1 absolute top-4 right-4">

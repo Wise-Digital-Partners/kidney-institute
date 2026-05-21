@@ -108,6 +108,7 @@ const Testimonial = ({ className, headingLevel }) => {
         className={`${
           className || "rounded-4xl overflow-hidden mb-20 md:mb-32"
         }`}
+        altText="Compassionate kidney care consultation for chronic kidney disease and nephrology services"
       >
         <header className="md:mb-10 relative">
           <HeadingTag>What Our Patients Say</HeadingTag>

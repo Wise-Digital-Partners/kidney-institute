@@ -26,6 +26,7 @@ const MeetTheTeam = ({ className, headingLevel, heading, text }) => {
               image={data.team.childImageSharp.gatsbyImageData}
               width="560"
               className="rounded-xl md:rounded-4xl"
+              alt="Advanced kidney care and dialysis treatment facility at Kidney Institute of the Desert"
             />
           </div>
           <div>

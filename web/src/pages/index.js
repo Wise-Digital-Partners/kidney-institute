@@ -32,6 +32,7 @@ const Page = ({ data }) => {
         mobileRemoveBackground={true}
         padding="pt-4 md:pt-36 md:pb-56"
         className="mb-8 md:mb-14"
+        altText="Serene desert scenery with water, palm trees, and mountains reflecting patient-centered kidney care"
       >
         <div className="max-w-2xl">
           <p className="font-heading text-secondary-900 md:text-white text-mobile-7xl md:text-7xl font-extrabold mb-4 md:mb-6">
@@ -97,6 +98,7 @@ const Page = ({ data }) => {
                 image={data.dialysisServices.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Patient receiving supportive dialysis care from nephrology team at local kidney clinic"
               />
             </div>
           </div>
@@ -107,6 +109,7 @@ const Page = ({ data }) => {
                 image={data.nephrologyExperts.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Medical demonstration of kidney anatomy by nephrology expert at Kidney Institutes"
               />
             </div>
             <div>
