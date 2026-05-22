@@ -35,6 +35,7 @@ const Page = ({ data }) => {
                 image={data.hero.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Kidney-friendly blueberries recommended as a healthy fruit choice for renal diet and kidney nutrition plans"
               />
             </div>
           </div>
@@ -96,6 +97,7 @@ const Page = ({ data }) => {
                 image={data.vegetables.childImageSharp.gatsbyImageData}
                 width="270"
                 className="rounded-xl mb-6"
+                alt="Renal diet vegetable choice featuring fresh cauliflower for kidney care patients"
               />
               <p className="font-heading text-xl text-secondary-900 font-semibold mb-4">
                 Vegetables

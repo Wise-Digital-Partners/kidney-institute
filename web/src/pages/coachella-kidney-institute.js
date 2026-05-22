@@ -76,6 +76,7 @@ const Page = ({ data }) => {
                 image={data.hero.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Coachella Kidney Institute clinic providing nephrology care and patient-centered dialysis services"
               />
             </div>
           </div>

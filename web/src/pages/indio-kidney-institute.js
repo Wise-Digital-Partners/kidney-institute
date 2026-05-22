@@ -76,6 +76,7 @@ const Page = ({ data }) => {
                 image={data.hero.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Kidney care clinic building in Indio offering nephrology and dialysis services"
               />
             </div>
           </div>
