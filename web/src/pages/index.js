@@ -113,7 +113,7 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h2>Top Nephrology Experts by Your Side</h2>
+              <h2>Top Nephrology Experts By Your Side</h2>
               <p>
                 At Kidney Institute of the Desert, our physicians have spent
                 years building their expertise and knowledge in kidney care both

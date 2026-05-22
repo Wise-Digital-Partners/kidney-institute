@@ -80,7 +80,7 @@ const Page = ({ data }) => {
 
           <div className="grid md:grid-cols-2 gap-y-6 md:gap-x-10 lg:gap-x-20 items-center mb-20 md:mb-32">
             <div className="order-2 md:order-1">
-              <h2>Easy Access to Dialysis Services</h2>
+              <h2>Leading Kidney Care in Palm Springs</h2>
               <p>
                 Our number one priority is a patient’s health and comfort,
                 whether their treatment involves hemodialysis or peritoneal
