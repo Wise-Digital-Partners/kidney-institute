@@ -2,7 +2,13 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 // import { GatsbyImage } from "gatsby-plugin-image";
 
-const ValueProps = ({ className, headingLevel, heading, locationsText }) => {
+const ValueProps = ({
+  className,
+  headingLevel,
+  heading,
+  locationsText,
+  content: customContent,
+}) => {
   const data = useStaticQuery(graphql`
     {
       convenientLocations: file(
@@ -25,11 +31,11 @@ const ValueProps = ({ className, headingLevel, heading, locationsText }) => {
     }
   `);
 
-  const content = [
+  const defaultContent = [
     {
       icon: data.expertCare.publicURL,
       heading: "Expert Care",
-      text: "You’ll be treated by top nephrologists and kidney care specialists with expertise in their fields.",
+      text: "You'll be treated by top nephrologists and kidney care specialists with expertise in their fields.",
     },
     {
       icon: data.friendlySupportiveSpecialists.publicURL,
@@ -45,6 +51,14 @@ const ValueProps = ({ className, headingLevel, heading, locationsText }) => {
     },
   ];
 
+  const content = customContent || defaultContent;
+
+  // Merge custom content with default icons if icons are not provided
+  const contentWithIcons = content.map((item, index) => ({
+    ...defaultContent[index],
+    ...item,
+  }));
+
   // const HeadingTag = headingLevel || "h2";
 
   return (
@@ -54,16 +68,18 @@ const ValueProps = ({ className, headingLevel, heading, locationsText }) => {
           <HeadingTag>{heading || ""}</HeadingTag>
         </header> */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-10 text-center">
-          {content.map((content, i) => {
+          {contentWithIcons.map((content, i) => {
             return (
               <div key={i}>
-                <div className="mb-4">
-                  <img
-                    src={content.icon}
-                    alt={content.heading}
-                    className="mx-auto"
-                  />
-                </div>
+                {content.icon && (
+                  <div className="mb-4">
+                    <img
+                      src={content.icon}
+                      alt={content.heading}
+                      className="mx-auto"
+                    />
+                  </div>
+                )}
                 <h3 className="font-heading text-secondary-900 font-semibold text-lg md:text-xl mb-3">
                   {content.heading}
                 </h3>

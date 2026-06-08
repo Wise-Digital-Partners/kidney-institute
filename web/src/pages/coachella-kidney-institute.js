@@ -29,11 +29,14 @@ const Page = ({ data }) => {
               </div>
               <h1>Coachella Kidney Institute</h1>
               <p>
-                At the Kidney Institute, we’re a team of friendly kidney doctors
-                and dialysis clinic nurses with years of experience caring for
-                patients. Our goal is to help educate our patients about their
-                kidney care and support them with treatments that are as
-                comfortable and stress-free as possible.
+                Kidney disease doesn&apos;t wait, and neither should your care.
+                The Coachella Kidney Institute brings specialist-level
+                nephrology and in-center hemodialysis directly to the heart of
+                Coachella so residents of the eastern Coachella Valley
+                don&apos;t have to travel far for the treatment they need. Our
+                bilingual team understands the community we serve and is
+                committed to providing attentive, culturally aware care at every
+                visit.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
@@ -94,12 +97,23 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h2>Easy Access to Dialysis Services in Coachella</h2>
+              <h2>
+                {" "}
+                In-Center Hemodialysis Serving Coachella and the Eastern Valley
+              </h2>
               <p>
-                Our number one priority is a patient’s health and comfort,
-                whether their treatment involves hemodialysis or peritoneal
-                dialysis. We provide expert, supportive dialysis services for
-                those who are living with kidney disease.
+                Patients living with end-stage renal disease (ESRD) or advanced
+                chronic kidney disease (CKD) need reliable, consistent access to
+                dialysis treatment. Our Coachella clinic offers in-center
+                <a href="https://www.kidneyinstitutes.com/dialysis-services">
+                  hemodialysis services
+                </a>
+                , with trained technicians and nursing staff present at every
+                session. Because we&apos;re centrally located near Coachella
+                City Hall on 6th Street, our patients spend less time commuting
+                and more time recovering. The clinic is Medicare-certified and
+                has maintained a quality rating, a reflection of the clinical
+                standards our team upholds every single treatment day.
               </p>
               <ButtonGhost href="/dialysis-services" text="Learn More" />
             </div>
@@ -107,26 +121,23 @@ const Page = ({ data }) => {
 
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-14 items-center">
             <div className="order-2 md:order-1">
-              <h2>Top Nephrology Experts By Your Side</h2>
+              <h2>
+                Your Kidney Doctor in Coachella — Nephrology Care Close to Home
+              </h2>
               <p>
-                At the Coachella Kidney Institute, our physicians have spent
-                years building their expertise and knowledge in kidney care both
-                here and around the world. Our nephrologists are specialists in
-                both the{" "}
-                <a
-                  href="https://www.kidneyinstitutes.com/dialysis-services"
-                  className="font-bold text-[#162d6d]"
-                >
-                  diagnosis
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://www.kidneyinstitutes.com/nephrology"
-                  className="font-bold text-[#162d6d]"
-                >
-                  treatment of kidney disease
-                </a>
-                .
+                Finding a nephrologist who is both highly qualified and
+                genuinely accessible is not always easy. Our clinic puts
+                board-eligible kidney specialists within reach for residents of
+                Coachella, Mecca, Thermal, and surrounding communities who would
+                otherwise need to travel to Indio or Rancho Mirage for
+                specialist care.
+              </p>
+              <p>
+                Our nephrologists diagnose and manage the full spectrum of
+                kidney conditions, from hypertension-related kidney damage to
+                end-stage renal disease requiring dialysis, and work alongside
+                you to slow progression and protect your remaining kidney
+                function.
               </p>
               <ButtonGhost href="/nephrology" text="Learn More" />
             </div>
@@ -141,7 +152,22 @@ const Page = ({ data }) => {
         </div>
       </section>
 
-      <ValueProps locationsText="We're located in the heart of Coachella’s downtown, near Coachella City Hall." />
+      <ValueProps
+        content={[
+          {
+            heading: "Expert Care",
+            text: "Our Coachella nephrologists bring years of specialist experience — and take the time to explain your condition and your options clearly.",
+          },
+          {
+            heading: "Friendly & Supportive Specialists",
+            text: "Our Coachella team believes that how you're treated between appointments matters too, so we make every visit feel a little less like a clinic and a little more like home.",
+          },
+          {
+            heading: "Convenient Locations",
+            text: "Coachella residents shouldn't have to travel across the valley for specialist care. We're here in your community, steps from City Hall.",
+          },
+        ]}
+      />
       <Testimonials />
       <Resources />
       <CallToAction />
