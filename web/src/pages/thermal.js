@@ -88,7 +88,10 @@ const Page = ({ data }) => {
                 supportive services for those who are living with kidney
                 disease.
               </p>
-              <ButtonGhost href="/dialysis-services" text="Learn More" />
+              <ButtonGhost
+                href="/dialysis-services"
+                text="Explore Our Hemodialysis and Dialysis Treatment Services"
+              />
             </div>
             <div className="order-1 md:order-2">
               <GatsbyImage
@@ -116,7 +119,10 @@ const Page = ({ data }) => {
                 specialists in both the diagnosis and treatment of kidney
                 disease.
               </p>
-              <ButtonGhost href="/nephrology" text="Learn More" />
+              <ButtonGhost
+                href="/nephrology"
+                text="Learn More About Our Nephrology Care"
+              />
             </div>
           </div>
         </div>
@@ -126,7 +132,7 @@ const Page = ({ data }) => {
       <ValueProps />
       <Resources />
       <Testimonials />
-      <About />
+      <About buttonText="Get To Know Kidney Institute of The Desert" />
       <CallToAction />
     </Layout>
   );

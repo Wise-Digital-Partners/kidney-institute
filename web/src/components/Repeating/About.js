@@ -4,7 +4,14 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 import ButtonGhost from "../Button/ButtonGhost";
 
-const MeetTheTeam = ({ className, headingLevel, heading, text }) => {
+const MeetTheTeam = ({
+  className,
+  headingLevel,
+  heading,
+  text,
+  buttonUrl,
+  buttonText,
+}) => {
   const data = useStaticQuery(graphql`
     {
       team: file(relativePath: { eq: "repeating/about/about.jpg" }) {
@@ -35,7 +42,10 @@ const MeetTheTeam = ({ className, headingLevel, heading, text }) => {
               {text ||
                 "We first opened our doors at the Kidney Institute of the Desert in Indio in 1987. Since then, we've expanded to serve the greater Coachella Valley. We provide friendly, quality care locally and for visitors to the area."}
             </p>
-            <ButtonGhost href="/about-us" text="Learn More" />
+            <ButtonGhost
+              href={buttonUrl || "/about-us"}
+              text={buttonText || "Learn More"}
+            />
           </div>
         </div>
       </div>

@@ -91,7 +91,10 @@ const Page = ({ data }) => {
                 services for those who are living with kidney disease. And
                 you’ll find our clinics at four convenient locations.
               </p>
-              <ButtonGhost href="/dialysis-services" text="Learn More" />
+              <ButtonGhost
+                href="/dialysis-services"
+                text="Explore Our Dialysis Services"
+              />
             </div>
             <div className="order-1 md:order-2">
               <GatsbyImage
@@ -121,7 +124,10 @@ const Page = ({ data }) => {
                 chronic kidney disease, kidney failure, kidney transplants,
                 kidney stone prevention, and more.
               </p>
-              <ButtonGhost href="/nephrology" text="Learn More" />
+              <ButtonGhost
+                href="/nephrology"
+                text="Learn More About Our Nephrology Care"
+              />
             </div>
           </div>
         </div>
