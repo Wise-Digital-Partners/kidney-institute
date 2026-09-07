@@ -13,7 +13,7 @@ const Page = ({ data }) => {
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
         title="Kidney Nutrition & Dialysis Diet | Kidney Institutes"
-        description="If you're having kidney trouble or are on dialysis, a kidney nutrition plan, or dialysis diet, will be key to your healthcare. Get essential tips here."
+        description="What can you eat with kidney disease? Our dietitians break down phosphorus and potassium guidance, so your meals feel manageable again. See the full guide."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

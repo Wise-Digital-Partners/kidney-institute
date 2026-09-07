@@ -177,7 +177,7 @@ const Page = ({ data }) => {
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
         title="Nephrology | Kidney Institute of the Desert"
-        description="Kidney Institute's nephrologists are committed to compassionate, supportive kidney care. Our goal is to make you comfortable and ensure you're stress-free."
+        description="Our nephrologists serve as on-site medical directors, not remote screens, so your kidney care always feels personal and close. Find your location near you."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

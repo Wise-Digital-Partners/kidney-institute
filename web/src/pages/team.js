@@ -127,7 +127,7 @@ const Page = ({ data }) => {
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
         title="Our Team | Nephrology | Kidney Institute of the Desert"
-        description="Meet our team of expert nephrologists whose number one priority is your kidney health. When you visit us, you benefit from knowledgeable, caring specialists."
+        description="Meet our nephrologists, nurses, and dietitians. Our physician-owned team has supported Coachella Valley's kidney warriors since 1987. Get to know our team."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
