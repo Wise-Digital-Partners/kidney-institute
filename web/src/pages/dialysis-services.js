@@ -69,7 +69,7 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
-        title="Dialysis Services | Kidney Institute of the Desert"
+        title="Dialysis Services in Coachella Valley | Hemodialysis & Peritoneal"
         description="New to dialysis? Our nurses, dietitians, social workers, and physicians all work closely together so your treatment feels calm, supported, and stress-free."
         canonical="https://www.kidneyinstitutes.com/dialysis-services"
         // openGraphImage={data.openGraphImage.publicURL}

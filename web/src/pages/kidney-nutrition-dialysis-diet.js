@@ -12,7 +12,7 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
-        title="Kidney Nutrition & Dialysis Diet | Kidney Institutes"
+        title="Kidney Diet & Dialysis Nutrition Guide | Coachella Valley"
         description="What can you eat with kidney disease? Our dietitians break down phosphorus and potassium guidance, so your meals feel manageable again. See the full guide."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
