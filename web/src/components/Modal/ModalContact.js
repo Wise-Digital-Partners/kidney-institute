@@ -165,7 +165,7 @@ const Modal = () => {
                       <p className="text-sm">
                         If you're currently on dialysis, please select Dialysis
                         Clinic to view the locations where we offer treatment.
-                        If youre not on dialysis, select Nephrology Office to
+                        If you're not on dialysis, select Nephrology Office to
                         schedule an appointment with one of our kidney doctors.
                       </p>
                     </div>

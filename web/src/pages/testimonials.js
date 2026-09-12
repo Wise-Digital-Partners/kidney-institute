@@ -14,8 +14,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Testimonials | Kidney Institute of the Desert"
         description="Find out what our patients say about the care they've received at the Kidney Institute of the Desert. We always welcome your feedback."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <Background
