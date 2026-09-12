@@ -9,7 +9,13 @@ import {
 
 import ButtonSolid from "../Button/ButtonSolid";
 
-const FAQs = ({ className, headingLevel, questionsAnswers }) => {
+const FAQs = ({
+  className,
+  headingLevel,
+  heading,
+  subtext,
+  questionsAnswers,
+}) => {
   const HeadingTag = headingLevel || "h2";
 
   return (
@@ -18,11 +24,11 @@ const FAQs = ({ className, headingLevel, questionsAnswers }) => {
         <div className="grid md:grid-cols-12 gap-y-12 md:gap-x-10 lg:gap-x-20">
           <div className="md:col-start-1 md:col-span-5">
             <HeadingTag className="font-body text-mobile-4xl md:text-4xl ">
-              Frequently Asked Questions
+              {heading || "Frequently Asked Questions"}
             </HeadingTag>
             <p className="text-sm text-gray-900">
-              Get answers to the questions we get the most. You can also reach
-              out to speak with someone on our team.
+              {subtext ||
+                "Get answers to the questions we get the most. You can also reach out to speak with someone on our team."}
             </p>
             <ButtonSolid modal="modal-contact" text="Contact Us" />
           </div>
