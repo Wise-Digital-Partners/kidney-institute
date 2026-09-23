@@ -133,8 +133,8 @@ const Modal = () => {
               </button> */}
               {isNoneActive(currentOption) && (
                 <div className="flex gap-x-8 justify-start w-full">
-                  <ContactPhone text="For Dialysis: (123) 456-7890" />
-                  <ContactPhone text="For Nephrology: (123) 456-7890" />
+                  <ContactPhone label="For Dialysis" phone="(760) 347-8181" />
+                  <ContactPhone label="For Nephrology" phone="(760) 360-4433" />
                 </div>
               )}
               {!isNoneActive(currentOption) && (
