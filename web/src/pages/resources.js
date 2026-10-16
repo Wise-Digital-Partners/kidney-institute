@@ -9,7 +9,7 @@ import AreasWeServe from "../components/Repeating/AreasWeServe";
 import CallToAction from "../components/Repeating/CTA";
 import englishForm from "../downloads/english-forms.pdf";
 import spanishForm from "../downloads/spanish-forms.pdf";
-import cvnEnglishForm from "../downloads/2021 CVN English.pdf";
+import cvnEnglishForm from "../downloads/CVN English.pdf";
 import cvnSpanishForm from "../downloads/CVN Spanish.pdf";
 
 const Page = ({ data }) => {
