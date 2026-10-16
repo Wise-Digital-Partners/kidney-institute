@@ -73,11 +73,7 @@ const ValueProps = ({
               <div key={i}>
                 {content.icon && (
                   <div className="mb-4">
-                    <img
-                      src={content.icon}
-                      alt={content.heading}
-                      className="mx-auto"
-                    />
+                    <img src={content.icon} alt="" className="mx-auto" />
                   </div>
                 )}
                 <h3 className="font-heading text-secondary-900 font-semibold text-lg md:text-xl mb-3">

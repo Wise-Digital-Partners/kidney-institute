@@ -92,11 +92,12 @@ const Testimonial = ({ className, headingLevel }) => {
       <div className="md:hidden">
         <GatsbyImage
           image={data.backgroundMobile.childImageSharp.gatsbyImageData}
+          alt=""
         />
       </div>
       <img
         src={data.quotes.publicURL}
-        alt="Quotes icon"
+        alt=""
         className="relative md:absolute -top-8 md:z-10 left-4 md:left-10 lg:left-20"
       />
       <Background
@@ -127,7 +128,10 @@ const Testimonial = ({ className, headingLevel }) => {
                           <div className="font-heading text-sm md:text-base text-secondary-900 uppercase font-bold tracking-wide mb-2">
                             {testimonial.name}
                           </div>
-                          <GatsbyImage image={testimonial.platform} />
+                          <GatsbyImage
+                            image={testimonial.platform}
+                            alt="Review left on Facebook"
+                          />
                         </cite>
                       </div>
                     </footer>

@@ -74,7 +74,7 @@ const ReviewCards = ({ gridLayout }) => {
                 <img
                   className="rounded-full"
                   src={review.headshot || data.headshot.publicURL}
-                  alt="User Headshot"
+                  alt=""
                   width="40"
                 />
                 <div className="ml-4">
@@ -86,7 +86,7 @@ const ReviewCards = ({ gridLayout }) => {
               <div className="hidden md:block">
                 <GatsbyImage
                   image={review.platform}
-                  alt="Social platform logo"
+                  alt="Review left on Facebook"
                 />
               </div>
             </div>
@@ -94,7 +94,10 @@ const ReviewCards = ({ gridLayout }) => {
               <q className="block mb-6 md:mb-0 before:hidden">{review.quote}</q>
             </blockquote>
             <div className="block md:hidden">
-              <GatsbyImage image={review.platform} alt="Social platform logo" />
+              <GatsbyImage
+                image={review.platform}
+                alt="Review left on Facebook"
+              />
             </div>
           </div>
         );

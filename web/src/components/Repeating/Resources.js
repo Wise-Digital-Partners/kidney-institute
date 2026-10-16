@@ -32,6 +32,7 @@ const ValueProps = ({ className }) => {
     {
       image: data.resources.childImageSharp.gatsbyImageData,
       heading: "New Patient Resources",
+      alt: "New patient forms to complete before your first Kidney Institute visit",
       text: "Fill out our forms before your visit. That way, we’re ready to begin your care when you arrive.",
       link: "/resources",
     },
@@ -45,6 +46,7 @@ const ValueProps = ({ className }) => {
     {
       image: data.travel.childImageSharp.gatsbyImageData,
       heading: "Travel",
+      alt: "Home dialysis supplies packed for travel outside the Coachella Valley",
       text: "Home dialysis options have made it possible for patients to travel safely and continue treatment.",
       link: "/traveling-on-dialysis",
     },

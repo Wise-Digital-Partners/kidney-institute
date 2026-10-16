@@ -36,11 +36,7 @@ const Page = ({ data }) => {
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
-                  <img
-                    src={data.mapPin.publicURL}
-                    alt="Map pin icon"
-                    className="mr-3"
-                  />
+                  <img src={data.mapPin.publicURL} alt="" className="mr-3" />
                   <a
                     href="https://goo.gl/maps/7MykTPcrecut5TKG6"
                     target="_blank"
@@ -51,19 +47,11 @@ const Page = ({ data }) => {
                   </a>
                 </li>
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
-                  <img
-                    src={data.clock.publicURL}
-                    alt="Clock icon"
-                    className="mr-3"
-                  />
+                  <img src={data.clock.publicURL} alt="" className="mr-3" />
                   <span>Monday - Friday 8:00 a.m. - 5:00 p.m.</span>
                 </li>
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
-                  <img
-                    src={data.phone.publicURL}
-                    alt="Phone icon"
-                    className="mr-3"
-                  />
+                  <img src={data.phone.publicURL} alt="" className="mr-3" />
                   <a href="tel:760-200-1000" className="hover:text-primary-900">
                     (760) 200-1000
                   </a>
@@ -75,6 +63,7 @@ const Page = ({ data }) => {
                 image={data.hero.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Coachella Valley Nephrology office on Washington Street in La Quinta"
               />
             </div>
           </div>
@@ -89,6 +78,7 @@ const Page = ({ data }) => {
                 image={data.nephrology.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Coachella Valley Nephrology nephrologist with a kidney patient in La Quinta"
               />
             </div>
             <div>
@@ -133,6 +123,7 @@ const Page = ({ data }) => {
                 image={data.dialysis.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Dialysis care coordinated by Coachella Valley Nephrology in La Quinta"
               />
             </div>
           </div>

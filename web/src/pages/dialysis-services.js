@@ -51,11 +51,13 @@ const Page = ({ data }) => {
     team: [
       {
         image: data.yvonneHamilton.childImageSharp.gatsbyImageData,
+        alt: "Yvonne Hamilton, head nurse at La Quinta Kidney Center",
         name: "Yvonne Hamilton",
         location: "La Quinta Kidney Center",
       },
       {
         image: data.mariluFuentes.childImageSharp.gatsbyImageData,
+        alt: "Marilu Fuentes, head nurse at Kidney Institute of the Desert in Indio",
         name: "Marilu Fuentes",
         location: "Kidney Institute of the Desert Indio",
       },
@@ -133,6 +135,7 @@ const Page = ({ data }) => {
               <GatsbyImage
                 image={data.dialysis.childImageSharp.gatsbyImageData}
                 width="625"
+                alt="Dialysis treatment area at a Kidney Institute of the Desert clinic in the Coachella Valley"
               />
             </div>
           </div>
@@ -703,7 +706,7 @@ const Page = ({ data }) => {
                   <div className="rounded-xl overflow-hidden mb-3">
                     <GatsbyImage
                       image={content.image}
-                      alt={content.heading}
+                      alt={content.alt}
                       className="mx-auto w-full"
                     />
                   </div>

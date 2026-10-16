@@ -37,11 +37,7 @@ const Page = ({ data }) => {
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
-                  <img
-                    src={data.mapPin.publicURL}
-                    alt="Map pin icon"
-                    className="mr-3"
-                  />
+                  <img src={data.mapPin.publicURL} alt="" className="mr-3" />
                   <a
                     href="https://goo.gl/maps/HG6V5oVz9VL26cYJ8"
                     target="_blank"
@@ -52,19 +48,11 @@ const Page = ({ data }) => {
                   </a>
                 </li>
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
-                  <img
-                    src={data.clock.publicURL}
-                    alt="Clock icon"
-                    className="mr-3"
-                  />
+                  <img src={data.clock.publicURL} alt="" className="mr-3" />
                   <span>Monday and Wednesday 5:30 a.m. - 6:00 p.m.</span>
                 </li>
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
-                  <img
-                    src={data.phone.publicURL}
-                    alt="Phone icon"
-                    className="mr-3"
-                  />
+                  <img src={data.phone.publicURL} alt="" className="mr-3" />
                   <a href="tel:760-200-1000" className="hover:text-primary-900">
                     (760) 200-1000
                   </a>
@@ -76,6 +64,7 @@ const Page = ({ data }) => {
                 image={data.hero.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="La Quinta Kidney Center dialysis clinic on Washington Street in La Quinta"
               />
             </div>
           </div>
@@ -90,6 +79,7 @@ const Page = ({ data }) => {
                 image={data.dialysis.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Hemodialysis station at La Quinta Kidney Center"
               />
             </div>
             <div>
@@ -134,6 +124,7 @@ const Page = ({ data }) => {
                 image={data.nephrology.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
+                alt="Nephrologist meeting with a kidney patient at La Quinta Kidney Center"
               />
             </div>
           </div>

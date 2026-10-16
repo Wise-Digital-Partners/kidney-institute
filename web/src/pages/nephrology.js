@@ -41,6 +41,7 @@ const Page = ({ data }) => {
     team: [
       {
         image: data.narenChandrashekar.childImageSharp.gatsbyImageData,
+        alt: "Dr. Naren Chandrashekar, nephrologist at Coachella Valley Nephrology",
         name: "Dr. Naren Chandrashekar",
         bio: (
           <>
@@ -98,6 +99,7 @@ const Page = ({ data }) => {
       },
       {
         image: data.jamburChandrashekar.childImageSharp.gatsbyImageData,
+        alt: "Dr. Jambur Chandrashekar, founding nephrologist at Coachella Valley Nephrology",
         name: "Dr. Jambur Chandrashekar",
         bio: (
           <>
@@ -212,6 +214,7 @@ const Page = ({ data }) => {
               <GatsbyImage
                 image={data.nephrology.childImageSharp.gatsbyImageData}
                 width="625"
+                alt="Coachella Valley Nephrology physician reviewing kidney care with a patient"
               />
             </div>
           </div>
@@ -434,7 +437,7 @@ const Page = ({ data }) => {
                   <div className="rounded-xl overflow-hidden mb-3">
                     <GatsbyImage
                       image={content.image}
-                      alt={content.heading}
+                      alt={content.alt}
                       className="mx-auto w-full transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
                     />
                   </div>
