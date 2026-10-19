@@ -2,6 +2,8 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
+import { useLocation } from "@reach/router";
+import defaultSocialImage from "../images/open-graph/facebook/Global.jpg";
 
 const SEO = ({
   description,
@@ -24,9 +26,17 @@ const SEO = ({
     }
   `);
 
+  const { pathname } = useLocation();
   const metaDescription = description || site.siteMetadata.description;
-  const socialDefault = `${site.siteMetadata.siteUrl}${openGraphImage}`;
-  const socialTwitter = `${site.siteMetadata.siteUrl}${twitterOpenGraphImage}`;
+  const toAbsoluteUrl = (value) =>
+    new URL(value, `${site.siteMetadata.siteUrl.replace(/\/$/, "")}/`).href;
+  const socialDefault = toAbsoluteUrl(openGraphImage || defaultSocialImage);
+  const socialTwitter = toAbsoluteUrl(
+    twitterOpenGraphImage || openGraphImage || defaultSocialImage
+  );
+  const pageUrl = new URL(canonical || pathname, site.siteMetadata.siteUrl);
+  pageUrl.search = "";
+  pageUrl.hash = "";
 
   return (
     <Helmet
@@ -53,6 +63,14 @@ const SEO = ({
           content: title,
         },
         {
+          property: `og:url`,
+          content: pageUrl.href,
+        },
+        {
+          property: `og:site_name`,
+          content: `Kidney Institute of the Desert`,
+        },
+        {
           property: `og:image`,
           content: socialDefault,
         },
@@ -66,7 +84,7 @@ const SEO = ({
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
