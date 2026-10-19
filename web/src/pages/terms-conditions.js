@@ -1,10 +1,16 @@
 import React from "react";
 
 import Layout from "../components/Layout";
+import SearchEngineOptimization from "../components/SEO";
 
 const Page = () => {
   return (
     <Layout headerStyle="overlap">
+      <SearchEngineOptimization
+        title="Terms and Conditions | Kidney Institute of the Desert"
+        description="Read the terms and conditions for using the Kidney Institute of the Desert website."
+        canonical="https://www.kidneyinstitutes.com/terms-conditions"
+      />
       <section className="pt-20 md:pt-40 pb-22 md:pb-32">
         <div className="container">
           <h1>Terms and Conditions</h1>
