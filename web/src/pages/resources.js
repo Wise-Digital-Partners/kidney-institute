@@ -59,7 +59,11 @@ const Page = ({ data }) => {
                 To ensure each patient receives personal, genuine care during
                 their visit, we ask that you complete a few forms and review our
                 procedures ahead of time. That way, we can begin your care as
-                soon as you arrive.
+                soon as you arrive. You can also read the{" "}
+                <a href="https://www.kidneyinstitutes.com/terms-conditions">
+                  terms and conditions
+                </a>{" "}
+                for this website.
               </p>
             </header>
 
