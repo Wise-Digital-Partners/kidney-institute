@@ -21,8 +21,8 @@ const Page = () => {
             estate and business planning. These Terms and Conditions of Use
             (“Agreement”) apply to any use of and access to our website,
           </p>
-          <a href="https://www.pfplumbing.net">
-            <p>https://www.pfplumbing.net</p>
+          <a href="https://www.kidneyinstitutes.com">
+            <p>https://www.kidneyinstitutes.com</p>
           </a>
           <p>
             (“the website”) by you and/or your agents (“you”).  By using the
@@ -40,7 +40,7 @@ const Page = () => {
                 Agreement may be modified at any time by Kidney Institute upon
                 posting of the modified Agreement. Any such modifications shall
                 be effective immediately. You can view the most recent version
-                of these terms at any time at https://www.pfplumbing.net. Each
+                of these terms at any time at <a href="https://www.kidneyinstitutes.com">https://www.kidneyinstitutes.com</a>. Each
                 use by you shall constitute and be deemed your unconditional
                 acceptance of this Agreement.
               </p>
@@ -52,7 +52,7 @@ const Page = () => {
               <p>
                 Your visit to our website is also governed by our Privacy
                 Policy. Please review our Privacy Policy at
-                https://www.pfplumbing.net. 
+                <a href="https://www.kidneyinstitutes.com">https://www.kidneyinstitutes.com</a>
               </p>
             </li>
           </ul>
