@@ -381,7 +381,7 @@ const Page = ({ data }) => {
       <section className="mb-20 md:mb-28">
         <div className="container">
           <div className="mb-10 md:mb-12">
-            <Reviews />
+            <Reviews gridLayout="masonry" />
           </div>
           <p className="text-center mb-0">
             Want to hear from more kidney warriors? Read{" "}
