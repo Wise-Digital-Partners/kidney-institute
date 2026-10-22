@@ -174,13 +174,27 @@ const Page = ({ data }) => {
               <div className="bg-[#A68098] rounded text-center text-white text-xs font-semibold px-2 py-1 inline-flex mb-6">
                 Dialysis Clinic
               </div>
-              <h1>La Quinta Kidney Center</h1>
+              <h1>La Quinta Kidney Center: Dialysis Center in La Quinta, CA</h1>
               <p>
-                At the Kidney Institute, we’re a team of friendly kidney doctors
-                and dialysis clinic nurses with years of experience caring for
-                patients. Our goal is to help educate our patients about their
-                kidney care and support them with treatments that are as
-                comfortable and stress-free as possible.
+                The La Quinta Kidney Center is a{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/dialysis-services"
+                  className="font-bold text-[#162d6d]"
+                >
+                  dialysis center in La Quinta
+                </a>
+                , CA, part of{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/"
+                  className="font-bold text-[#162d6d]"
+                >
+                  Kidney Institute of the Desert
+                </a>
+                . We’re a team of friendly kidney doctors and dialysis clinic
+                nurses with years of experience caring for patients. Our goal is
+                to help educate our patients about their kidney care and support
+                them with treatments that are as comfortable and stress-free as
+                possible.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
@@ -234,8 +248,30 @@ const Page = ({ data }) => {
               <p>
                 Our number one priority is a patient’s health and comfort,
                 whether their treatment involves hemodialysis or peritoneal
-                dialysis. We provide expert, supportive dialysis services for
-                those who are living with kidney disease.
+                dialysis. We provide expert, supportive dialysis services at our
+                La Quinta dialysis center for those who are living with kidney
+                disease. We also have dialysis clinics in{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/indio-kidney-institute"
+                  className="font-bold text-[#162d6d]"
+                >
+                  Indio
+                </a>
+                ,{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute"
+                  className="font-bold text-[#162d6d]"
+                >
+                  Rancho Mirage
+                </a>
+                , and{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/coachella-kidney-institute"
+                  className="font-bold text-[#162d6d]"
+                >
+                  Coachella
+                </a>
+                .
               </p>
               <ButtonGhost href="/dialysis-services" text="Learn More" />
             </div>
@@ -278,7 +314,28 @@ const Page = ({ data }) => {
         </div>
       </section>
 
-      <ValueProps locationsText="We're located on Washington Street, just off Fred Waring Drive and near Colonel Mitchell Paige Middle School." />
+      <ValueProps
+        content={[
+          {},
+          {},
+          {
+            text: (
+              <>
+                Our La Quinta dialysis center is located on Washington Street,
+                just off Fred Waring Drive and near Colonel Mitchell Paige
+                Middle School.{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/locations"
+                  className="font-bold text-[#162d6d]"
+                >
+                  View all locations
+                </a>
+                .
+              </>
+            ),
+          },
+        ]}
+      />
       <Testimonials />
       <Resources />
       <CallToAction />

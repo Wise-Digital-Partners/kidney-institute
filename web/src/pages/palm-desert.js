@@ -127,7 +127,8 @@ const Page = ({ data }) => {
       >
         <div className="max-w-2xl">
           <h1 className="text-secondary-900 md:text-white text-mobile-7xl md:text-7xl font-extrabold mb-4 md:mb-6">
-            Expert Kidney Care. Serving Palm Desert Since 1987.
+            Expert Desert Nephrology & Kidney Care. Serving Palm Desert Since
+            1987.
           </h1>
           <p className="text-xl md:text-white font-semibold mb-7">
             Top physicians and specialists serving four dialysis clinics and two
@@ -160,7 +161,7 @@ const Page = ({ data }) => {
                 className="mb-6 mx-auto"
               />
             </div>
-            <h2>Palm Desert Dialysis Clinic & Nephrologists</h2>
+            <h2>Palm Desert Dialysis Clinic & Desert Nephrologists</h2>
             <p>
               At Kidney Institute of the Desert, we’re a team of friendly kidney
               doctors and dialysis clinic nurses with years of experience caring
@@ -178,7 +179,29 @@ const Page = ({ data }) => {
                 whether their treatment involves hemodialysis or peritoneal
                 dialysis. Our Palm Desert kidney specialists provide expert,
                 supportive services for those who are living with kidney
-                disease.
+                disease. Palm Desert dialysis patients can be treated at our
+                nearby{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute"
+                  className="font-bold text-[#162d6d]"
+                >
+                  Rancho Mirage clinic at Eisenhower Medical Center
+                </a>
+                , or at our{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/indio-kidney-institute"
+                  className="font-bold text-[#162d6d]"
+                >
+                  Indio
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/la-quinta-kidney-center"
+                  className="font-bold text-[#162d6d]"
+                >
+                  La Quinta
+                </a>{" "}
+                clinics.
               </p>
               <ButtonGhost href="/dialysis-services" text="Learn More" />
             </div>
@@ -200,7 +223,7 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h2>Top Nephrology Experts by Your Side</h2>
+              <h2>Top Desert Nephrology Experts by Your Side</h2>
               <p>
                 At Kidney Institute of the Desert, our physicians have spent
                 years building their expertise and knowledge in kidney care both

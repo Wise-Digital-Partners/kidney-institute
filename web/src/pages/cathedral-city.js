@@ -106,7 +106,7 @@ const Page = ({ data }) => {
       >
         <div className="max-w-2xl">
           <h1 className="text-secondary-900 md:text-white text-mobile-7xl md:text-7xl font-extrabold mb-4 md:mb-6">
-            Expert Kidney Care. Serving Cathedral City Since 1987.
+            Expert Kidney Care. Clinics Serving Cathedral City Since 1987.
           </h1>
           <p className="text-xl md:text-white font-semibold mb-7">
             Top physicians and specialists serving four dialysis clinics and two
@@ -139,7 +139,9 @@ const Page = ({ data }) => {
                 className="mb-6 mx-auto"
               />
             </div>
-            <h2>Cathedral City Dialysis Clinic & Nephrologists</h2>
+            <h2>
+              Kidney Clinic Serving Cathedral City: Dialysis & Nephrologists
+            </h2>
             <p>
               At Kidney Institute of the Desert, we’re a team of friendly kidney
               doctors and dialysis clinic nurses with years of experience caring
@@ -151,13 +153,36 @@ const Page = ({ data }) => {
 
           <div className="grid md:grid-cols-2 gap-y-6 md:gap-x-10 lg:gap-x-20 items-center mb-20 md:mb-32">
             <div className="order-2 md:order-1">
-              <h2>Kidney Specialists Serving Cathedral City</h2>
+              <h2>Kidney Clinic Serving Cathedral City</h2>
               <p>
                 Our number one priority is a patient’s health and comfort,
                 whether their treatment involves hemodialysis or peritoneal
                 dialysis. Our Cathedral City kidney specialists provide expert,
                 supportive services for those who are living with kidney
-                disease.
+                disease. Looking for a clinic in Cathedral City? Our kidney and
+                dialysis clinics serve Cathedral City patients from locations
+                across the Coachella Valley, including{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute"
+                  className="font-bold text-[#162d6d]"
+                >
+                  Rancho Mirage
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/indio-kidney-institute"
+                  className="font-bold text-[#162d6d]"
+                >
+                  Indio
+                </a>
+                . See{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/locations"
+                  className="font-bold text-[#162d6d]"
+                >
+                  all clinic locations
+                </a>
+                .
               </p>
               <ButtonGhost
                 href="/dialysis-services"
@@ -188,7 +213,22 @@ const Page = ({ data }) => {
                 years building their expertise and knowledge in kidney care both
                 here and around the world. Our Cathedral City nephrologists are
                 specialists in both the diagnosis and treatment of kidney
-                disease.
+                disease. Cathedral City patients can see our nephrologists at
+                our{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology"
+                  className="font-bold text-[#162d6d]"
+                >
+                  Indio nephrology office
+                </a>{" "}
+                or our{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/rancho-mirage-coachella-valley-nephrology"
+                  className="font-bold text-[#162d6d]"
+                >
+                  La Quinta nephrology office
+                </a>
+                .
               </p>
               <ButtonGhost
                 href="/nephrology"

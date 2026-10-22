@@ -256,11 +256,26 @@ const Page = ({ data }) => {
       >
         <div className="max-w-2xl">
           <p className="font-heading text-secondary-900 md:text-white text-mobile-7xl md:text-7xl font-extrabold mb-4 md:mb-6">
-            Expert Kidney Care. Serving the Desert Since 1987.
+            Expert Desert Dialysis & Kidney Care. Serving the Desert Cities
+            Since 1987.
           </p>
           <p className="text-xl md:text-white font-semibold mb-7">
-            Top physicians and specialists serving four dialysis clinics and two
-            nephrology locations.
+            Top physicians and specialists providing{" "}
+            <a
+              href="https://www.kidneyinstitutes.com/dialysis-services"
+              className="underline"
+            >
+              desert dialysis
+            </a>{" "}
+            and nephrology care across the{" "}
+            <a
+              href="https://www.kidneyinstitutes.com/locations"
+              className="underline"
+            >
+              desert cities
+            </a>{" "}
+            of Indio, Rancho Mirage, Coachella and La Quinta, with four dialysis
+            clinics and two nephrology locations.
           </p>
 
           <ButtonSolid
@@ -290,14 +305,57 @@ const Page = ({ data }) => {
               />
             </div>
             <h1>
-              Top Nephrologists & Kidney Dialysis Clinics in Coachella Valley
+              Top Desert Dialysis Clinics & Nephrologists in the Coachella
+              Valley Desert Cities
             </h1>
             <p>
               At Kidney Institute of the Desert, we’re a team of friendly kidney
-              doctors and dialysis clinic nurses with years of experience caring
-              for patients. Our goal is to help educate our patients about their
-              kidney care and support them with treatments that are as
-              comfortable and stress-free as possible.
+              doctors and dialysis clinic nurses with years of experience
+              providing{" "}
+              <a
+                href="https://www.kidneyinstitutes.com/dialysis-services"
+                className="font-bold text-[#162d6d]"
+              >
+                desert dialysis
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://www.kidneyinstitutes.com/nephrology"
+                className="font-bold text-[#162d6d]"
+              >
+                nephrology care
+              </a>{" "}
+              to patients in the desert cities of{" "}
+              <a
+                href="https://www.kidneyinstitutes.com/indio-kidney-institute"
+                className="font-bold text-[#162d6d]"
+              >
+                Indio
+              </a>
+              ,{" "}
+              <a
+                href="https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute"
+                className="font-bold text-[#162d6d]"
+              >
+                Rancho Mirage
+              </a>
+              ,{" "}
+              <a
+                href="https://www.kidneyinstitutes.com/coachella-kidney-institute"
+                className="font-bold text-[#162d6d]"
+              >
+                Coachella
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://www.kidneyinstitutes.com/la-quinta-kidney-center"
+                className="font-bold text-[#162d6d]"
+              >
+                La Quinta
+              </a>
+              . Our goal is to help educate our patients about their kidney care
+              and support them with treatments that are as comfortable and
+              stress-free as possible.
             </p>
           </header>
 
@@ -309,7 +367,15 @@ const Page = ({ data }) => {
                 whether their treatment involves hemodialysis or peritoneal
                 dialysis. Our kidney specialists provide expert, supportive
                 services for those who are living with kidney disease. And
-                you’ll find our clinics at four convenient locations.
+                you’ll find our{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/locations"
+                  className="font-bold text-[#162d6d]"
+                >
+                  desert city dialysis clinics
+                </a>{" "}
+                at four convenient locations, so you can get treatment close to
+                home.
               </p>
               <ButtonGhost
                 href="/dialysis-services"
@@ -354,7 +420,27 @@ const Page = ({ data }) => {
       </section>
 
       <AreasWeServe />
-      <ValueProps />
+      <ValueProps
+        content={[
+          {},
+          {},
+          {
+            text: (
+              <>
+                We have{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/locations"
+                  className="font-bold text-[#162d6d]"
+                >
+                  six kidney and dialysis clinics
+                </a>{" "}
+                serving the desert cities of Indio, Rancho Mirage, Coachella,
+                and La Quinta.
+              </>
+            ),
+          },
+        ]}
+      />
       <Resources />
       <Testimonials />
       <About />
