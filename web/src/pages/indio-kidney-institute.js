@@ -18,6 +18,160 @@ const Page = ({ data }) => {
         description="World-class nephrology and dialysis services in Indio, CA. Hemodialysis, peritoneal dialysis, and specialist kidney care close to the Coachella Valley."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+
+        canonical="https://www.kidneyinstitutes.com/indio-kidney-institute"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id":
+                "https://www.kidneyinstitutes.com/indio-kidney-institute#webpage",
+              url: "https://www.kidneyinstitutes.com/indio-kidney-institute",
+              name: "Kidney Institute of the Desert - Indio | Nephrology & Dialysis Clinic",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/indio-kidney-institute#primaryimage",
+              },
+              about: {
+                "@id": "https://www.kidneyinstitutes.com/#location-indio",
+              },
+              mainEntity: {
+                "@id": "https://www.kidneyinstitutes.com/#location-indio",
+              },
+              inLanguage: "en-US",
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id": "https://www.kidneyinstitutes.com/#location-indio",
+              name: "Kidney Institute of the Desert - Indio",
+              url: "https://www.kidneyinstitutes.com/indio-kidney-institute",
+              description:
+                "Nephrology and dialysis clinic in Indio, California, part of Kidney Institute of the Desert.",
+              telephone: "+1-760-347-8181",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "81715 Doctor Carreon Blvd., Suite B2",
+                addressLocality: "Indio",
+                addressRegion: "CA",
+                postalCode: "92201",
+                addressCountry: "US",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 33.7070808,
+                longitude: -116.238594,
+              },
+              hasMap:
+                "https://www.google.com/maps/place/?q=place_id:ChIJ_dCnUiT42oARztBNRh8_uAo",
+              image: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/indio-kidney-institute#primaryimage",
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  opens: "05:30",
+                  closes: "18:00",
+                },
+              ],
+              medicalSpecialty: "https://schema.org/Nephrologic",
+              areaServed: [
+                {
+                  "@type": "City",
+                  name: "Indio",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Bermuda Dunes",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Indian Wells",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Thermal",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+              ],
+              sameAs: [
+                "https://www.google.com/maps/place/?q=place_id:ChIJ_dCnUiT42oARztBNRh8_uAo",
+              ],
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              mainEntityOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/indio-kidney-institute#webpage",
+              },
+              availableService: [
+                {
+                  "@type": "MedicalProcedure",
+                  name: "Hemodialysis",
+                },
+                {
+                  "@type": "MedicalProcedure",
+                  name: "Peritoneal dialysis",
+                },
+              ],
+            },
+            {
+              "@type": "ImageObject",
+              "@id":
+                "https://www.kidneyinstitutes.com/indio-kidney-institute#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/2d30c8cfc39341ab7cdccd657a373478/d84fc/desert-indio-hero.jpg",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/2d30c8cfc39341ab7cdccd657a373478/d84fc/desert-indio-hero.jpg",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
 
       <section className="md:bg-gray-50 pt-6 md:py-24 mb-20 md:mb-32">

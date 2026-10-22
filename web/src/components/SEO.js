@@ -14,6 +14,7 @@ const SEO = ({
   openGraphImage,
   twitterOpenGraphImage,
   canonical,
+  schema,
 }) => {
   const { site } = useStaticQuery(graphql`
     query DefaultSEOQuery {
@@ -114,7 +115,11 @@ const SEO = ({
         .concat(meta)}
       title={title}
       titleTemplate={`%s`}
-    />
+    >
+      {schema && (
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      )}
+    </Helmet>
   );
 };
 
@@ -133,6 +138,7 @@ SEO.propTypes = {
   twitterOpenGraphImage: PropTypes.string,
   openGraphImage: PropTypes.string,
   canonical: PropTypes.string,
+  schema: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
 export default SEO;

@@ -437,6 +437,53 @@ const Page = ({ data }) => {
         description="Are you interested in joining the Kidney Institute team? Find out about our job openings and how you can reach out."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+
+        canonical="https://www.kidneyinstitutes.com/careers"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.kidneyinstitutes.com/careers#webpage",
+              url: "https://www.kidneyinstitutes.com/careers",
+              name: "Careers | Kidney Institute of the Desert | Nephrology",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              primaryImageOfPage: {
+                "@id": "https://www.kidneyinstitutes.com/careers#primaryimage",
+              },
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/careers#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/e5426512550a7fefba1ab31274ffe96b/d84fc/1.0-careers.jpg",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/e5426512550a7fefba1ab31274ffe96b/d84fc/1.0-careers.jpg",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
 
       <section className="pt-4 md:pt-24 mb-10 md:mb-24">
@@ -468,7 +515,7 @@ const Page = ({ data }) => {
             <header className=" text-center mb-16">
               <h2>Open Positions</h2>
             </header>
-            <div class="grid grid-cols-1 gap-y-6 mb-16">
+            <div className="grid grid-cols-1 gap-y-6 mb-16">
               {content.jobs.map((content, i) => {
                 return (
                   <button

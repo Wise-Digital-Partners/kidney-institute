@@ -10,6 +10,41 @@ const Page = () => {
         title="Privacy Policy | Kidney Institute of the Desert"
         description="Read our privacy policy to understand how we protect your personal information."
         canonical="https://www.kidneyinstitutes.com/privacy-policy/"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.kidneyinstitutes.com/privacy-policy/#webpage",
+              url: "https://www.kidneyinstitutes.com/privacy-policy/",
+              name: "Privacy Policy | Kidney Institute of the Desert",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
       <section className="pt-12 md:pt-16 pb-20 md:pb-32">
         <div className="container">

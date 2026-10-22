@@ -25,6 +25,226 @@ const Page = ({ data }) => {
         canonical="https://www.kidneyinstitutes.com/"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.kidneyinstitutes.com/#webpage",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert | Nephrology & Dialysis in the Coachella Valley",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              about: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              mainEntity: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              inLanguage: "en-US",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              alternateName: ["Kidney Institutes", "Kidney Institute"],
+              url: "https://www.kidneyinstitutes.com/",
+              description:
+                "Expert kidney care serving the Coachella Valley since 1987: nephrology, hemodialysis, peritoneal dialysis, kidney nutrition planning and travel dialysis support.",
+              foundingDate: "1987",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+              image: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+              telephone: "+1-760-360-4433",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "81715 Doctor Carreon Blvd., Suite B2",
+                addressLocality: "Indio",
+                addressRegion: "CA",
+                postalCode: "92201",
+                addressCountry: "US",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 33.7070808,
+                longitude: -116.238594,
+              },
+              medicalSpecialty: "https://schema.org/Nephrologic",
+              areaServed: [
+                {
+                  "@type": "City",
+                  name: "Indio",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Bermuda Dunes",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Indian Wells",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Thermal",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Coachella",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Mecca",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "La Quinta",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Palm Desert",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Rancho Mirage",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Cathedral City",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Palm Springs",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+                {
+                  "@type": "City",
+                  name: "Thousand Palms",
+                  containedInPlace: { "@type": "State", name: "California" },
+                },
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+1-760-360-4433",
+                contactType: "customer service",
+                areaServed: "US",
+                availableLanguage: "English",
+              },
+              sameAs: [
+                "https://www.facebook.com/Kidney-Institute-of-the-Desert-134446316605496/",
+                "https://www.linkedin.com/company/kidney/",
+                "https://twitter.com/KidneyInsDesert",
+                "https://www.google.com/maps/place/?q=place_id:ChIJ_dCnUiT42oARztBNRh8_uAo",
+              ],
+              subOrganization: [
+                {
+                  "@id": "https://www.kidneyinstitutes.com/#location-indio",
+                },
+                {
+                  "@id": "https://www.kidneyinstitutes.com/#location-coachella",
+                },
+                {
+                  "@id": "https://www.kidneyinstitutes.com/#location-la-quinta",
+                },
+                {
+                  "@id":
+                    "https://www.kidneyinstitutes.com/#location-rancho-mirage",
+                },
+                {
+                  "@id":
+                    "https://www.kidneyinstitutes.com/#location-nephrology-indio",
+                },
+                {
+                  "@id":
+                    "https://www.kidneyinstitutes.com/#location-nephrology-la-quinta",
+                },
+              ],
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id": "https://www.kidneyinstitutes.com/#location-indio",
+              name: "Kidney Institute of the Desert - Indio",
+              url: "https://www.kidneyinstitutes.com/indio-kidney-institute",
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id": "https://www.kidneyinstitutes.com/#location-coachella",
+              name: "Coachella Kidney Institute",
+              url: "https://www.kidneyinstitutes.com/coachella-kidney-institute",
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id": "https://www.kidneyinstitutes.com/#location-la-quinta",
+              name: "La Quinta Kidney Center",
+              url: "https://www.kidneyinstitutes.com/la-quinta-kidney-center",
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id": "https://www.kidneyinstitutes.com/#location-rancho-mirage",
+              name: "Kidney Institute at Eisenhower Medical Center",
+              url: "https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute",
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id":
+                "https://www.kidneyinstitutes.com/#location-nephrology-indio",
+              name: "Coachella Valley Nephrology - Indio",
+              url: "https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology",
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id":
+                "https://www.kidneyinstitutes.com/#location-nephrology-la-quinta",
+              name: "Coachella Valley Nephrology - La Quinta",
+              url: "https://www.kidneyinstitutes.com/rancho-mirage-coachella-valley-nephrology",
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+              publisher: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
 
       <Background

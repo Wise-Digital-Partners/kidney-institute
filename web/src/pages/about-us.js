@@ -19,6 +19,58 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="About Kidney Institute of the Desert | Nephrology"
         description="Our patients and their kidney care journey mean everything to us. Meet the team of expert nephrologists whose number one priority is your kidney health."
+        canonical="https://www.kidneyinstitutes.com/about-us"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "AboutPage",
+              "@id": "https://www.kidneyinstitutes.com/about-us#webpage",
+              url: "https://www.kidneyinstitutes.com/about-us",
+              name: "About Kidney Institute of the Desert | Nephrology",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              primaryImageOfPage: {
+                "@id": "https://www.kidneyinstitutes.com/about-us#primaryimage",
+              },
+              mainEntity: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              about: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/about-us#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/b8f0f6e1ee9ff2b6adead56feeff0342/d84fc/Who%20We%20Are.jpg",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/b8f0f6e1ee9ff2b6adead56feeff0342/d84fc/Who%20We%20Are.jpg",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

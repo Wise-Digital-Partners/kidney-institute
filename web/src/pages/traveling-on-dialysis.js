@@ -41,6 +41,66 @@ const Page = ({ data }) => {
         description="Kidney failure doesn’t mean your travel days are over. Traveling on dialysis can be done safely, and we can help you plan your treatments."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+
+        canonical="https://www.kidneyinstitutes.com/traveling-on-dialysis"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": ["WebPage", "MedicalWebPage"],
+              "@id":
+                "https://www.kidneyinstitutes.com/traveling-on-dialysis#webpage",
+              url: "https://www.kidneyinstitutes.com/traveling-on-dialysis",
+              name: "Traveling on Dialysis | Kidney Institute of the Desert",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/traveling-on-dialysis#primaryimage",
+              },
+              about: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/traveling-on-dialysis#topic",
+              },
+            },
+            {
+              "@type": "ImageObject",
+              "@id":
+                "https://www.kidneyinstitutes.com/traveling-on-dialysis#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/5e9ae24777fe330de8526dbd682f0e9c/d84fc/1.0-travel-hero.jpg",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/5e9ae24777fe330de8526dbd682f0e9c/d84fc/1.0-travel-hero.jpg",
+            },
+            {
+              "@type": "Thing",
+              "@id":
+                "https://www.kidneyinstitutes.com/traveling-on-dialysis#topic",
+              name: "Travel for people on dialysis",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
 
       <section className="pt-4 md:pt-24 mb-20 md:mb-24">

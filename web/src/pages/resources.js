@@ -19,6 +19,111 @@ const Page = ({ data }) => {
         title="Resources | Nephrology | Kidney Institute of the Desert"
         description="Get everything you need to be a 'kidney warrior.' Find a clinic, download the forms you'll need, check on insurance, and tap into educational resources."
         canonical="https://www.kidneyinstitutes.com/resources"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "CollectionPage",
+              "@id": "https://www.kidneyinstitutes.com/resources#webpage",
+              url: "https://www.kidneyinstitutes.com/resources",
+              name: "Resources | Nephrology | Kidney Institute of the Desert",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/resources#primaryimage",
+              },
+              mainEntity: {
+                "@id": "https://www.kidneyinstitutes.com/resources#list",
+              },
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/resources#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/9f1f9f2ec55567e51c32ea9ef267bad5/d84fc/1.0-forms-hero.jpg",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/9f1f9f2ec55567e51c32ea9ef267bad5/d84fc/1.0-forms-hero.jpg",
+            },
+            {
+              "@type": "ItemList",
+              "@id": "https://www.kidneyinstitutes.com/resources#list",
+              name: "Patient resources",
+              numberOfItems: 8,
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "New patient intake form (English)",
+                  url: "https://www.kidneyinstitutes.com/static/english-forms-ed8066a4dd5b3f9fbc700a57cb1d03da.pdf",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "New patient intake form (Spanish)",
+                  url: "https://www.kidneyinstitutes.com/static/spanish-forms-9682c2f2f6fe0cccc59cd8ef0cfdfc15.pdf",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Patient education, The Kidney Hub (English)",
+                  url: "https://thekidneyhub.org/new-esrd-patient-education/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Patient education, The Kidney Hub (Spanish)",
+                  url: "https://thekidneyhub.org/new-esrd-patient-education-spanish/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 5,
+                  name: "Coachella Valley Nephrology new patient packet (English)",
+                  url: "https://www.kidneyinstitutes.com/static/2021%20CVN%20English-f2a8a8b4f4c0b4882d78fd77f01ed5ed.pdf",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 6,
+                  name: "Coachella Valley Nephrology new patient packet (Spanish)",
+                  url: "https://www.kidneyinstitutes.com/static/CVN%20Spanish-6c6bf8b00e4d8fdaec72dfc3302ae38c.pdf",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 7,
+                  name: "Your guide to a kidney-friendly diet",
+                  url: "https://www.kidneyinstitutes.com/kidney-nutrition-dialysis-diet",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 8,
+                  name: "People on dialysis can travel too",
+                  url: "https://www.kidneyinstitutes.com/traveling-on-dialysis",
+                },
+              ],
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
@@ -67,7 +172,7 @@ const Page = ({ data }) => {
               </p>
             </header>
 
-            <div class="grid md:grid-cols-2 gap-x-10 gap-y-8">
+            <div className="grid md:grid-cols-2 gap-x-10 gap-y-8">
               <div className="bg-white shadow-3xl px-6 lg:px-8 py-7 rounded-xl">
                 <p className="font-heading text-secondary-900 text-xl font-semibold">
                   Kidney Institiute Dialysis Forms
@@ -214,7 +319,7 @@ const Page = ({ data }) => {
                   </ul>
                 </div>
               </div>
-              <p class="italic text-sm">
+              <p className="italic text-sm">
                 Don’t see your insurance plan?
                 <AniLink
                   fade

@@ -107,6 +107,169 @@ const Page = ({ data }) => {
         title="Dialysis Services in the Coachella Valley | Kidney Institute"
         description="Hemodialysis and peritoneal dialysis at four clinics in the Coachella Valley, with our own nephrologists on-site. Independent and physician-led since 1987."
         canonical="https://www.kidneyinstitutes.com/dialysis-services"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id":
+                "https://www.kidneyinstitutes.com/dialysis-services#webpage",
+              url: "https://www.kidneyinstitutes.com/dialysis-services",
+              name: "Dialysis Services in the Coachella Valley | Kidney Institute",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/dialysis-services#primaryimage",
+              },
+              mainEntity: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/dialysis-services#service",
+              },
+            },
+            {
+              "@type": "ImageObject",
+              "@id":
+                "https://www.kidneyinstitutes.com/dialysis-services#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/ee8bdd0cfeb51ed3a6ba3dd9f75966c0/cc647/Dialysis%20Services%20hero%20desktop.png",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/ee8bdd0cfeb51ed3a6ba3dd9f75966c0/cc647/Dialysis%20Services%20hero%20desktop.png",
+            },
+            {
+              "@type": "Service",
+              "@id":
+                "https://www.kidneyinstitutes.com/dialysis-services#service",
+              name: "Dialysis Services",
+              description:
+                "Hemodialysis and peritoneal dialysis (CAPD and automated) at four Coachella Valley clinics, with on-site nephrologists, provided by a physician-led practice since 1987.",
+              serviceType: ["Hemodialysis", "Peritoneal dialysis"],
+              url: "https://www.kidneyinstitutes.com/dialysis-services",
+              provider: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              areaServed: [
+                {
+                  "@type": "City",
+                  name: "Indio",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Bermuda Dunes",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Indian Wells",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Thermal",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Coachella",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Mecca",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "La Quinta",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Palm Desert",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Rancho Mirage",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Cathedral City",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Palm Springs",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Thousand Palms",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+              ],
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

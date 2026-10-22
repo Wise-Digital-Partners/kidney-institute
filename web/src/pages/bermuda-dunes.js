@@ -22,6 +22,90 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Bermuda Dunes Dialysis Clinic & Nephrologists"
         description="Get top experts by your side. Our Bermuda Dunes dialysis clinic and nephrologists are specialists in the diagnosis and treatment of kidney disease."
+        canonical="https://www.kidneyinstitutes.com/bermuda-dunes"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.kidneyinstitutes.com/bermuda-dunes#webpage",
+              url: "https://www.kidneyinstitutes.com/bermuda-dunes",
+              name: "Bermuda Dunes Dialysis Clinic & Nephrologists",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/bermuda-dunes#primaryimage",
+              },
+              about: {
+                "@id": "https://www.kidneyinstitutes.com/bermuda-dunes#place",
+              },
+              mentions: [
+                { "@id": "https://www.kidneyinstitutes.com/#location-indio" },
+                {
+                  "@id": "https://www.kidneyinstitutes.com/#location-la-quinta",
+                },
+                {
+                  "@id":
+                    "https://www.kidneyinstitutes.com/#location-nephrology-indio",
+                },
+              ],
+            },
+            {
+              "@type": "ImageObject",
+              "@id":
+                "https://www.kidneyinstitutes.com/bermuda-dunes#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/fc3ba5b7525e309df82a0223de52bda2/41c5c/hero-doctor.png",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/fc3ba5b7525e309df82a0223de52bda2/41c5c/hero-doctor.png",
+            },
+            {
+              "@type": "City",
+              name: "Bermuda Dunes",
+              containedInPlace: { "@type": "State", name: "California" },
+              "@id": "https://www.kidneyinstitutes.com/bermuda-dunes#place",
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id": "https://www.kidneyinstitutes.com/#location-indio",
+              name: "Kidney Institute of the Desert - Indio",
+              url: "https://www.kidneyinstitutes.com/indio-kidney-institute",
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id": "https://www.kidneyinstitutes.com/#location-la-quinta",
+              name: "La Quinta Kidney Center",
+              url: "https://www.kidneyinstitutes.com/la-quinta-kidney-center",
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id":
+                "https://www.kidneyinstitutes.com/#location-nephrology-indio",
+              name: "Coachella Valley Nephrology - Indio",
+              url: "https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: { "@id": "https://www.kidneyinstitutes.com/#logo" },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

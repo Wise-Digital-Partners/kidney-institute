@@ -11,6 +11,47 @@ const Page = ({ data }) => {
         title="Leave Us a Review | Kidney Institute of the Desert"
         description="Your review helps other kidney warriors find compassionate dialysis and nephrology care in the Coachella Valley. Share your experience with our team today."
         canonical="https://www.kidneyinstitutes.com/review-us/"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "ContactPage",
+              "@id": "https://www.kidneyinstitutes.com/review-us/#webpage",
+              url: "https://www.kidneyinstitutes.com/review-us/",
+              name: "Contact Us | Kidney Institute of the Desert",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              mainEntity: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              about: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
         openGraphImage={data.openGraphImage.publicURL}
         twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

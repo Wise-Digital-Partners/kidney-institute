@@ -183,6 +183,138 @@ const Page = ({ data }) => {
         title="Our Team: Dr. Chandrashekar | Kidney Institute of the Desert"
         description="Meet Dr. Naren and Dr. Jambur Chandrashekar, board-certified nephrologists, plus the on-site care team serving Coachella Valley kidney warriors since 1987."
         canonical="https://www.kidneyinstitutes.com/team"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "AboutPage",
+              "@id": "https://www.kidneyinstitutes.com/team#webpage",
+              url: "https://www.kidneyinstitutes.com/team",
+              name: "Our Team: Dr. Chandrashekar | Kidney Institute of the Desert",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              mainEntity: {
+                "@id": "https://www.kidneyinstitutes.com/team#list",
+              },
+            },
+            {
+              "@type": "ItemList",
+              "@id": "https://www.kidneyinstitutes.com/team#list",
+              name: "Physicians and care team",
+              numberOfItems: 4,
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  item: {
+                    "@id":
+                      "https://www.kidneyinstitutes.com/#person-narendra-chandrashekar",
+                  },
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  item: {
+                    "@id":
+                      "https://www.kidneyinstitutes.com/#person-jambur-chandrashekar",
+                  },
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  item: {
+                    "@id":
+                      "https://www.kidneyinstitutes.com/#person-yvonne-hamilton",
+                  },
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  item: {
+                    "@id":
+                      "https://www.kidneyinstitutes.com/#person-marilu-fuentes",
+                  },
+                },
+              ],
+            },
+            {
+              "@type": "Person",
+              "@id":
+                "https://www.kidneyinstitutes.com/#person-narendra-chandrashekar",
+              name: "Narendra S. Chandrashekar",
+              jobTitle:
+                "Board-certified nephrologist; on-site medical director, La Quinta Kidney Center and Kidney Institute at Eisenhower Medical Center",
+              image:
+                "https://www.kidneyinstitutes.com/static/65a28e29b00d62680d59c3cdf178236a/074da/Dr.%20Naren%20Chandrashekar.jpg",
+              url: "https://www.kidneyinstitutes.com/team",
+              worksFor: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              honorificSuffix: "MD",
+              alternateName: "Dr. Naren Chandrashekar",
+            },
+            {
+              "@type": "Person",
+              "@id":
+                "https://www.kidneyinstitutes.com/#person-jambur-chandrashekar",
+              name: "Jambur Chandrashekar",
+              jobTitle: "Founding physician and board-certified nephrologist",
+              image:
+                "https://www.kidneyinstitutes.com/static/a90a79a895cbd1e30e346adbeabb8e57/074da/Dr.%20Jambur%20Chandrashekar.jpg",
+              url: "https://www.kidneyinstitutes.com/team",
+              worksFor: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              alternateName: "Dr. J. Chandrashekar",
+            },
+            {
+              "@type": "Person",
+              "@id": "https://www.kidneyinstitutes.com/#person-yvonne-hamilton",
+              name: "Yvonne Hamilton",
+              jobTitle: "Head Nurse, La Quinta Kidney Center",
+              image:
+                "https://www.kidneyinstitutes.com/static/3e3be3022a50fbc4e93f38b6265a7e35/75992/Yvonne%20Hamilton.jpg",
+              url: "https://www.kidneyinstitutes.com/team",
+              worksFor: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "Person",
+              "@id": "https://www.kidneyinstitutes.com/#person-marilu-fuentes",
+              name: "Marilu Fuentes",
+              jobTitle: "Head Nurse, Kidney Institute of the Desert - Indio",
+              image:
+                "https://www.kidneyinstitutes.com/static/1c6d549d91f7a499f6654b4f8f32c833/074da/Marilu%20Fuentes.jpg",
+              url: "https://www.kidneyinstitutes.com/team",
+              worksFor: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

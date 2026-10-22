@@ -10,6 +10,42 @@ const Page = () => {
         title="Terms and Conditions | Kidney Institute of the Desert"
         description="Read the terms and conditions for using the Kidney Institute of the Desert website."
         canonical="https://www.kidneyinstitutes.com/terms-conditions"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id":
+                "https://www.kidneyinstitutes.com/terms-conditions#webpage",
+              url: "https://www.kidneyinstitutes.com/terms-conditions",
+              name: "Terms and Conditions | Kidney Institute of the Desert",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
       <section className="pt-20 md:pt-40 pb-22 md:pb-32">
         <div className="container">
@@ -40,9 +76,12 @@ const Page = () => {
                 Agreement may be modified at any time by Kidney Institute upon
                 posting of the modified Agreement. Any such modifications shall
                 be effective immediately. You can view the most recent version
-                of these terms at any time at <a href="https://www.kidneyinstitutes.com">https://www.kidneyinstitutes.com</a>. Each
-                use by you shall constitute and be deemed your unconditional
-                acceptance of this Agreement.
+                of these terms at any time at{" "}
+                <a href="https://www.kidneyinstitutes.com">
+                  https://www.kidneyinstitutes.com
+                </a>
+                . Each use by you shall constitute and be deemed your
+                unconditional acceptance of this Agreement.
               </p>
             </li>
           </ul>
@@ -52,7 +91,9 @@ const Page = () => {
               <p>
                 Your visit to our website is also governed by our Privacy
                 Policy. Please review our Privacy Policy at
-                <a href="https://www.kidneyinstitutes.com">https://www.kidneyinstitutes.com</a>
+                <a href="https://www.kidneyinstitutes.com">
+                  https://www.kidneyinstitutes.com
+                </a>
               </p>
             </li>
           </ul>

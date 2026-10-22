@@ -19,6 +19,170 @@ const Page = ({ data }) => {
         description="Searching for a kidney doctor or dialysis center in Rancho Mirage? Our team at Eisenhower Medical Center is here for you. Call us today!"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+
+        canonical="https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id":
+                "https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute#webpage",
+              url: "https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute",
+              name: "Rancho Mirage Dialysis Clinic | Kidney Institute",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute#primaryimage",
+              },
+              about: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/#location-rancho-mirage",
+              },
+              mainEntity: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/#location-rancho-mirage",
+              },
+              inLanguage: "en-US",
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id": "https://www.kidneyinstitutes.com/#location-rancho-mirage",
+              name: "Kidney Institute at Eisenhower Medical Center",
+              url: "https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute",
+              description:
+                "Nephrology and dialysis clinic in Rancho Mirage, California, part of Kidney Institute of the Desert.",
+              telephone: "+1-760-837-9696",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "39000 Bob Hope Dr., Suite 103",
+                addressLocality: "Rancho Mirage",
+                addressRegion: "CA",
+                postalCode: "92270",
+                addressCountry: "US",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 33.762343,
+                longitude: -116.406823,
+              },
+              hasMap:
+                "https://www.google.com/maps/place/?q=place_id:ChIJHaGMMQD92oARKPeeWY6SMAg",
+              image: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute#primaryimage",
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  opens: "05:30",
+                  closes: "18:00",
+                },
+              ],
+              medicalSpecialty: "https://schema.org/Nephrologic",
+              areaServed: [
+                {
+                  "@type": "City",
+                  name: "Rancho Mirage",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Cathedral City",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Palm Springs",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Thousand Palms",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Palm Desert",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+              ],
+              sameAs: [
+                "https://www.google.com/maps/place/?q=place_id:ChIJHaGMMQD92oARKPeeWY6SMAg",
+              ],
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              mainEntityOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute#webpage",
+              },
+              availableService: [
+                {
+                  "@type": "MedicalProcedure",
+                  name: "Hemodialysis",
+                },
+                {
+                  "@type": "MedicalProcedure",
+                  name: "Peritoneal dialysis",
+                },
+              ],
+            },
+            {
+              "@type": "ImageObject",
+              "@id":
+                "https://www.kidneyinstitutes.com/rancho-mirage-kidney-institute#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/30818f81a307071ca811ef00af62b3ad/d84fc/emc-hero.jpg",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/30818f81a307071ca811ef00af62b3ad/d84fc/emc-hero.jpg",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
 
       <section className="md:bg-gray-50 pt-6 md:py-24 mb-20 md:mb-32">

@@ -18,6 +18,141 @@ const Page = ({ data }) => {
         description="At the Coachella Kidney Institute, we're a team of friendly kidney doctors and dialysis clinic nurses with years of experience caring for patients."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+
+        canonical="https://www.kidneyinstitutes.com/coachella-kidney-institute"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id":
+                "https://www.kidneyinstitutes.com/coachella-kidney-institute#webpage",
+              url: "https://www.kidneyinstitutes.com/coachella-kidney-institute",
+              name: "Coachella Kidney Institute | Nephrology & Dialysis Clinic",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/coachella-kidney-institute#primaryimage",
+              },
+              about: {
+                "@id": "https://www.kidneyinstitutes.com/#location-coachella",
+              },
+              mainEntity: {
+                "@id": "https://www.kidneyinstitutes.com/#location-coachella",
+              },
+              inLanguage: "en-US",
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id": "https://www.kidneyinstitutes.com/#location-coachella",
+              name: "Coachella Kidney Institute",
+              url: "https://www.kidneyinstitutes.com/coachella-kidney-institute",
+              description:
+                "Nephrology and dialysis clinic in Coachella, California, part of Kidney Institute of the Desert.",
+              telephone: "+1-760-391-5300",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "1413 6th St.",
+                addressLocality: "Coachella",
+                addressRegion: "CA",
+                postalCode: "92236",
+                addressCountry: "US",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 33.67843,
+                longitude: -116.1775417,
+              },
+              hasMap:
+                "https://www.google.com/maps/place/?q=place_id:ChIJY0ObM4lY2oARReOrfc4ZIYs",
+              image: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/coachella-kidney-institute#primaryimage",
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Wednesday", "Friday"],
+                  opens: "05:30",
+                  closes: "18:00",
+                },
+              ],
+              medicalSpecialty: "https://schema.org/Nephrologic",
+              areaServed: [
+                {
+                  "@type": "City",
+                  name: "Coachella",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Mecca",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Thermal",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+              ],
+              sameAs: [
+                "https://www.google.com/maps/place/?q=place_id:ChIJY0ObM4lY2oARReOrfc4ZIYs",
+              ],
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              mainEntityOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/coachella-kidney-institute#webpage",
+              },
+              availableService: [
+                {
+                  "@type": "MedicalProcedure",
+                  name: "In-center hemodialysis",
+                },
+              ],
+            },
+            {
+              "@type": "ImageObject",
+              "@id":
+                "https://www.kidneyinstitutes.com/coachella-kidney-institute#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/7980abcec932121cc32bd685fd46f5e7/d84fc/coachella-hero.jpg",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/7980abcec932121cc32bd685fd46f5e7/d84fc/coachella-hero.jpg",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
 
       <section className="md:bg-gray-50 pt-6 md:py-24 mb-20 md:mb-32">

@@ -18,6 +18,152 @@ const Page = ({ data }) => {
         description="At Coachella Valley Nephrology in Indio, we're a team of friendly kidney doctors and dialysis clinic nurses with years of experience caring for patients."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+
+        canonical="https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id":
+                "https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology#webpage",
+              url: "https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology",
+              name: "Coachella Valley Nephrology - Indio",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology#primaryimage",
+              },
+              about: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/#location-nephrology-indio",
+              },
+              mainEntity: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/#location-nephrology-indio",
+              },
+              inLanguage: "en-US",
+            },
+            {
+              "@type": "MedicalClinic",
+              "@id":
+                "https://www.kidneyinstitutes.com/#location-nephrology-indio",
+              name: "Coachella Valley Nephrology - Indio",
+              url: "https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology",
+              description:
+                "Nephrology office in Indio, California (Coachella Valley Nephrology), part of Kidney Institute of the Desert.",
+              telephone: "+1-760-360-4433",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "81-719 Dr Carreon Blvd., Suite A",
+                addressLocality: "Indio",
+                addressRegion: "CA",
+                postalCode: "92201",
+                addressCountry: "US",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 33.7060065,
+                longitude: -116.2388894,
+              },
+              hasMap:
+                "https://www.google.com/maps/place/?q=place_id:ChIJfZsUrSX42oARISCAurBrBT8",
+              image: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology#primaryimage",
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "08:00",
+                  closes: "17:00",
+                },
+              ],
+              medicalSpecialty: "https://schema.org/Nephrologic",
+              areaServed: [
+                {
+                  "@type": "City",
+                  name: "Indio",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Bermuda Dunes",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Indian Wells",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Thermal",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+              ],
+              sameAs: [
+                "https://www.google.com/maps/place/?q=place_id:ChIJfZsUrSX42oARISCAurBrBT8",
+              ],
+              parentOrganization: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              mainEntityOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology#webpage",
+              },
+            },
+            {
+              "@type": "ImageObject",
+              "@id":
+                "https://www.kidneyinstitutes.com/indio-coachella-valley-nephrology#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/f673ae20f6819676cead53a84f6a65e9/d84fc/coachella-vallery-hero.jpg",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/f673ae20f6819676cead53a84f6a65e9/d84fc/coachella-vallery-hero.jpg",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
 
       <section className="md:bg-gray-50 pt-6 md:py-24 mb-20 md:mb-32">

@@ -17,6 +17,66 @@ const Page = ({ data }) => {
         description="What can you eat with kidney disease? Our dietitians break down phosphorus and potassium guidance, so your meals feel manageable again. See the full guide."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+
+        canonical="https://www.kidneyinstitutes.com/kidney-nutrition-dialysis-diet"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": ["WebPage", "MedicalWebPage"],
+              "@id":
+                "https://www.kidneyinstitutes.com/kidney-nutrition-dialysis-diet#webpage",
+              url: "https://www.kidneyinstitutes.com/kidney-nutrition-dialysis-diet",
+              name: "Kidney Nutrition & Dialysis Diet | Kidney Institutes",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/kidney-nutrition-dialysis-diet#primaryimage",
+              },
+              about: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/kidney-nutrition-dialysis-diet#topic",
+              },
+            },
+            {
+              "@type": "ImageObject",
+              "@id":
+                "https://www.kidneyinstitutes.com/kidney-nutrition-dialysis-diet#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/7cfddcd5622ddc4631ff4917def579e5/d84fc/1.0-hero-nutrition.jpg",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/7cfddcd5622ddc4631ff4917def579e5/d84fc/1.0-hero-nutrition.jpg",
+            },
+            {
+              "@type": "Thing",
+              "@id":
+                "https://www.kidneyinstitutes.com/kidney-nutrition-dialysis-diet#topic",
+              name: "Kidney-friendly nutrition for people on dialysis",
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
 
       <section className="pt-4 md:pt-24 mb-20 md:mb-24">

@@ -182,6 +182,167 @@ const Page = ({ data }) => {
         description="Our nephrologists serve as on-site medical directors, not remote screens, so your kidney care always feels personal and close. Find your location near you."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+
+        canonical="https://www.kidneyinstitutes.com/nephrology"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.kidneyinstitutes.com/nephrology#webpage",
+              url: "https://www.kidneyinstitutes.com/nephrology",
+              name: "Nephrology | Kidney Institute of the Desert",
+              isPartOf: {
+                "@id": "https://www.kidneyinstitutes.com/#website",
+              },
+              inLanguage: "en-US",
+              primaryImageOfPage: {
+                "@id":
+                  "https://www.kidneyinstitutes.com/nephrology#primaryimage",
+              },
+              mainEntity: {
+                "@id": "https://www.kidneyinstitutes.com/nephrology#service",
+              },
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/nephrology#primaryimage",
+              url: "https://www.kidneyinstitutes.com/static/a86407a7f0ac0eba39dae8174344a3c8/11ebd/1.0-hero-desktop.png",
+              contentUrl:
+                "https://www.kidneyinstitutes.com/static/a86407a7f0ac0eba39dae8174344a3c8/11ebd/1.0-hero-desktop.png",
+            },
+            {
+              "@type": "Service",
+              "@id": "https://www.kidneyinstitutes.com/nephrology#service",
+              name: "Nephrology Care",
+              description:
+                "Diagnosis and treatment of kidney disease, blood pressure and electrolyte disorders by Coachella Valley Nephrology physicians.",
+              serviceType: "Nephrology",
+              url: "https://www.kidneyinstitutes.com/nephrology",
+              provider: {
+                "@id": "https://www.kidneyinstitutes.com/#organization",
+              },
+              areaServed: [
+                {
+                  "@type": "City",
+                  name: "Indio",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Bermuda Dunes",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Indian Wells",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Thermal",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Coachella",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Mecca",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "La Quinta",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Palm Desert",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Rancho Mirage",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Cathedral City",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Palm Springs",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+                {
+                  "@type": "City",
+                  name: "Thousand Palms",
+                  containedInPlace: {
+                    "@type": "State",
+                    name: "California",
+                  },
+                },
+              ],
+            },
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://www.kidneyinstitutes.com/#organization",
+              name: "Kidney Institute of the Desert",
+              url: "https://www.kidneyinstitutes.com/",
+              logo: {
+                "@id": "https://www.kidneyinstitutes.com/#logo",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kidneyinstitutes.com/#website",
+              url: "https://www.kidneyinstitutes.com/",
+              name: "Kidney Institute of the Desert",
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://www.kidneyinstitutes.com/#logo",
+              url: "https://www.kidneyinstitutes.com/static/ea94a5b767f30e2decfc8f9e920d35db/Logo-grayscale%20stacked.png",
+            },
+          ],
+        }}
       />
 
       <section className="bg-gray-100 pt-10 md:pt-18 pb-14 mb-20 md:mb-32">
