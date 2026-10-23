@@ -10,6 +10,7 @@ import Layout from "../components/Layout";
 import SearchEngineOptimization from "../components/SEO";
 import Testimonials from "../components/Repeating/Testimonials";
 import Resources from "../components/Repeating/Resources";
+import FAQs from "../components/Repeating/FAQs";
 import CallToAction from "../components/Repeating/CTA";
 import ButtonSolid from "../components/Button/ButtonSolid";
 import ScrollWrapper from "../components/Scroll/ScrollWrapper";
@@ -26,6 +27,34 @@ const Page = ({ data }) => {
   //const [modalTabIndex, setModalTabIndex] = useState(0);
 
   const content = {
+    faqs: [
+      {
+        question: "Is a nephrologist the same as a urologist?",
+        answer:
+          "No. A nephrologist treats kidney disease, hypertension, and electrolyte disorders medically. A urologist handles the surgical and structural side of the urinary tract. If you were referred for declining kidney function or abnormal labs, you want a nephrologist.",
+      },
+      {
+        question: "Why does it matter that the medical director is on-site?",
+        answer:
+          "An on-site medical director means the physician overseeing your clinic's care is physically present, not managing your case from another market. At Kidney Institute of the Desert, our nephrologists are those on-site directors, so questions and adjustments happen in person.",
+      },
+      {
+        question: "What conditions bring patients to a nephrologist?",
+        answer:
+          "Most often, chronic kidney disease, hard-to-control hypertension, electrolyte imbalances, or lab results (like elevated creatinine or protein in the urine) that a primary care provider has flagged for specialist review.",
+      },
+      {
+        question: "Do I need a referral to see a nephrologist here?",
+        answer:
+          "Most patients arrive through a referring physician, but our team can help you understand your options if you have concerns about your kidney health and are not yet connected with a nephrologist.",
+      },
+      {
+        question:
+          "What happens if my kidney disease progresses toward dialysis?",
+        answer:
+          "Your nephrologist plans with you. Because we also provide dialysis services directly, that transition happens within the same practice and the same care team you already know.",
+      },
+    ],
     nephrologyOffices: [
       {
         image: data.indioNephrology.childImageSharp.gatsbyImageData,
@@ -178,8 +207,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
-        title="Nephrology | Kidney Institute of the Desert"
-        description="Our nephrologists serve as on-site medical directors, not remote screens, so your kidney care always feels personal and close. Find your location near you."
+        title="Nephrologist in the Coachella Valley | Kidney Institute"
+        description="Our nephrologists are on-site medical directors, not remote screens, diagnosing and treating kidney disease, hypertension, and electrolyte disorders daily."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
 
@@ -191,7 +220,7 @@ const Page = ({ data }) => {
               "@type": "WebPage",
               "@id": "https://www.kidneyinstitutes.com/nephrology#webpage",
               url: "https://www.kidneyinstitutes.com/nephrology",
-              name: "Nephrology | Kidney Institute of the Desert",
+              name: "Nephrologist in the Coachella Valley | Kidney Institute",
               isPartOf: {
                 "@id": "https://www.kidneyinstitutes.com/#website",
               },
@@ -322,6 +351,18 @@ const Page = ({ data }) => {
               ],
             },
             {
+              "@type": "FAQPage",
+              "@id": "https://www.kidneyinstitutes.com/nephrology#faq",
+              mainEntity: content.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            },
+            {
               "@type": "MedicalBusiness",
               "@id": "https://www.kidneyinstitutes.com/#organization",
               name: "Kidney Institute of the Desert",
@@ -356,14 +397,16 @@ const Page = ({ data }) => {
               />
               <h1>Your Nephrology Experts</h1>
               <p>
-                Coachella Valley Nephrology is committed to compassionate,
-                supportive care. The kidney health of every patient we see is
-                important to us, and we want the care we provide to be as
-                comfortable and stress-free as possible. We’re experts in kidney
-                health, the treatment of kidney diseases, blood pressure
-                management, and electrolyte disorders. Also, we serve as the
-                medical directors and take care of patients at the Kidney
-                Institutes.
+                Kidney disease rarely announces itself. Fatigue, swelling, and
+                creeping high blood pressure often build for years before a
+                diagnosis, and by the time patients reach us, many are
+                frightened and unsure who to trust. At Kidney Institute of the
+                Desert, our nephrologists diagnose and manage kidney disease,
+                hypertension, and electrolyte disorders as on-site medical
+                directors, in the building with you rather than reviewing your
+                labs from a screen somewhere else. This is nephrology built on
+                worldwide expertise by your side, backed by a team that has
+                served the Coachella Valley since 1987.
               </p>
               <ButtonSolid
                 modal="modal-contact"
@@ -390,7 +433,7 @@ const Page = ({ data }) => {
               <li>
                 <AnchorLink
                   to={url + "#anchor-1"}
-                  title="Nephrologists"
+                  title="What Is Nephrology"
                   stripHash
                   className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
                 />
@@ -398,22 +441,6 @@ const Page = ({ data }) => {
               <li>
                 <AnchorLink
                   to={url + "#anchor-2"}
-                  title="Kidney Function"
-                  stripHash
-                  className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
-                />
-              </li>
-              <li>
-                <AnchorLink
-                  to={url + "#anchor-3"}
-                  title="When to Seek Help"
-                  stripHash
-                  className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
-                />
-              </li>
-              <li>
-                <AnchorLink
-                  to={url + "#anchor-3"}
                   title="Conditions We Treat"
                   stripHash
                   className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
@@ -421,8 +448,24 @@ const Page = ({ data }) => {
               </li>
               <li>
                 <AnchorLink
+                  to={url + "#anchor-3"}
+                  title="Independent Difference"
+                  stripHash
+                  className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
+                />
+              </li>
+              <li>
+                <AnchorLink
+                  to={url + "#anchor-4"}
+                  title="Your First Visit"
+                  stripHash
+                  className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
+                />
+              </li>
+              <li>
+                <AnchorLink
                   to={url + "#anchor-5"}
-                  title="Procedures"
+                  title="Support Beyond the Exam"
                   stripHash
                   className="relative font-heading text-secondary-900/50 font-semibold before:absolute before:-bottom-3 before:left-0 lg:before:w-0 lg:before:bg-primary-900 lg:before:h-2 lg:before:transition-all lg:before:duration-500 lg:before:ease-linear no-underline"
                 />
@@ -432,104 +475,188 @@ const Page = ({ data }) => {
             <ScrollContent className="lg:col-end-13 lg:col-span-8">
               <StyledContent>
                 <div id="anchor-1" className="mb-14 lg:mb-12">
-                  <h2>Nephrologist = Kidney Specialist</h2>
+                  <h2>What Is Nephrology, and Why the Distinction Matters</h2>
                   <p>
-                    It’s a common question we get—what is nephrology? It’s an
-                    internal medicine specialty focused on the functions of the
-                    kidneys. Doctors who specialize in nephrology—like our team
-                    here at Coachella Valley Nephrology—are experts in kidney
-                    health, the treatment of kidney diseases, blood pressure
-                    management, and electrolyte disorders. A nephrologist is
-                    different from a urologist who specializes in the urinary
-                    tract system including the bladder, prostate, and tumors of
-                    the kidneys.
+                    Nephrology is the branch of medicine focused on the kidneys:
+                    how they filter waste, regulate blood pressure, and balance
+                    the electrolytes your body depends on. A nephrologist is the
+                    physician trained to diagnose and manage kidney disease and
+                    the conditions that damage kidney function over time, most
+                    often hypertension and diabetes.
+                  </p>
+                  <p>
+                    Patients frequently confuse a nephrologist with a urologist,
+                    but the two specialties treat different problems. A
+                    urologist manages the structural and surgical side of the
+                    urinary tract, including the bladder and kidney stones
+                    requiring surgery. A nephrologist manages kidney function
+                    itself: chronic kidney disease, electrolyte imbalances, and
+                    the medical (non-surgical) treatment of hypertension's
+                    effect on the kidneys. If your primary care provider has
+                    referred you to us for declining kidney function, high
+                    creatinine, or protein in your urine, a nephrologist, not a
+                    urologist, is the specialist you need.
                   </p>
                 </div>
 
                 <div id="anchor-2" className="mb-14 lg:mb-12">
-                  <h2>Why Your Kidneys Are Vital</h2>
+                  <h2>Conditions We Diagnose and Treat</h2>
                   <p>
-                    Kidneys cleanse the blood of toxins. When they don't work
-                    properly, those toxins, plus excess fluids, can build up in
-                    the body. As a result, a person experiencing kidney failure
-                    may have high blood pressure, headaches that don't seem to
-                    go away, swelling in certain areas of their body, and feel
-                    extremely tired. Kidneys perform vital functions. These
-                    functions include:
+                    Our nephrologists at{" "}
+                    <a
+                      href="https://www.kidneyinstitutes.com/"
+                      className="font-bold text-[#162d6d]"
+                    >
+                      Kidney Institute of the Desert
+                    </a>
+                    , alongside our physician arm, Coachella Valley Nephrology,
+                    diagnose and manage:
                   </p>
-
                   <ul className="list-disc pl-6 mb-6">
-                    <li>Removal of waste products and drugs from the body</li>
                     <li>
-                      Regulating the body’s salt, potassium, and acid content
+                      <strong>Chronic kidney disease (CKD)</strong>, at every
+                      stage, from early detection through advanced-stage
+                      management
                     </li>
-                    <li>Releasing hormones that regulate blood pressure</li>
                     <li>
-                      Producing hormones that promote strong, healthy bones
+                      <strong>Hypertension</strong>, including blood pressure
+                      that is difficult to control and is affecting kidney
+                      function
                     </li>
-                    <li>Controlling the production of red blood cells</li>
+                    <li>
+                      <strong>Electrolyte disorders</strong>, such as imbalances
+                      in potassium, sodium, and phosphorus that place stress on
+                      the kidneys
+                    </li>
+                    <li>
+                      <strong>Glomerulonephritis and nephrotic syndrome</strong>
+                      , inflammatory conditions affecting the kidney's filtering
+                      units
+                    </li>
+                    <li>
+                      <strong>Diabetic kidney disease</strong>, the kidney
+                      complications that can follow long-term diabetes
+                    </li>
+                    <li>
+                      <strong>Progression toward dialysis</strong>, including
+                      the planning and education patients need well before
+                      treatment begins
+                    </li>
                   </ul>
+                  <p>
+                    When kidney disease reaches a point where dialysis becomes
+                    necessary, our nephrologists coordinate directly with our
+                    own dialysis services, so your care team does not change and
+                    your medical history does not need to be re-explained to
+                    someone new.
+                  </p>
                 </div>
 
                 <div id="anchor-3" className="mb-14 lg:mb-12">
-                  <h2>When Should You See a Nephrologist?</h2>
+                  <h2>The Independent Difference: Medical Directors On-Site</h2>
                   <p>
-                    Most people don't go to a nephrologist without a referral
-                    from their primary care doctor. Typically, seeing a
+                    National dialysis and nephrology chains often manage
+                    patients remotely, with a medical director overseeing
+                    multiple facilities and rarely present in person. Kidney
+                    Institute of the Desert works differently. Our nephrologists
+                    serve as on-site medical directors at our clinics, so the
+                    physician responsible for your care is in the building, not
+                    managing your case remotely across markets.
+                  </p>
+                  <p>
+                    This is what we mean by worldwide expertise by your side:
+                    our physicians bring training and experience recognized well
+                    beyond the desert, but they deliver it in person, at one of
+                    our six{" "}
                     <a
-                      href="https://www.kidneyinstitutes.com/nephrology"
+                      href="https://www.kidneyinstitutes.com/locations"
                       className="font-bold text-[#162d6d]"
                     >
-                      nephrologist
+                      dialysis clinics
                     </a>{" "}
-                    means that you have kidney-related symptoms from an unknown
-                    cause or that you have health issues only a renal specialist
-                    knows how to treat. When may your primary care provider
-                    refer you to a nephrologist? If you have symptoms that
-                    indicate a possible problem with your kidneys, or for any of
-                    the following reasons:
+                    across the Coachella Valley, as partners in an independent,
+                    physician-owned practice. We have served the Greater
+                    Coachella Valley since 1987, and that independence is why
+                    our nephrologists can build a relationship with you over
+                    years, not a single visit.
                   </p>
-                  <ul className="list-disc pl-6 mb-6">
-                    <li>
-                      A large amount of blood or protein is found in your urine.
-                    </li>
-                    <li>You have recurring kidney stones.</li>
-                    <li>
-                      You have high blood pressure that isn't improving even
-                      though you're taking medication.
-                    </li>
-                    <li>
-                      You have a medical condition that increases your risk of
-                      kidney problems (such as diabetes or a heart condition).
-                    </li>
-                  </ul>
                 </div>
 
                 <div id="anchor-4" className="mb-14 lg:mb-12">
-                  <h2>Conditions a Nephrologist Treats</h2>
+                  <h2>What to Expect at Your First Nephrology Visit</h2>
                   <p>
-                    Kidneys perform vital functions, and a nephrologist can
-                    treat you for conditions such as:
+                    Starting care with a new specialist can feel overwhelming,
+                    especially on top of a new diagnosis. Here is what your
+                    first visit looks like:
                   </p>
-                  <ul className="list-disc pl-6 mb-6">
-                    <li>Blood or Protein In Your Urine</li>
-                    <li>Recurrent Kidney Stones</li>
-                    <li>Chronic Kidney Disease</li>
-                    <li>Kidney Failure</li>
-                    <li>Electrolyte and Mineral Imbalances</li>
-                    <li>Kidney Transplant Follow-Up Care</li>
-                  </ul>
+                  <ol className="list-decimal pl-6 mb-6">
+                    <li>
+                      <strong>We review your referral and history.</strong> Your
+                      nephrologist reads through the labs and notes your primary
+                      care provider or referring physician has already sent, so
+                      you are not starting from zero.
+                    </li>
+                    <li>
+                      <strong>We run the tests we need.</strong> This usually
+                      means blood work to check kidney function (like GFR and
+                      creatinine) and sometimes imaging or urine tests,
+                      depending on your situation.
+                    </li>
+                    <li>
+                      <strong>
+                        We explain what we find, in plain language.
+                      </strong>{" "}
+                      Your nephrologist walks you through your results and what
+                      they mean for your kidneys, your blood pressure, and your
+                      day-to-day life.
+                    </li>
+                    <li>
+                      <strong>We build a plan together.</strong> Whether that
+                      means medication changes, dietary adjustments, or ongoing
+                      monitoring, you leave with a clear next step, not just a
+                      diagnosis.
+                    </li>
+                    <li>
+                      <strong>We connect you with our full team.</strong> If you
+                      need dietary guidance or dialysis planning, our nurses,
+                      dietitians, and social workers are already part of your
+                      care, not a separate referral.
+                    </li>
+                  </ol>
                 </div>
 
                 <div id="anchor-5">
-                  <h2>What Procedures a Nephrologist Performs</h2>
+                  <h2>Support Beyond the Exam Room</h2>
                   <p>
-                    Nephrologists help detect and diagnose kidney problems by
-                    performing blood and urine tests, imaging testing (i.e.,
-                    ultrasounds, CT scans, and X-rays), and biopsies. They're
-                    also involved in patient care and treatment, including
-                    hemodialysis, and are a vital member of a kidney transplant
-                    team.
+                    Kidney disease affects more than lab numbers. It can change
+                    what you eat, how you plan travel, and how confident you
+                    feel about the future. That is why nephrology care here
+                    comes with a full support system: nurses, registered
+                    dietitians, and social workers who work alongside your
+                    nephrologist, not on a separate track.
+                  </p>
+                  <p>
+                    If you are new to the process, our{" "}
+                    <a
+                      href="https://www.kidneyinstitutes.com/resources"
+                      className="font-bold text-[#162d6d]"
+                    >
+                      patient resources
+                    </a>{" "}
+                    page has the forms and insurance information you need before
+                    your first visit, so you can spend that appointment talking
+                    with your nephrologist instead of filling out paperwork in
+                    the waiting room. We accept 18 or more insurance providers,
+                    including Aetna, Blue Cross, Blue Shield, Cigna, Kaiser,
+                    IEHP Direct, Tricare, and Veterans plans, and our team can
+                    help verify your coverage as part of{" "}
+                    <a
+                      href="https://www.kidneyinstitutes.com/resources"
+                      className="font-bold text-[#162d6d]"
+                    >
+                      new-patient onboarding
+                    </a>
+                    .
                   </p>
                 </div>
               </StyledContent>
@@ -609,6 +736,37 @@ const Page = ({ data }) => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <FAQs
+        heading="Frequently Asked Questions"
+        questionsAnswers={content.faqs}
+      />
+
+      <section className="mb-24 md:mb-32">
+        <div className="container">
+          <h2>Care That Stays With You</h2>
+          <p>
+            Kidney disease is easier to face with a physician who knows your
+            history and is present to guide you through it. That is the model we
+            have built at Kidney Institute of the Desert: nephrologists who
+            serve as on-site medical directors, a multidisciplinary team that
+            supports you beyond the exam room, and 40 years of experience
+            serving kidney warriors across the Coachella Valley. You do not have
+            to navigate a kidney diagnosis alone, or from a distance.
+          </p>
+          <p className="mb-0">
+            Find a{" "}
+            <a
+              href="https://www.kidneyinstitutes.com/locations"
+              className="font-bold text-[#162d6d]"
+            >
+              dialysis clinic near you
+            </a>{" "}
+            and meet the physician who will be in the room with you, every step
+            of the way.
+          </p>
         </div>
       </section>
 
