@@ -14,8 +14,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
-        title="Coachella Valley Nephrology - Rancho Mirage"
-        description="At Coachella Valley Nephrology in Rancho Mirage, we're a team of friendly kidney doctors and dialysis clinic nurses with years of experience."
+        title="Nephrologist in La Quinta, CA | Coachella Valley Nephrology"
+        description="Coachella Valley Nephrology in La Quinta offers expert kidney care from physician-led nephrologists on Washington Street. Call us today to book your visit."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
 
@@ -28,7 +28,7 @@ const Page = ({ data }) => {
               "@id":
                 "https://www.kidneyinstitutes.com/rancho-mirage-coachella-valley-nephrology#webpage",
               url: "https://www.kidneyinstitutes.com/rancho-mirage-coachella-valley-nephrology",
-              name: "Coachella Valley Nephrology - La Quinta",
+              name: "Nephrologist in La Quinta, CA | Coachella Valley Nephrology",
               isPartOf: {
                 "@id": "https://www.kidneyinstitutes.com/#website",
               },
@@ -175,10 +175,10 @@ const Page = ({ data }) => {
               </div>
               <h1>Coachella Valley Nephrology - La Quinta</h1>
               <p>
-                At Coachella Valley Nephrology in La Quinta, we’re a team of
-                friendly kidney doctors with years of experience caring for
-                patients. Our goal is to use the most up-to-date information to
-                help diagnose and manage your kidney conditions.
+                A kidney diagnosis can feel like a lot to take in. At Coachella
+                Valley Nephrology in La Quinta, our friendly kidney doctors help
+                you understand your condition and build a care plan that fits
+                your life.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
@@ -228,26 +228,19 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h2>Top Nephrology Experts By Your Side</h2>
+              <h2>Top Nephrology Experts By Your Side in La Quinta</h2>
               <p>
-                At Coachella Valley Nephrology in Indio, our physicians have
-                spent years building their expertise and knowledge in kidney
-                care both here and around the world. Our nephrologists are
-                specialists in both the{" "}
-                <a
-                  href="https://www.kidneyinstitutes.com/dialysis-services"
-                  className="font-bold text-[#162d6d]"
-                >
-                  diagnosis
-                </a>{" "}
-                and{" "}
+                At Coachella Valley Nephrology in La Quinta, our physicians have
+                spent years building their kidney care expertise, both here in
+                the desert and around the world. Our nephrologists{" "}
                 <a
                   href="https://www.kidneyinstitutes.com/nephrology"
                   className="font-bold text-[#162d6d]"
                 >
-                  treatment of kidney disease
+                  diagnose and treat kidney disease
                 </a>
-                .
+                , high blood pressure, and electrolyte disorders, so you can see
+                a specialist close to home.
               </p>
               <ButtonGhost href="/nephrology" text="Learn More" />
             </div>
@@ -257,10 +250,17 @@ const Page = ({ data }) => {
             <div className="order-2 md:order-1">
               <h2>Easy Access to Dialysis Services in Coachella Valley</h2>
               <p>
-                Our number one priority is a patient’s health and comfort,
-                whether their treatment involves hemodialysis or peritoneal
-                dialysis. We provide expert, supportive dialysis services for
-                those who are living with kidney disease.
+                If your care plan grows to include dialysis, you won't have to
+                go far. Our{" "}
+                <a
+                  href="https://www.kidneyinstitutes.com/la-quinta-kidney-center"
+                  className="font-bold text-[#162d6d]"
+                >
+                  La Quinta Kidney Center
+                </a>{" "}
+                dialysis clinic is in the same building on Washington Street, in
+                Suite 101. Whether you need hemodialysis or peritoneal dialysis,
+                our team puts your health and comfort first.
               </p>
               <ButtonGhost href="/dialysis-services" text="Learn More" />
             </div>
