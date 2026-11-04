@@ -11,6 +11,7 @@ const SEO = ({
   meta,
   keywords,
   title,
+  documentTitle,
   openGraphImage,
   twitterOpenGraphImage,
   canonical,
@@ -113,7 +114,7 @@ const SEO = ({
             : []
         )
         .concat(meta)}
-      title={title}
+      title={documentTitle || title}
       titleTemplate={`%s`}
     >
       {schema && (
@@ -135,6 +136,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   title: PropTypes.string,
+  documentTitle: PropTypes.string,
   twitterOpenGraphImage: PropTypes.string,
   openGraphImage: PropTypes.string,
   canonical: PropTypes.string,

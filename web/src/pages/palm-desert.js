@@ -20,6 +20,7 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
+        documentTitle="Palm Desert Nephrology & Dialysis | Kidney Institutes"
         title="Palm Desert Dialysis Clinic & Nephrologists"
         description="Looking for a top Palm Desert dialysis clinic & nephrologists? At the Kidney Institutes, we specialize in the diagnosis and treatment of kidney disease."
         // openGraphImage={data.openGraphImage.publicURL}
