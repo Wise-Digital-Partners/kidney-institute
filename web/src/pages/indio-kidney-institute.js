@@ -14,6 +14,7 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
+        documentTitle="Indio Dialysis Clinic & Nephrology | Kidney Institute"
         title="Indio Dialysis Clinic | Kidney Institute of the Desert"
         description="World-class nephrology and dialysis services in Indio, CA. Hemodialysis, peritoneal dialysis, and specialist kidney care close to the Coachella Valley."
         // openGraphImage={data.openGraphImage.publicURL}
