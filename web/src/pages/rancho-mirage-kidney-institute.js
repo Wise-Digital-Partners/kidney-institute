@@ -15,6 +15,7 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
+        documentTitle="Rancho Mirage Dialysis Center | Kidney Institute"
         title="Rancho Mirage Dialysis Clinic | Kidney Institute"
         description="Searching for a kidney doctor or dialysis center in Rancho Mirage? Our team at Eisenhower Medical Center is here for you. Call us today!"
         // openGraphImage={data.openGraphImage.publicURL}
