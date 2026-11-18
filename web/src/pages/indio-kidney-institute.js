@@ -257,7 +257,7 @@ const Page = ({ data }) => {
       </section>
 
       <ValueProps locationsText="We're located in the heart of Indio, next door to the John F. Kennedy Memorial Hospital." />
-      <Testimonials />
+      <Testimonials reviewer="Norma Valladares" />
       <Resources />
       <CallToAction />
     </Layout>
