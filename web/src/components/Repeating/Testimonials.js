@@ -36,7 +36,7 @@ const StyledSlider = styled.div`
   }
 `;
 
-const Testimonial = ({ className, headingLevel }) => {
+const Testimonial = ({ className, headingLevel, reviewer }) => {
   const data = useStaticQuery(graphql`
     {
       quotes: file(relativePath: { eq: "repeating/testimonials/quotes.svg" }) {
@@ -85,6 +85,9 @@ const Testimonial = ({ className, headingLevel }) => {
     },
   ];
 
+  const selectedReview = testimonials.find((testimonial) => testimonial.name === reviewer);
+  const visibleReviews = selectedReview ? [selectedReview] : testimonials;
+  const ReviewContainer = selectedReview ? React.Fragment : Slider;
   const HeadingTag = headingLevel || "h2";
 
   return (
@@ -116,8 +119,8 @@ const Testimonial = ({ className, headingLevel }) => {
         </header>
 
         <StyledSlider>
-          <Slider>
-            {testimonials.map((testimonial, i) => {
+          <ReviewContainer>
+            {visibleReviews.map((testimonial, i) => {
               return (
                 <div key={i}>
                   <blockquote className="md:max-w-md md:w-3/4">
@@ -139,7 +142,7 @@ const Testimonial = ({ className, headingLevel }) => {
                 </div>
               );
             })}
-          </Slider>
+          </ReviewContainer>
         </StyledSlider>
       </Background>
     </div>

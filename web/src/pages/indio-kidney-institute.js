@@ -14,9 +14,9 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
-        documentTitle="Indio Dialysis Clinic & Nephrology | Kidney Institute"
-        title="Indio Dialysis Clinic | Kidney Institute of the Desert"
-        description="World-class nephrology and dialysis services in Indio, CA. Hemodialysis, peritoneal dialysis, and specialist kidney care close to the Coachella Valley."
+        documentTitle={"Indio Dialysis Clinic"}
+        title={"Indio Dialysis Clinic"}
+        description={"Medicare-certified Indio dialysis clinic since 1987. Hemodialysis and peritoneal dialysis next to JFK Memorial Hospital. Call (760) 347-8181 to begin care."}
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
 
@@ -182,14 +182,8 @@ const Page = ({ data }) => {
               <div className="bg-[#A68098] rounded text-center text-white text-xs font-semibold px-2 py-1 inline-flex mb-6">
                 Dialysis Clinic
               </div>
-              <h1>Kidney Institute of the Desert - Indio</h1>
-              <p>
-                At the Kidney Institute, we’re a team of friendly kidney doctors
-                and dialysis clinic nurses with years of experience caring for
-                patients. Our goal is to help educate our patients about their
-                kidney care and support them with treatments that are as
-                comfortable and stress-free as possible.
-              </p>
+              <h1>{"Kidney Institute of the Desert in Indio"}</h1>
+              <p>{"Our Indio clinic has been Medicare-certified since 1987. Kidney warriors across Indio and the eastern valley count on us for dialysis. We are a physician-owned, independent team, and we take time to get to know you. Find us on Doctor Carreon Boulevard, next to John F. Kennedy Memorial Hospital."}</p>
               <ul className="space-y-2">
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
                   <img src={data.mapPin.publicURL} alt="" className="mr-3" />
@@ -204,7 +198,7 @@ const Page = ({ data }) => {
                 </li>
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
                   <img src={data.clock.publicURL} alt="" className="mr-3" />
-                  <span>Monday - Saturday 5:30 a.m. - 6:00 p.m.</span>
+                  <span>Monday through Saturday, 5:30 a.m. to 6:00 p.m.</span>
                 </li>
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
                   <img src={data.phone.publicURL} alt="" className="mr-3" />
@@ -219,7 +213,7 @@ const Page = ({ data }) => {
                 image={data.hero.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
-                alt="Kidney care clinic building in Indio offering nephrology and dialysis services"
+                alt="Kidney Institute of the Desert dialysis clinic on Doctor Carreon Boulevard in Indio"
               />
             </div>
           </div>
@@ -238,40 +232,16 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h2>Easy Access to Dialysis Services in Indio</h2>
-              <p>
-                Our number one priority is a patient’s health and comfort,
-                whether their treatment involves hemodialysis or peritoneal
-                dialysis. We provide expert, supportive dialysis services for
-                those who are living with kidney disease.
-              </p>
+              <h2>{"In-Center Hemodialysis and Peritoneal Dialysis in Indio"}</h2>
+              <p>{"Our Indio clinic has 20 dialysis stations. We are open Monday through Saturday, 5:30 a.m. to 6:00 p.m. We offer in-center hemodialysis and peritoneal dialysis. Our nurses, dietitians, and social workers build one care plan with you, so you never manage kidney disease alone."}</p>
               <ButtonGhost href="/dialysis-services" text="Learn More" />
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-14 items-center">
             <div className="order-2 md:order-1">
-              <h2>Top Nephrology Experts By Your Side</h2>
-              <p>
-                At Kidney Institute of the Desert in Indio, our physicians have
-                spent years building their expertise and knowledge in kidney
-                care both here and around the world. Our nephrologists are
-                specialists in both the{" "}
-                <a
-                  href="https://www.kidneyinstitutes.com/dialysis-services"
-                  className="font-bold text-[#162d6d]"
-                >
-                  diagnosis
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://www.kidneyinstitutes.com/nephrology"
-                  className="font-bold text-[#162d6d]"
-                >
-                  treatment of kidney disease
-                </a>
-                .
-              </p>
+              <h2>{"Kidney Doctors Close to Your Dialysis Clinic"}</h2>
+              <p>{"Coachella Valley Nephrology is our physician practice, and its Indio office is just down the street. Dr. Jambur Chandrashekar, a founding member of Kidney Institute of the Desert, has been on staff at John F. Kennedy Memorial Hospital since 1979. Meet our kidney doctors at the Coachella Valley Nephrology office in Indio."}</p>
               <ButtonGhost href="/nephrology" text="Learn More" />
             </div>
             <div className="order-1 md:order-2">
@@ -287,7 +257,7 @@ const Page = ({ data }) => {
       </section>
 
       <ValueProps locationsText="We're located in the heart of Indio, next door to the John F. Kennedy Memorial Hospital." />
-      <Testimonials />
+      <Testimonials reviewer="Norma Valladares" />
       <Resources />
       <CallToAction />
     </Layout>
