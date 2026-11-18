@@ -268,7 +268,7 @@ const Page = ({ data }) => {
       </section>
 
       <KidneyValueProps locationsText="We're in the Probst Building on Bob Hope Drive. For patients already receiving care at Eisenhower, getting to us doesn't mean a separate trip across town." />
-      <Testimonials />
+      <Testimonials reviewer="Patrick Boatsman" />
       <Resources />
       <CallToAction />
     </Layout>
