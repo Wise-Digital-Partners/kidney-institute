@@ -15,9 +15,9 @@ const Page = ({ data }) => {
   return (
     <Layout headerHasBorder={true}>
       <SearchEngineOptimization
-        documentTitle="Rancho Mirage Dialysis Center | Kidney Institute"
-        title="Rancho Mirage Dialysis Clinic | Kidney Institute"
-        description="Searching for a kidney doctor or dialysis center in Rancho Mirage? Our team at Eisenhower Medical Center is here for you. Call us today!"
+        documentTitle={"Rancho Mirage Dialysis Clinic"}
+        title={"Rancho Mirage Dialysis Clinic"}
+        description={"Dialysis clinic on the Eisenhower Medical Center campus in Rancho Mirage. Your medical director is on-site. Call us at (760) 837-9696 to get started today."}
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
 
@@ -193,18 +193,8 @@ const Page = ({ data }) => {
               <div className="bg-[#A68098] rounded text-center text-white text-xs font-semibold px-2 py-1 inline-flex mb-6">
                 Dialysis Clinic
               </div>
-              <h1>
-                Kidney Institute at Eisenhower Medical Center — Rancho Mirage
-              </h1>
-              <p>
-                A kidney diagnosis changes everything about how you plan your
-                week, how you think about travel, and how you feel walking into
-                a clinic three times a week. We know that. The team at the
-                Kidney Institute at Eisenhower Medical Center is here not just
-                to manage your treatment, but to make sure you feel supported,
-                informed, and cared for every time you walk through our doors in
-                Rancho Mirage.
-              </p>
+              <h1>{"Kidney Institute at Eisenhower Medical Center in Rancho Mirage"}</h1>
+              <p>{"A kidney diagnosis changes everything about how you plan your week, how you think about travel, and how you feel walking into a clinic three times a week. We know that. The team at the Kidney Institute at Eisenhower Medical Center is here not just to manage your treatment, but to make sure you feel supported, informed, and cared for every time you walk through our doors in Rancho Mirage."}</p>
               <ul className="space-y-2">
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
                   <img src={data.mapPin.publicURL} alt="" className="mr-3" />
@@ -219,7 +209,7 @@ const Page = ({ data }) => {
                 </li>
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
                   <img src={data.clock.publicURL} alt="" className="mr-3" />
-                  <span>Monday - Saturday 5:30 a.m. - 6:00 p.m.</span>
+                  <span>Monday through Saturday, 5:30 a.m. to 6:00 p.m.</span>
                 </li>
                 <li className="flex items-center text-secondary-900 font-semibold text-sm">
                   <img src={data.phone.publicURL} alt="" className="mr-3" />
@@ -253,51 +243,16 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h2>Dialysis</h2>
-              <p>
-                Most dialysis patients have to manage two separate care
-                relationships: their dialysis clinic and their hospital. At our
-                Rancho Mirage location, those two are already connected. Our
-                team coordinates directly with Eisenhower Medical Center
-                physicians, so your{" "}
-                <a
-                  href="https://www.kidneyinstitutes.com/dialysis-services"
-                  className="font-bold text-[#162d6d]"
-                >
-                  hemodialysis or peritoneal dialysis
-                </a>{" "}
-                plan reflects everything happening with your health, not just
-                what happens during your treatment sessions.
-              </p>
+              <h2>{"Dialysis on the Eisenhower Campus"}</h2>
+              <p>{"Many dialysis patients manage two care relationships: a dialysis clinic and a hospital. At our Rancho Mirage clinic, the two are close together. We are on the Eisenhower Medical Center campus, and our medical director is an active member of the Eisenhower medical staff. We offer hemodialysis and peritoneal dialysis, with a care plan built around your whole health, not only your treatment days."}</p>
               <ButtonGhost href="/dialysis-services" text="Learn More" />
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-14 items-center">
             <div className="order-2 md:order-1">
-              <h2>Nephrology</h2>
-              <p>
-                Our nephrologists in Rancho Mirage see patients across the full
-                range of early chronic kidney disease, late-stage disease, and
-                everything in between. They&apos;re trained in both the{" "}
-                <a
-                  href="https://www.kidneyinstitutes.com/dialysis-services"
-                  className="font-bold text-[#162d6d]"
-                >
-                  diagnosis
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://www.kidneyinstitutes.com/nephrology"
-                  className="font-bold text-[#162d6d]"
-                >
-                  treatment of kidney disease
-                </a>
-                , and they take the time to walk you through your options, your
-                lab results, and what to expect next. Kidney care is harder to
-                manage when you don&apos;t understand what&apos;s happening, and
-                that&apos;s something our physicians take seriously.
-              </p>
+              <h2>{"Nephrology Led by Your On-Site Medical Director"}</h2>
+              <p>{"Dr. Naren Chandrashekar is our on-site medical director here, so you see him in person, not on a screen. He is a board-certified nephrologist. He has cared for patients in the Coachella Valley since 2002. He is a former Chief of Nephrology at Eisenhower Medical Center and was President of its Medical Staff from 2022 through 2023. For office visits with a kidney doctor, our Coachella Valley Nephrology offices are in Indio and La Quinta."}</p>
               <ButtonGhost href="/nephrology" text="Learn More" />
             </div>
             <div className="order-1 md:order-2">
@@ -305,7 +260,7 @@ const Page = ({ data }) => {
                 image={data.nephrology.childImageSharp.gatsbyImageData}
                 width="560"
                 className="rounded-xl md:rounded-4xl"
-                alt="Nephrologist discussing kidney lab results with a patient in Rancho Mirage"
+                alt="Nephrologist discussing kidney lab results with a patient at the Eisenhower Medical Center clinic"
               />
             </div>
           </div>
