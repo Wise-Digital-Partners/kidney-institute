@@ -6,7 +6,7 @@ import ButtonSolid from "../Button/ButtonSolid";
 import ButtonGhost from "../Button/ButtonGhost";
 // import CTAFullWidth from "../CTA/CTAFullWidth";
 
-const CTA = ({ heading, headingLevel, subtext, onClick, className }) => {
+const CTA = ({ heading, headingLevel, subtext, onClick, className, locationHref }) => {
   // const data = useStaticQuery(graphql`
   //   {
   //     backgroundDesktop: file(
@@ -56,7 +56,8 @@ const CTA = ({ heading, headingLevel, subtext, onClick, className }) => {
 
           <div className="flex flex-col md:flex-row items-center space-y-5 md:space-y-0 md:space-x-4">
             <ButtonGhost
-              modal="modal-contact"
+              href={locationHref}
+              modal={locationHref ? undefined : "modal-contact"}
               altStyle={true}
               onClick={onClick}
               icon="fas fa-map-marker-alt"
