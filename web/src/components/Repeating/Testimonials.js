@@ -36,7 +36,7 @@ const StyledSlider = styled.div`
   }
 `;
 
-const Testimonial = ({ className, headingLevel }) => {
+const Testimonial = ({ className, headingLevel, reviewer }) => {
   const data = useStaticQuery(graphql`
     {
       quotes: file(relativePath: { eq: "repeating/testimonials/quotes.svg" }) {
@@ -86,6 +86,29 @@ const Testimonial = ({ className, headingLevel }) => {
   ];
 
   const HeadingTag = headingLevel || "h2";
+  const visibleTestimonials = reviewer
+    ? testimonials.filter((testimonial) => testimonial.name === reviewer)
+    : testimonials;
+  const slides = visibleTestimonials.map((testimonial) => (
+      <div key={testimonial.name}>
+        <blockquote className="md:max-w-md md:w-3/4">
+          <q>{testimonial.quote}</q>
+          <footer className="mt-10 mx-auto">
+            <div>
+              <cite className="not-italic">
+                <div className="font-heading text-sm md:text-base text-secondary-900 uppercase font-bold tracking-wide mb-2">
+                  {testimonial.name}
+                </div>
+                <GatsbyImage
+                  image={testimonial.platform}
+                  alt="Review left on Facebook"
+                />
+              </cite>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+  ));
 
   return (
     <div className="container relative px-0 md:px-4">
@@ -116,30 +139,7 @@ const Testimonial = ({ className, headingLevel }) => {
         </header>
 
         <StyledSlider>
-          <Slider>
-            {testimonials.map((testimonial, i) => {
-              return (
-                <div key={i}>
-                  <blockquote className="md:max-w-md md:w-3/4">
-                    <q>{testimonial.quote}</q>
-                    <footer className="mt-10 mx-auto">
-                      <div>
-                        <cite className="not-italic">
-                          <div className="font-heading text-sm md:text-base text-secondary-900 uppercase font-bold tracking-wide mb-2">
-                            {testimonial.name}
-                          </div>
-                          <GatsbyImage
-                            image={testimonial.platform}
-                            alt="Review left on Facebook"
-                          />
-                        </cite>
-                      </div>
-                    </footer>
-                  </blockquote>
-                </div>
-              );
-            })}
-          </Slider>
+          {reviewer ? slides : <Slider>{slides}</Slider>}
         </StyledSlider>
       </Background>
     </div>
